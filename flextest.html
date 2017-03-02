@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style type="text/css">
+        body {
+            display: flex;}
 [class$="face"] {
     margin:16px;
     padding:4px;
     background-color: black;
     width: 104px;
     height:104px;
-border-radius:10%;}
-        .pip {
+    border-radius:10%;}
+        [class$="pip"] {
             width:24px;
             height:24px;
             border-radius:50%;
@@ -30,8 +32,19 @@ border-radius:10%;}
     display: flex;
     justify-content:space-between;
   }
-        .second2_face.pip:nth-of-type(2){
+        .second_pip {
             align-self:flex-end;}
+        .third_face {
+            display: flex;
+            justify-content:space-between;}
+        .third_pip {
+            align-self:center;}
+        .forth_face {
+            display: flex;
+            justify-content: space-between;}
+        .column {display:flex;
+        justify-content: space-between;
+            flex-direction:column;}
     </style>
 </head>
 <body>
@@ -44,7 +57,22 @@ border-radius:10%;}
 </div>
 <div class="second2_face">
     <span class="pip"></span>
+    <span class="second_pip"></span>
+</div>
+<div class="third_face">
     <span class="pip"></span>
+    <span class="third_pip"></span>
+    <span class="second_pip"></span>
+</div>
+<div class="forth_face">
+    <div class="column">
+    <span class="pip"></span>
+    <span class="pip"></span>
+    </div>
+    <div class="column">
+        <span class="pip"></span>
+        <span class="pip"></span>
+    </div>
 </div>
 </body>
 </html>

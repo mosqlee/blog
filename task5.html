@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,intal-scale=1">
+    <style type="text/css">
+        body {margin:0;}
+header {width: 100%;
+    position: fixed;
+    height:11.11vw;
+background-color: #5fc0cd;
+    display: flex;
+    z-index: 1;
+    }
+        .arrow {
+            margin:3vw;
+            object-fit:contain;
+            width:5vw;}
+        .back {display:flex;
+            margin-right:29vw;}
+        .page {
+            color:white;
+            align-self:center;
+            font-size: 5vw;
+            }
+        footer {
+            position: fixed;
+            z-index:1;
+            bottom:1vw;
+            width:100%;
+            display: flex;
+            justify-content:space-around;
+        }
+        [class$="button"] {width: 41.67vw;
+            border-style:solid;
+            font-size: 5vw;
+            background: none;
+            font-weight:bold;
+            height:12.5vw;
+            border-radius:1vw;}
+        .first_button {
+
+              border-color: #5fc0cd;
+              border-width:0.5vw;
+              color: #5fc0cd;
+            background:white;
+            }
+        .second_button {
+            border-color: #5fc0cd;
+            border-width:0.5vw;
+            color: white;
+            background-color: #5fc0cd;
+        }
+        .background {
+            position: absolute;
+            width:100%;
+            height: 45.83vw;
+            margin-top:11vw;
+            z-index:-1;}
+    .head {
+    width: 23.61vw;
+    margin:20.83vw 0 0 6vw;
+        border-radius:50%;
+    }
+        .location {
+            position: absolute;
+            width: 2.76vw;
+            margin:34.72vw 0 0 5vw;
+        }
+        .name {
+            position: absolute;
+            font-size: 5vw;
+            color: white;
+            margin: 26vw 34.4vw;
+            }
+        .age {
+            position: absolute;
+            font-size: 4vw;
+            color: white;
+            margin: 26vw 0 0 52.5vw;}
+        .adress {
+            position: absolute;
+            font-size: 3.3vw;
+            color: white;
+            margin: 34.72vw 0 0 39vw;}
+        [class$="floor"] {
+            width:94.44%;
+            line-height: 10vw;
+            border-width:0.1vw;
+            border-bottom-style:solid;
+            font-size: 4.5vw;
+            font-weight:900;
+            margin-left:5.56vw;
+
+        }
+        .flex {
+            display: flex;flex-direction: column;
+            position: absolute;
+            margin-top: 12.5vw;}
+        .first_floor {
+            margin:0 0 0 0;
+            padding-right:5.56vw;
+            }
+        .skill {
+            margin-left: 3.56vw;
+            border-left-style:solid;
+            border-color: #5fc0cd;
+            padding-left:2vw;}
+        .sixth_floor {
+            display: flex;
+            margin:0 0 0 0;
+            padding-right:5.56vw;}
+
+        .introduce_left {
+            flex-shrink:0;align-self: center;
+            margin-left: 5.56vw;
+            margin-right: 2.33vw;
+}
+        .introduce_right {
+            font-size:4vw;
+            line-height:5vw;
+            }
+        [class$="left"] {
+            color: #a8a8a8;}
+        [class$="right"] {
+            border-left-style: solid;border-width: thin;
+            padding-left: 5.56vw;
+            border-color: gray;}
+        .price_right {
+            color: red;
+            border-color: gray;}
+    </style>
+</head>
+<body>
+<header class="fixed">
+    <a  class="back" href="">
+        <img class="arrow" src="http://119.10.57.69:880/jnshu265/pic/arrow2.png">
+    </a>
+    <h1 class="page">个人主页</h1>
+</header>
+<footer class="bottom_fixed">
+    <button class="first_button" type="button">留言</button>
+    <button class="second_button" type="button">电话联系</button>
+</footer>
+<main>
+<div>
+    <p class="name">高素雅</p>
+    <p class="age">51岁</p>
+    <p class="adress">北京.通州.果园</p>
+    <img class="background" src="http://119.10.57.69:880/jnshu265/pic/background.png">
+    <img class="head" src="http://119.10.57.69:880/jnshu265/pic/head.png">
+    <img class="location" src="http://119.10.57.69:880/jnshu265/pic/location.png">
+</div>
+    <div class="flex">
+        <div class="first_floor">
+        <span class="skill">专业技能</span>
+        </div>
+        <div class="second_floor">
+            <span class="skill1">住家</span>
+            <span class="skill_right">不含餐</span>
+        </div>
+        <div class="third_floor">
+            <span class="experience_left">从业年限</span>
+            <span class="xperience_right">0~3年</span>
+        </div>
+        <div class="forth_floor">
+            <span class="time_left">工作时间</span>
+            <span class="time_right">全天</span>
+        </div>
+        <div class="fifth_floor">
+            <span class="price_left">服务价格</span>
+            <span class="price_right">25元/小时</span>
+        </div>
+        <div class="sixth_floor">
+            <span class="introduce_left">自我介绍</span>
+            <span class="introduce_right">可以洗衣，做饭，照顾老人。在护工方面有5年的经验，经验丰富。</span>
+        </div>
+    </div>
+</main>
+</body>
+</html>

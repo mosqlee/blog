@@ -88,9 +88,10 @@ footer {
     line-height: 10vw;
     border-width:.1vw;
     border-bottom-style:solid;
+    border-bottom-color: #a8a8a8;
     font-size: 4.5vw;
     font-weight:900;
-    border-bottom-color: #a8a8a8;
+
 }
 .flex {
     display: flex;
@@ -106,7 +107,6 @@ footer {
     margin-left: 3.56vw;
     padding-left:2vw;
     border-left-style:solid;
-
 }
 .star {
     width:4.5vw;}

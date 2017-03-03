@@ -8,36 +8,39 @@ header {
     background-color: #5fc0cd;
 }
 footer {
+    display: flex;
+    justify-content:space-around;
     position: fixed;
     z-index:1;
     bottom:1vw;
     width:100%;
-    display: flex;
-    justify-content:space-around;
 }
 .arrow {
     margin:3vw;
+    width:5vw;
     object-fit:contain;
-    width:5vw;}
+    }
 .back {display:flex;
     margin-right:29vw;}
 .page {
-    color:white;
     align-self:center;
+    color:white;
     font-size: 5vw;
 }
-[class$="button"] {width: 41.67vw;
+[class$="button"] {
+    width: 41.67vw;
+    height:12.5vw;
     border-style:solid;
     font-size: 5vw;
     background: none;
     font-weight:bold;
-    height:12.5vw;
-    border-radius:1vw;}
+    border-radius:1vw;
+    }
 .first-button {
+    background:white;
     border-color: #5fc0cd;
     border-width:.5vw;
     color: #5fc0cd;
-    background:white;
 }
 .second-button {
     border-color: #5fc0cd;
@@ -47,10 +50,11 @@ footer {
 }
 .background {
     position: absolute;
+    z-index:-1;
     width:100%;
     height: 45.83vw;
     margin-top:11vw;
-    z-index:-1;}
+}
 .head {
     width: 23.61vw;
     margin:20.83vw 0 0 6vw;
@@ -63,31 +67,33 @@ footer {
 }
 .name {
     position: absolute;
+    margin: 26vw 34.4vw;
     font-size: 5vw;
     color: white;
-    margin: 26vw 34.4vw;
 }
 .age {
     position: absolute;
+    margin: 26vw 0 0 52.5vw;
     font-size: 4vw;
     color: white;
-    margin: 26vw 0 0 52.5vw;}
+}
 .adress {
     position: absolute;
+    margin: 34.72vw 0 0 39vw;
     font-size: 3.3vw;
     color: white;
-    margin: 34.72vw 0 0 39vw;
 }
 [class$="floor"] {
+    margin-left:5.56vw;
     line-height: 10vw;
     border-width:.1vw;
     border-bottom-style:solid;
     font-size: 4.5vw;
     font-weight:900;
-    margin-left:5.56vw;
 }
 .flex {
-    display: flex;flex-direction: column;
+    display: flex;
+    flex-direction: column;
     position: absolute;
     top: 56.5vw;
 }
@@ -97,9 +103,9 @@ footer {
 }
 .skill {
     margin-left: 3.56vw;
+    padding-left:2vw;
     border-left-style:solid;
     border-color: #5fc0cd;
-    padding-left:2vw;
 }
 .star {
     width:4.5vw;}
@@ -120,7 +126,8 @@ footer {
     color: #a8a8a8;
 }
 [class$="right"] {
-    border-left-style: solid;border-width: thin;
+    border-left-style: solid;
+    border-width: thin;
     padding-left: 5.56vw;
     border-color: gray;
 }

@@ -69,19 +69,19 @@ footer {
     position: absolute;
     margin: 26vw 34.4vw;
     font-size: 5vw;
-    color: white;
+    color: #fff;
 }
 .age {
     position: absolute;
     margin: 26vw 0 0 52.5vw;
     font-size: 4vw;
-    color: white;
+    color: #fff;
 }
 .adress {
     position: absolute;
     margin: 34.72vw 0 0 39vw;
     font-size: 3.3vw;
-    color: white;
+    color: #fff;
 }
 [class$="floor"] {
     margin-left:5.56vw;
@@ -133,5 +133,5 @@ footer {
 }
 .price-right {
     color: red;
-    border-color: gray;
+    border-color: #a8a8a8;
 }

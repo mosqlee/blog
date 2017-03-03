@@ -1,10 +1,11 @@
 body {margin:0;}
-header {width: 100%;
+header {
     position: fixed;
-    height:11.11vw;
-    background-color: #5fc0cd;
     display: flex;
     z-index: 1;
+    width: 100%;
+    height:11.11vw;
+    background-color: #5fc0cd;
 }
 footer {
     position: fixed;
@@ -12,7 +13,7 @@ footer {
     bottom:1vw;
     width:100%;
     display: flex;
-    justify-content:space-around;
+
 }
 .arrow {
     margin:3vw;

@@ -1,0 +1,129 @@
+body {margin:0;}
+header {width: 100%;
+    position: fixed;
+    height:11.11vw;
+    background-color: #5fc0cd;
+    display: flex;
+    z-index: 1;
+}
+footer {
+    position: fixed;
+    z-index:1;
+    bottom:1vw;
+    width:100%;
+    display: flex;
+    justify-content:space-around;
+}
+.arrow {
+    margin:3vw;
+    object-fit:contain;
+    width:5vw;}
+.back {display:flex;
+    margin-right:29vw;}
+.page {
+    color:white;
+    align-self:center;
+    font-size: 5vw;
+}
+[class$="button"] {width: 41.67vw;
+    border-style:solid;
+    font-size: 5vw;
+    background: none;
+    font-weight:bold;
+    height:12.5vw;
+    border-radius:1vw;}
+.first-button {
+    border-color: #5fc0cd;
+    border-width:.5vw;
+    color: #5fc0cd;
+    background:white;
+}
+.second-button {
+    border-color: #5fc0cd;
+    border-width:.5vw;
+    color: white;
+    background-color: #5fc0cd;
+}
+.background {
+    position: absolute;
+    width:100%;
+    height: 45.83vw;
+    margin-top:11vw;
+    z-index:-1;}
+.head {
+    width: 23.61vw;
+    margin:20.83vw 0 0 6vw;
+    border-radius:50%;
+}
+.location {
+    position: absolute;
+    width: 2.76vw;
+    margin:34.72vw 0 0 5vw;
+}
+.name {
+    position: absolute;
+    font-size: 5vw;
+    color: white;
+    margin: 26vw 34.4vw;
+}
+.age {
+    position: absolute;
+    font-size: 4vw;
+    color: white;
+    margin: 26vw 0 0 52.5vw;}
+.adress {
+    position: absolute;
+    font-size: 3.3vw;
+    color: white;
+    margin: 34.72vw 0 0 39vw;
+}
+[class$="floor"] {
+    line-height: 10vw;
+    border-width:.1vw;
+    border-bottom-style:solid;
+    font-size: 4.5vw;
+    font-weight:900;
+    margin-left:5.56vw;
+}
+.flex {
+    display: flex;flex-direction: column;
+    position: absolute;
+    top: 56.5vw;
+}
+.first-floor {
+    margin:0 0 0 0;
+    padding-right:5.56vw;
+}
+.skill {
+    margin-left: 3.56vw;
+    border-left-style:solid;
+    border-color: #5fc0cd;
+    padding-left:2vw;
+}
+.star {
+    width:4.5vw;}
+.sixth-floor {
+    display: flex;
+    margin:0 0 0 0;
+}
+.introduce-left {
+    flex-shrink:0;align-self: center;
+    margin-left: 5.56vw;
+    margin-right: 2.33vw;
+}
+.introduce-right {
+    font-size:4vw;
+    line-height:5vw;
+}
+[class$="left"] {
+    color: #a8a8a8;
+}
+[class$="right"] {
+    border-left-style: solid;border-width: thin;
+    padding-left: 5.56vw;
+    border-color: gray;
+}
+.price-right {
+    color: red;
+    border-color: gray;
+}

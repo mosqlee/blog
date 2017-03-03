@@ -13,6 +13,7 @@ footer {
     bottom:1vw;
     width:100%;
     display: flex;
+    justify-content:space-around;
 }
 .arrow {
     margin:3vw;

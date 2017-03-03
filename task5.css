@@ -120,8 +120,9 @@ footer {
     margin-right: 2.33vw;
 }
 .introduce-right {
-    font-size:4vw;
+    font-size:3.5vw;
     line-height:5vw;
+    font-weight: 600;
 }
 [class$="left"] {
     color: #a8a8a8;

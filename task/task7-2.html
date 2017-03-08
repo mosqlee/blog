@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <meta name="viewport" content="width= device-width, inital-scale=1">
+    <meta name="viewport" content="width= device-width, inital-scale=1,user-scalable=no">
     <link rel="stylesheet" href="http://zengyupei.cn/bootstrap/css/bootstrap/3.3.6/bootstrap.min.css">
     <style type="text/css">
         body {background-color:#29bde0 }
@@ -11,9 +11,17 @@
     .kof97 {
         display: flex;justify-content: space-between;align-items: center;
         margin:1rem;}
-        .vote {font-size: 3.4rem;
+        .vote {
             margin-right:1rem;
-            color: #fff;}
+            color: #fff;
+            font-size:2.5rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: block;
+            display: -webkit-box;
+            line-clamp: 1;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;}
     .back {
         text-decoration: none;}
         a:hover {
@@ -27,18 +35,34 @@
             align-items:center;
             padding: 1rem;}
         .tittle {
-            font-size:2.5rem;}
+            font-size:2rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: block;
+            display: -webkit-box;
+            line-clamp: 1;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;}
         .box {background-color:  #b9e9f5;}
         .point {margin:0 2rem;
             display: flex;}
         h4 {
             margin: 15rem 3vw 3vw;
-            color: #fff;}
+            color: #fff;
+            font-size:2rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: block;
+            display: -webkit-box;
+            line-clamp: 1;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;}
         .square {
             width:21vw;
             height: 21vw;
             background-color: #f5c97b;
-            float: left;margin:5.9vw;
+            float: left;
+            margin:5.9vw 5.9vw 2vw;
             border-style:solid;
             border-width:.8vw;
             border-color: #fff;display: flex;flex-direction: column;
@@ -60,6 +84,26 @@
             color: #fff;}
         .go-die {
             line-height:3vw;color: #fff;}
+        .play {border:none;
+            background: none;}
+        .icon {
+            border:none;
+            background:none;
+             }
+        .pictrue {
+            width:4vw;}
+        .hidden-icon {
+            margin-left:7vw;
+            opacity:0;}
+
+        .box1 {
+            width:32vw;
+            height:32vw;
+            float: left;
+           }
+        .box1:hover .hidden-icon {
+                opacity:1;}
+
     </style>
 </head>
 <body>
@@ -73,7 +117,8 @@
         <div class="box">
             <div class="fixed">
             <span class="tittle">发言讨论结束，大家请投票</span>
-            <a href=""><img class="start" src="http://119.10.57.69:880/jnshu265/pic/start.png"></a>
+                <audio id="test" src="http://119.10.57.69:880/jnshu265/music/badsong.mp3"></audio>
+            <button class="play" onclick="play()" href=""><img class="start" src="http://119.10.57.69:880/jnshu265/pic/start.png"></button>
         </div>
         </div>
         <img class="point" src="http://119.10.57.69:880/jnshu265/pic/point.png">
@@ -81,64 +126,212 @@
 </header>
 <main>
 <h4>点击得票数最多人的头像</h4>
-    <div>
+    <div class="box1">
         <div class="square">
+
             <div class="degree"><span>水民</span></div>
 
             <div class="num"><span>1号</span></div>
+
         </div>
+        <div class="hidden-icon">
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/kill.png"> </a>
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/search.png"> </a>
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/position.png"> </a>
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/heal.png"> </a>
+        </div>
+    </div>
+    <div class="box1">
         <div class="square">
+            <div class="degree"><span>水民</span></div>
+            <div class="num"><span>1号</span></div>
+        </div>
+        <div class="hidden-icon">
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/kill.png"> </a>
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/search.png"> </a>
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/position.png"> </a>
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/heal.png"> </a>
+        </div>
+    </div>
+    <div class="box1">
+
+        <div class="square">
+
+            <div class="degree"><span>水民</span></div>
+
+            <div class="num"><span>1号</span></div>
+
+        </div>
+        <div class="hidden-icon">
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/kill.png"> </a>
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/search.png"> </a>
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/position.png"> </a>
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/heal.png"> </a>
+        </div>
+    </div>
+    <div class="box1">
+
+        <div class="square">
+
+            <div class="degree"><span>水民</span></div>
+
+            <div class="num"><span>1号</span></div>
+
+        </div>
+        <div class="hidden-icon">
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/kill.png"> </a>
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/search.png"> </a>
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/position.png"> </a>
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/heal.png"> </a>
+        </div>
+    </div>
+    <div class="box1">
+
+        <div class="square">
+
+            <div class="degree"><span>水民</span></div>
+
+            <div class="num"><span>1号</span></div>
+
+        </div>
+        <div class="hidden-icon">
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/kill.png"> </a>
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/search.png"> </a>
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/position.png"> </a>
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/heal.png"> </a>
+        </div>
+    </div>
+    <div class="box1">
+
+    <div class="square">
+
         <div class="degree"><span>水民</span></div>
 
-        <div class="num"><span>2号</span></div>
+        <div class="num"><span>1号</span></div>
+
     </div>
-        <div class="square">
-            <div class="degree"><span>警察</span></div>
+    <div class="hidden-icon">
+        <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/kill.png"> </a>
+        <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/search.png"> </a>
+        <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/position.png"> </a>
+        <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/heal.png"> </a>
+    </div>
+</div>
+    <div class="box1">
 
-            <div class="num"><span>3号</span></div>
-        </div>
-        <div class="square">
-            <div class="degree"><span>法官</span></div>
+    <div class="square">
 
-            <div class="num"><span>4号</span></div>
-        </div>
-        <div class="square">
-            <div class="degree"><span>狙击手</span></div>
-
-            <div class="num"><span>5号</span></div>
-        </div>
-        <div class="square">
-            <div class="degree"><span>医生</span></div>
-
-            <div class="num"><span>6号</span></div>
-        </div>
-        <div class="square">
-            <div class="degree"><span>杀手</span></div>
-
-            <div class="num"><span>7号</span></div>
-        </div>
-        <div class="square">
-            <div class="degree"><span>水民</span></div>
-
-            <div class="num"><span>8号</span></div>
-        </div>
-        <div class="square">
         <div class="degree"><span>水民</span></div>
 
-        <div class="num"><span>9号</span></div></div>
-        <div class="square">
-            <div class="degree"><span>水民</span></div>
+        <div class="num"><span>1号</span></div>
 
-            <div class="num"><span>10号</span></div></div>
-        <div class="square">
-            <div class="degree"><span>水民</span></div>
-
-            <div class="num"><span>11号</span></div></div>
-        <div class="square">
-            <div class="degree"><span>水民</span></div>
-
-            <div class="num"><span>12号</span></div></div>
     </div>
+    <div class="hidden-icon">
+        <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/kill.png"> </a>
+        <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/search.png"> </a>
+        <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/position.png"> </a>
+        <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/heal.png"> </a>
+    </div>
+</div>
+    <div class="box1">
+
+        <div class="square">
+
+            <div class="degree"><span>水民</span></div>
+
+            <div class="num"><span>1号</span></div>
+
+        </div>
+        <div class="hidden-icon">
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/kill.png"> </a>
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/search.png"> </a>
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/position.png"> </a>
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/heal.png"> </a>
+        </div>
+    </div>
+    <div class="box1">
+
+        <div class="square">
+
+            <div class="degree"><span>水民</span></div>
+
+            <div class="num"><span>1号</span></div>
+
+        </div>
+        <div class="hidden-icon">
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/kill.png"> </a>
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/search.png"> </a>
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/position.png"> </a>
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/heal.png"> </a>
+        </div>
+    </div>
+    <div class="box1">
+
+        <div class="square">
+
+            <div class="degree"><span>水民</span></div>
+
+            <div class="num"><span>1号</span></div>
+
+        </div>
+        <div class="hidden-icon">
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/kill.png"> </a>
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/search.png"> </a>
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/position.png"> </a>
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/heal.png"> </a>
+        </div>
+    </div>
+    <div class="box1">
+
+        <div class="square">
+
+            <div class="degree"><span>水民</span></div>
+
+            <div class="num"><span>1号</span></div>
+
+        </div>
+        <div class="hidden-icon">
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/kill.png"> </a>
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/search.png"> </a>
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/position.png"> </a>
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/heal.png"> </a>
+        </div>
+    </div>
+    <div class="box1">
+
+        <div class="square">
+
+            <div class="degree"><span>水民</span></div>
+
+            <div class="num"><span>1号</span></div>
+
+        </div>
+        <div class="hidden-icon">
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/kill.png"> </a>
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/search.png"> </a>
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/position.png"> </a>
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/heal.png"> </a>
+        </div>
+    </div>
+    <div class="box1">
+
+        <div class="square">
+
+            <div class="degree"><span>水民</span></div>
+
+            <div class="num"><span>1号</span></div>
+
+        </div>
+        <div class="hidden-icon">
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/kill.png"> </a>
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/search.png"> </a>
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/position.png"> </a>
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/heal.png"> </a>
+        </div>
+    </div>
+
+
+
 </main>
 <footer>
 <nav class="nav navbar-default navbar-fixed-bottom">
@@ -150,5 +343,20 @@
 </footer>
 </body>
 </html>
+<script>
+    var isPlaying = false;
+    function play() {
+        var player = document.getElementById('test');
+        if (isPlaying){
+            player.pause();
+            player.src = "";
+            isPlaying = false;
+        } else {
+            player.src = "http://119.10.57.69:880/jnshu265/music/badsong.mp3";
+            player.play();
+            isPlaying = true;
+        }
+    }
+</script>
 <script src="http://zengyupei.cn/bootstrap/js/bootstrap/3.3.6/bootstrap.min.js"></script>
 <script src="http://zengyupei.cn/bootstrap/js/jquery/2.0.0/jquery.min.js"></script>

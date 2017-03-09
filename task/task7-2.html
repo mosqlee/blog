@@ -6,120 +6,154 @@
     <meta name="viewport" content="width= device-width, inital-scale=1,user-scalable=no">
     <link rel="stylesheet" href="http://zengyupei.cn/bootstrap/css/bootstrap/3.3.6/bootstrap.min.css">
     <style type="text/css">
-        body {background-color:#29bde0 }
-        .navbar-default {background-color: #29bde0;}
-    .kof97 {
-        display: flex;justify-content: space-between;align-items: center;
-        margin:1rem;}
+        body {
+            background-color:#29bde0
+        }
+        .navbar-default {
+            background-color: #29bde0;
+        }
+    .vote-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin:1rem;
+    }
         .vote {
+            display: block;
+            display: -webkit-box;
             margin-right:1rem;
-            color: #fff;
             font-size:2.5rem;
             overflow: hidden;
             text-overflow: ellipsis;
-            display: block;
-            display: -webkit-box;
             line-clamp: 1;
             -webkit-line-clamp: 1;
-            -webkit-box-orient: vertical;}
+            -webkit-box-orient: vertical;
+            color: #fff;
+        }
     .back {
-        text-decoration: none;}
+        text-decoration: none;
+    }
         a:hover {
-            text-decoration: none;}
+            text-decoration: none
+        ;}
         .start {
             -webkit-border-radius:50%;
             -moz-border-radius:50%;
-            border-radius:50%;}
+            border-radius:50%;
+        }
         .fixed {
-            display: flex;justify-content: space-between;
+            display: flex;
+            justify-content: space-between;
             align-items:center;
-            padding: 1rem;}
+            padding: 1rem;
+        }
         .tittle {
-            font-size:2rem;
-            overflow: hidden;
-            text-overflow: ellipsis;
             display: block;
             display: -webkit-box;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size:2rem;
             line-clamp: 1;
             -webkit-line-clamp: 1;
-            -webkit-box-orient: vertical;}
-        .box {background-color:  #b9e9f5;}
-        .point {margin:0 2rem;
-            display: flex;}
+            -webkit-box-orient: vertical;
+        }
+        .box {
+            background-color:  #b9e9f5;
+        }
+        .point {
+            display: flex;
+            margin:0 2rem;
+        }
         h4 {
-            margin: 15rem 3vw 3vw;
-            color: #fff;
-            font-size:2rem;
-            overflow: hidden;
-            text-overflow: ellipsis;
             display: block;
             display: -webkit-box;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 15rem 3vw 3vw;
+            font-size:2rem;
             line-clamp: 1;
             -webkit-line-clamp: 1;
-            -webkit-box-orient: vertical;}
+            -webkit-box-orient: vertical;
+            color: #fff;
+        }
         .square {
+            display: flex;
+            flex-direction: column;
+            justify-content:flex-end;
+            float: left;
             width:21vw;
             height: 21vw;
-            background-color: #f5c97b;
-            float: left;
             margin:5.9vw 5.9vw 2vw;
             border-style:solid;
             border-width:.8vw;
-            border-color: #fff;display: flex;flex-direction: column;
-            justify-content:flex-end;}
+            border-color: #fff;
+            background-color: #f5c97b;
+        }
         .degree {
-            font-size:4vw;text-align: center;margin-bottom: 3vw;
+            text-align: center;
+            margin-bottom: 3vw;
+            font-size:4vw;
             }
         .num {
-            background-color: #83b09a;
-            color:#fff;
             text-align: center;
             font-size:3vw;
+            color:#fff;
+            background-color: #83b09a;
             }
-        .navbar-fixed-bottom {background-color:#29bde0; }
-        .submit {
-            text-align: center;
-            font-size:6vw;
-            margin:4vw 11vw;background-color: #fbb435;
-            color: #fff;}
-        .go-die {
-            line-height:3vw;color: #fff;}
-        .play {border:none;
-            background: none;}
+        .play {
+            border:none;
+            background: none;
+        }
         .icon {
             border:none;
             background:none;
              }
         .pictrue {
-            width:4vw;}
+            width:4vw;
+        }
         .hidden-icon {
             margin-left:7vw;
-            opacity:0;}
-
+            opacity:0;
+        }
         .box1 {
-            width:32vw;
             height:32vw;
             float: left;
+            width:32vw;
            }
         .box1:hover .hidden-icon {
-                opacity:1;}
-
+            opacity:1;
+        }
+        .navbar-fixed-bottom {
+            background-color:#29bde0;
+        }
+        .submit {
+            width:80vw;
+            margin:4vw 11vw;
+            text-align: center;
+            font-size:6vw;
+            color: #fff;
+            background-color: #fbb435;
+        }
     </style>
 </head>
 <body>
 <header>
     <nav class="nav navbar-default navbar-fixed-top">
-        <div class="kof97">
-            <a href="" class="menu"><img src="http://119.10.57.69:880/jnshu265/pic/menu.png"> </a>
-        <span class="vote">投票</span>
-        <a class="back" href=""><span class="vote">X</span></a>
+        <div class="vote-head">
+            <a href="" class="menu"><img src="http://119.10.57.69:880/jnshu265/pic/menu.png"></a>
+            <span class="vote">投票</span>
+            <a class="back" href="http://zengyupei.cn/task/task7-1.html">
+                <span class="vote">X</span>
+            </a>
         </div>
         <div class="box">
             <div class="fixed">
             <span class="tittle">发言讨论结束，大家请投票</span>
-                <audio id="test" src="http://119.10.57.69:880/jnshu265/music/badsong.mp3"></audio>
-            <button class="play" onclick="play()" href=""><img class="start" src="http://119.10.57.69:880/jnshu265/pic/start.png"></button>
-        </div>
+                <audio id="test" src="http://119.10.57.69:880/jnshu265/music/badsong.mp3">
+                </audio>
+                <button class="play" type="button" onclick="play()"><img class="start" src="http://119.10.57.69:880/jnshu265/pic/start.png">
+                </button>
+            </div>
         </div>
         <img class="point" src="http://119.10.57.69:880/jnshu265/pic/point.png">
     </nav>
@@ -128,11 +162,20 @@
 <h4>点击得票数最多人的头像</h4>
     <div class="box1">
         <div class="square">
-
             <div class="degree"><span>水民</span></div>
-
             <div class="num"><span>1号</span></div>
-
+        </div>
+        <div class="hidden-icon">
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/kill.png"></a>
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/search.png"></a>
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/position.png"></a>
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/heal.png"></a>
+        </div>
+    </div>
+    <div class="box1">
+        <div class="square">
+            <div class="degree"><span>水民</span></div>
+            <div class="num"><span>1号</span></div>
         </div>
         <div class="hidden-icon">
             <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/kill.png"> </a>
@@ -154,13 +197,9 @@
         </div>
     </div>
     <div class="box1">
-
         <div class="square">
-
             <div class="degree"><span>水民</span></div>
-
             <div class="num"><span>1号</span></div>
-
         </div>
         <div class="hidden-icon">
             <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/kill.png"> </a>
@@ -170,13 +209,9 @@
         </div>
     </div>
     <div class="box1">
-
         <div class="square">
-
             <div class="degree"><span>水民</span></div>
-
             <div class="num"><span>1号</span></div>
-
         </div>
         <div class="hidden-icon">
             <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/kill.png"> </a>
@@ -186,13 +221,9 @@
         </div>
     </div>
     <div class="box1">
-
         <div class="square">
-
             <div class="degree"><span>水民</span></div>
-
             <div class="num"><span>1号</span></div>
-
         </div>
         <div class="hidden-icon">
             <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/kill.png"> </a>
@@ -202,45 +233,9 @@
         </div>
     </div>
     <div class="box1">
-
-    <div class="square">
-
-        <div class="degree"><span>水民</span></div>
-
-        <div class="num"><span>1号</span></div>
-
-    </div>
-    <div class="hidden-icon">
-        <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/kill.png"> </a>
-        <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/search.png"> </a>
-        <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/position.png"> </a>
-        <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/heal.png"> </a>
-    </div>
-</div>
-    <div class="box1">
-
-    <div class="square">
-
-        <div class="degree"><span>水民</span></div>
-
-        <div class="num"><span>1号</span></div>
-
-    </div>
-    <div class="hidden-icon">
-        <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/kill.png"> </a>
-        <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/search.png"> </a>
-        <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/position.png"> </a>
-        <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/heal.png"> </a>
-    </div>
-</div>
-    <div class="box1">
-
         <div class="square">
-
             <div class="degree"><span>水民</span></div>
-
             <div class="num"><span>1号</span></div>
-
         </div>
         <div class="hidden-icon">
             <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/kill.png"> </a>
@@ -250,13 +245,9 @@
         </div>
     </div>
     <div class="box1">
-
         <div class="square">
-
             <div class="degree"><span>水民</span></div>
-
             <div class="num"><span>1号</span></div>
-
         </div>
         <div class="hidden-icon">
             <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/kill.png"> </a>
@@ -266,13 +257,9 @@
         </div>
     </div>
     <div class="box1">
-
         <div class="square">
-
             <div class="degree"><span>水民</span></div>
-
             <div class="num"><span>1号</span></div>
-
         </div>
         <div class="hidden-icon">
             <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/kill.png"> </a>
@@ -282,13 +269,9 @@
         </div>
     </div>
     <div class="box1">
-
         <div class="square">
-
             <div class="degree"><span>水民</span></div>
-
             <div class="num"><span>1号</span></div>
-
         </div>
         <div class="hidden-icon">
             <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/kill.png"> </a>
@@ -298,13 +281,9 @@
         </div>
     </div>
     <div class="box1">
-
         <div class="square">
-
             <div class="degree"><span>水民</span></div>
-
             <div class="num"><span>1号</span></div>
-
         </div>
         <div class="hidden-icon">
             <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/kill.png"> </a>
@@ -313,36 +292,15 @@
             <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/heal.png"> </a>
         </div>
     </div>
-    <div class="box1">
-
-        <div class="square">
-
-            <div class="degree"><span>水民</span></div>
-
-            <div class="num"><span>1号</span></div>
-
-        </div>
-        <div class="hidden-icon">
-            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/kill.png"> </a>
-            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/search.png"> </a>
-            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/position.png"> </a>
-            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/heal.png"> </a>
-        </div>
-    </div>
-
-
-
 </main>
 <footer>
 <nav class="nav navbar-default navbar-fixed-bottom">
-    <a href="http://zengyupei.cn/task/task7-3.html">
-    <div class="submit">
-        <span class="go-die">投死</span>
-    </div></a>
+
+    <button class="submit" type="button" onclick="window.location.href='http://zengyupei.cn/task/task7-3.html'">
+        投死
+    </button>
 </nav>
 </footer>
-</body>
-</html>
 <script>
     var isPlaying = false;
     function play() {
@@ -360,3 +318,5 @@
 </script>
 <script src="http://zengyupei.cn/bootstrap/js/bootstrap/3.3.6/bootstrap.min.js"></script>
 <script src="http://zengyupei.cn/bootstrap/js/jquery/2.0.0/jquery.min.js"></script>
+</body>
+</html>

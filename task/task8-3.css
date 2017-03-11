@@ -145,9 +145,6 @@ span.phonenum {
 .hover{
     position: relative;
 }
-.hover:hover .hidden-hover {
-    opacity: 0.7;
-}
 .hidden-hover {
     position: absolute;
     width:100%;
@@ -157,7 +154,9 @@ span.phonenum {
     background: #000;
     opacity: 0;
 }
-
+.hover:hover .hidden-hover {
+    opacity: 0.7;
+}
 .footbox {
     margin-bottom: 2vw;
 }

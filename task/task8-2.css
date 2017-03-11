@@ -1,0 +1,175 @@
+main {
+    background-color: #fafafa;
+}
+.navbar-static-top {
+    background: #29b078;
+    vertical-align: center;
+    margin:0;
+    border:none;
+}
+.share {
+    background: #fff;
+    width:100%;
+    margin-top:6px;
+}
+span.phonenum {
+    float:left;
+    color: #29b078;
+
+}
+.background1 {
+    display: block;
+    float: right;
+    margin: 2px;
+    background: url(http://119.10.57.69:880/jnshu265/pic/task8-sprites.png);
+    width: 23px;
+    height: 24px;
+    background-position: 0 0;
+
+}
+.background2 {
+    display: block;
+    float: right;
+    margin: 2px;
+    background: url(http://119.10.57.69:880/jnshu265/pic/task8-sprites.png) no-repeat;
+    width: 24px;
+    height: 24px;
+    background-position: -24px 0;
+}
+.background3 {
+    display: block;
+    float: right;
+    margin: 2px;
+    background: url(http://119.10.57.69:880/jnshu265/pic/task8-sprites.png) no-repeat;
+    width: 27px;
+    height: 24px;
+    background-position: -49px 0;
+}
+
+#naviga {
+    color: #fff;
+    margin:2vw 0;
+    background:none;
+}
+.active {
+    border-bottom: solid #fff ;
+
+}
+.nav-hover:hover {
+    border-bottom: solid #fff ;
+}
+.logos {
+    padding:0;
+}
+.logo {
+    margin:2vw 0;
+}
+
+.homepage {
+    margin:2vw 0;
+}
+.tittle {
+    width: 98.79vw;
+}
+.companies {
+    padding:0;
+    background: #fff;
+    border: #ededed .1vw solid;
+    -webkit-border-radius: 2%;
+    -moz-border-radius: 2%;
+    border-radius:2%;
+    box-shadow: 1px 1px 1px 1px #ededed;
+}
+
+.company li {
+    margin-left: 7vw;
+    position: relative;
+}
+li.list-group-item {
+    border:none;
+    border-bottom: .1vw solid #ededed;
+    margin:0;
+    text-align: center;
+}
+.background {
+    display: block;
+    position: absolute;
+    left: -1vw;
+    top: .95vw;
+    width:1rem;
+    height:1rem;
+    border: .1vw solid #f99e6a;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+}
+.company li a:link {
+    color: #29b078;
+}
+.company li a:visited{
+     color: #f99e6a;
+    }
+.main-body {
+    margin-bottom:10vw;
+    padding:0;
+    background: #fff;
+    border: #ededed .1vw solid;
+    -webkit-border-radius: 2%;
+    -moz-border-radius: 2%;
+    border-radius: 2%;
+    box-shadow: 1px 1px 1px 1px #ededed;
+    color: #b5b5b5;
+
+}
+.introdution {
+    border-bottom:.1vw solid #e6e6e6 ;
+    overflow: hidden;
+}
+.brief-introdution {
+    margin:2vw;
+}
+.paragraph {
+    margin-top:2vw;
+}
+
+
+
+
+
+
+
+.footbox {
+    margin-bottom: 2vw;
+}
+.links li {
+    color: #e0e0e0;
+}
+.col-md-1 a {
+    font-size:.9rem;
+    color: #e0e0e0;
+}
+.footbox1 {
+    background: #29b078;
+    color: #fff;
+    padding-bottom: 1rem;
+    border-bottom: solid #32c086 .2vw;
+}
+.barcode {
+    width: 7vw;
+}
+.about-us {
+    margin-top:5rem;
+}
+.about-us a {
+    color: #fff;
+}
+.ourwebs {
+    margin-top: 2rem;
+}
+.ourwebs a {
+    color: #fff;
+}
+.footbox2 {
+    background: #29b078;
+    color: #fff;
+}

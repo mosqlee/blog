@@ -74,15 +74,15 @@ span.phonenum {
 .nav-list li {
     padding:8px;
 }
-#active a,
-#active a:focus,
-#active a:hover
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover
 {
     background: #29b078;
     color: #fff;
 }
-#more a:focus,
-#more a:hover
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>li>a:hover
 {
     background: #29b078;
     color: #fff;
@@ -140,7 +140,10 @@ span.phonenum {
 .hover{
     position: relative;
 }
-.hidden-hover {
+.hover:hover .hidden-hover {
+    opacity: 0.7;
+}
+div.hidden-hover {
     position: absolute;
     width:100%;
     padding:2vw ;
@@ -149,9 +152,7 @@ span.phonenum {
     background: #000;
     opacity: 0;
 }
-.hover:hover .hidden-hover {
-    opacity: 0.7;
-}
+
 .footbox {
     margin-bottom: 2vw;
 }

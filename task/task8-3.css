@@ -74,16 +74,11 @@ span.phonenum {
 .nav-list li {
     padding:8px;
 }
-.navbar-default .navbar-nav>.active>a,
-.navbar-default .navbar-nav>.active>a:focus,
-.navbar-default .navbar-nav>.active>a:hover
-{
+#active {
     background: #29b078;
     color: #fff;
 }
-.navbar-default .navbar-nav>li>a:focus,
-.navbar-default .navbar-nav>li>a:hover
-{
+#more {
     background: #29b078;
     color: #fff;
 }

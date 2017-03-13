@@ -12,9 +12,12 @@ main {
     margin-top:6px;
 }
 span.phonenum {
-    float:left;
+    float: left;
     color: #29b078;
-
+}
+a.login {
+    padding-right:.5vw;
+    border-right:#29b078 solid .5vw;
 }
 .background1 {
     display: block;
@@ -68,7 +71,7 @@ span.phonenum {
 strong {
     font-size:7rem;
 }
-div.item active {
+.item {
     position: relative;
 }
 .carousel-caption {
@@ -76,13 +79,13 @@ div.item active {
     bottom:30%;
 }
 .slogen1 {
-    font-size:4rem;
+    font-size:2vw;
 }
 .slogen2 {
-    font-size:5rem;
+    font-size:3vw;
 }
 .text {
-    margin-top:160px;
+    margin-top:10vw;
 }
 .trim {
     margin-top: 8px;
@@ -211,4 +214,44 @@ div.tittle {
 .footbox2 {
     background: #29b078;
     color: #fff;
+}
+@media all and (max-width: 425px) {
+    .tag p {
+        text-align: center;
+    }
+    .aside {
+        text-align: center;
+    }
+    .flexbox {
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
+        margin-top: 8vw;
+    }
+    .companies {
+        text-align: center;
+    }
+    .footbox {
+        display: none;
+    }
+    .circle {
+        display: block;
+        float: left;
+        width: 2rem;
+        height: 2rem;
+        -webkit-border-radius:50%;
+        -moz-border-radius:50%;
+        border-style: solid;
+        border-radius:50%;
+        border-color: #fff;
+        border-width: 1px;
+        box-shadow: 1px 1px 1px 1px #a8a8a8;
+        background-color: #fff;
+
+    }
+    .circle span {
+        line-height:2rem;
+        font-size: 1rem;
+        color: #29b078;
+    }
 }

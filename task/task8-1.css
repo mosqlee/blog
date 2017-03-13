@@ -74,6 +74,9 @@ strong {
 .item {
     position: relative;
 }
+.item img {
+    width:100%;
+}
 .carousel-caption {
     position: absolute;
     bottom:30%;

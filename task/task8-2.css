@@ -1,3 +1,4 @@
+
 main {
     background-color: #fafafa;
 }
@@ -13,10 +14,14 @@ main {
     margin-top:6px;
 }
 span.phonenum {
-    float:left;
+    float: left;
     color: #29b078;
-
 }
+a.login {
+    padding-right:.5vw;
+    border-right:#29b078 solid .5vw;
+}
+
 .background1 {
     display: block;
     float: right;
@@ -75,7 +80,8 @@ span.phonenum {
     margin:2vw 0;
 }
 .tittle {
-    width: 98.79vw;
+    width: 100%;
+    overflow: hidden;
 }
 .companies {
     padding:0;
@@ -175,7 +181,8 @@ li.list-group-item {
         text-align: center;
     }
     .paragraph {
-        margin:0 2vw;
+        margin:0;
+        padding:0;
     }
     .introdution {
         margin:0 1vw;

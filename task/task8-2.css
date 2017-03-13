@@ -55,6 +55,12 @@ span.phonenum {
     border-bottom: solid #fff ;
 
 }
+.slogen1 {
+    font-size:2vw;
+}
+.slogen2 {
+    font-size:3vw;
+}
 .nav-hover:hover {
     border-bottom: solid #fff ;
 }

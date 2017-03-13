@@ -257,4 +257,7 @@ div.tittle {
         font-size: 1rem;
         color: #29b078;
     }
+    .background4 {
+        display: none;
+    }
 }

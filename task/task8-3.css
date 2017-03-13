@@ -120,6 +120,9 @@ a.login {
     padding:.5rem;
 }
 
+table {
+    margin-top: 1vw;
+}
 .table-bordered td {
     padding:.5rem;
     color: #c6c6c6;

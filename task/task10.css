@@ -2,11 +2,11 @@ header {
     background-color: #1d7ad9;
 }
 .login {
-    color: #fff;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
     border-style: none;
+    color: #fff;
 }
 .regist {
     width: 80px;
@@ -22,12 +22,12 @@ nav-list {
     margin:3vh 0 0;
 }
 .nav-list li {
-    background: #fff;
     margin:0 2vw;
     border: solid 1px #e6e6e6;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
+    background: #fff;
 }
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
     color: #fff;
@@ -69,43 +69,43 @@ nav-list {
 }
 /*步骤描述*/
 .steps li {
-    list-style-type: none;
+    position: relative;
+    float: left;
     font-size: 12px;
     text-align: center;
     width: 25%;
-    position: relative;
-    float: left;
+    list-style-type: none;
 }
 
 /*步骤数字*/
 .steps li:before {
     display: block;
+    margin: 0 auto 8px auto;
     content: counter(step); /*设定计数器内容*/
     counter-increment: step;  /*计数器值递增*/
     width: 32px;
     height: 32px;
-    background-color: #f99e6a;
     line-height: 32px;
     border-radius: 32px;
     font-size: 16px;
     color: #fff;
     text-align: center;
     font-weight: 700;
-    margin: 0 auto 8px auto;
+    background-color: #f99e6a;
 }
 .steps li.active:before {
     background-color: #777;
 }
 /*连接线*/
 .steps li ~ li:after {
-    content: '';
-    width: 100%;
-    height: 2px;
-    background-color: #f99e6a;
     position: absolute;
     left: -100%;
     top: 15px;
     z-index: -1; /*放置在数字层后面*/
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #f99e6a;
 }
 
 /*将当前/完成步骤之前连接线变绿*/
@@ -176,14 +176,14 @@ input[type='radio'].radio1 {
     opacity:0;
 }
 label.radio1 {
-    background:url(http://119.10.57.69:880/jnshu265/pic/task10/blankdot.png) no-repeat;
     height:20px;
     padding-left:25px;
+    background:url(http://119.10.57.69:880/jnshu265/pic/task10/blankdot.png) no-repeat;
 }
 input[type='radio'].radio1:checked + .radio1 {
-    background:url(http://119.10.57.69:880/jnshu265/pic/task10/dot.png) no-repeat;
     height:20px;
     padding-left:25px;
+    background:url(http://119.10.57.69:880/jnshu265/pic/task10/dot.png) no-repeat;
 }
 form {
     margin: 0 2vw;
@@ -216,16 +216,16 @@ select {
 }
 .btn-container {
     padding: 10vh 0;
-    border: #e6e6e6 solid 1px;
     margin-bottom: 5vh;
+    border: #e6e6e6 solid 1px;
 }
 .btn-container button {
     width: 20vw;
 
 }
 .footer-box {
-    background-color: #e6e6e6;
     padding: 5vh 0;
+    background-color: #e6e6e6;
 }
 .web-info {
     height: 8vh;
@@ -247,10 +247,10 @@ h5 {
 @media all and (max-width: 600px) {
     .border-left-right {
         display: block;
+        padding: 2vh 0 3vh;
         border-left: #e6e6e6 solid 1px;
         border-right: #e6e6e6 solid 1px;
         border-bottom: #e6e6e6 solid 1px;
-        padding: 2vh 0 3vh;
     }
 
     .unit {

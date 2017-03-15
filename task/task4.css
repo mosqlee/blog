@@ -17,7 +17,8 @@ header {width: 100%;
 p {
     position: absolute;
     left: 45vw;
-    top: -2.5vw;}
+    top: -2.5vw;
+}
 .register {
     position: absolute;
     right:4.2vw;
@@ -31,11 +32,12 @@ p {
     margin-top: 15.2vw;
     position: absolute;}
 .psw {
+    position: absolute;
     width:100%;
+    top: 33.48vw;
     height: 15.2vw;
     background-color: white;
-    margin-top: 33.48vw;
-    position: absolute;}
+}
 .phone {
     position: absolute;
     left: 5.5vw;

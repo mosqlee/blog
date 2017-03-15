@@ -1,0 +1,87 @@
+.font-5 {
+  font-size: 5vw;
+}
+body {
+  margin: 0;
+  background-color: #e1e5e7;
+}
+header {
+  position: fixed;
+  width: 100%;
+  height: 12.5vw;
+  z-index: -1;
+  font-size: 5vw;
+  background-color: #9ed2dd;
+}
+header p {
+  position: absolute;
+  top: -2.5vw;
+  left: 45vw;
+  color: #ffffff;
+}
+header a {
+  color: #ffffff;
+}
+header .close {
+  position: absolute;
+  top: 2.8vw;
+  left: 4.2vw;
+  text-decoration: none;
+}
+header .register {
+  position: absolute;
+  top: 2.8vw;
+  right: 4.2vw;
+  text-decoration: none;
+}
+.account {
+  position: absolute;
+  top: 15.2vw;
+  width: 100%;
+  height: 15vw;
+  background-color: #fff;
+}
+.account img {
+  position: absolute;
+  top: 5vw;
+  left: 5.5vw;
+  width: 4.2vw;
+}
+.psw {
+  position: absolute;
+  top: 33vw;
+  width: 100%;
+  height: 15.2vw;
+  background-color: #fff;
+}
+.psw img {
+  position: absolute;
+  top: 5vw;
+  left: 5.5vw;
+  width: 4.2vw;
+}
+input {
+  position: absolute;
+  top: 5vw;
+  left: 20vw;
+  border-style: none;
+  outline: none;
+  font-size: 5vw;
+}
+button {
+  position: absolute;
+  top: 52vw;
+  width: 100%;
+  height: 10vw;
+  font-size: 5vw;
+  border: none;
+  background: none #9ed2dd;
+  color: #ffffff;
+}
+.forgetpsw {
+  position: absolute;
+  top: 66vw;
+  right: 1vw;
+  font-size: 3vw;
+  color: #9ed2dd;
+}

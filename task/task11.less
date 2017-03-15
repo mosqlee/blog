@@ -1,0 +1,98 @@
+@width: 100px;
+@color-blue: #9ed2dd;
+@color-gray: #e1e5e7;
+@color-white: #fff;
+.whiteback() {
+  background-color: #fff;
+}
+.font-5 {
+  font-size: 5vw;
+}
+.posf() {
+  position: fixed;
+  width: 100%;
+  height: 12.5vw;
+  z-index: -1;
+  font-size: 5vw;
+  background-color: @color-blue;
+}
+.posa(@_,@left-or-right-distance,@top-distance) {
+  position: absolute;
+  top: @top-distance;
+}
+.posa(left,@left-or-right-distance,@top-distance) {
+  left: @left-or-right-distance;
+}
+.posa(right,@left-or-right-distance,@top-distance) {
+  right: @left-or-right-distance;
+}
+.posa(width100,@height,@top-distance) {
+  width: 100%;
+  height: @height;
+}
+.nav(){
+  .posa();
+  text-decoration: none;
+  color: @color-white;
+}
+
+body {
+  margin: 0;
+  background-color: @color-gray;
+}
+header {
+  .posf();
+  p {
+    .posa(left,45vw,-2.5vw);
+    color: @color-white;
+  }
+  a {
+    color: @color-white;
+  }
+  .close {
+    .posa(left,4.2vw,2.8vw);
+    text-decoration: none;
+  }
+  .register {
+    .posa(right,4.2vw,2.8vw);
+    text-decoration: none;
+  }
+}
+.account {
+  .posa(width100, 15vw, 15.2vw);
+  .whiteback();
+  img {
+    .posa(left,5.5vw,5vw);
+    width: 4.2vw;
+  }
+}
+.psw {
+  .posa(width100, 15.2vw, 33vw);
+  .whiteback();
+  img {
+    .posa(left,5.5vw,5vw);
+    width: 4.2vw;
+  }
+}
+input {
+  .posa(left,20vw,5vw);
+  border-style: none;
+  outline: none;
+  .font-5()
+}
+button {
+  .posa(width100,10vw,52vw);
+  .font-5();
+  border: none;
+  background: none @color-blue;
+  color: @color-white;
+}
+.forgetpsw {
+  .posa(right,1vw,66vw);
+  font-size: 5vw-2vw;
+  color: @color-blue;
+}
+
+
+
+

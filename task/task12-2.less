@@ -1,0 +1,131 @@
+@charset "UTF-8";
+/*
+---------------------------------
+Site: http://zengyupei.cn
+Author: zengyupei.cn
+Updated: 2017/3/16 and 15:30
+Updated by: Mosqlee
+---------------------------------
+*/
+/*
+---------------------------------
+COLORS
+nav-Body background: #5fc0cd
+font-color: gray:#a8a8a8,blue:#5fc0cd,red:#ff4f00,white:#fff,blasck:#000
+Container background: #fff #5fc0cd
+Main Text: #000 #a8a8a8
+Links: none
+Visited links: none
+Hover links: none
+H1, H2, H3: #960
+H4, H5, H6: #000
+---------------------------------
+*/
+/*通用参数*/
+@color-blue: #5fc0cd;
+@color-gray: #d3d3d3;
+@color-red: #e63b0e;
+@color-white: #fff;
+@font-normal: 1.5rem;
+//背景图片
+.sprites(@y,@w:18px,@h:18px) {
+  display: inline-block;
+  float: left;
+  width: @w;
+  height: @h;
+  background: url(http://119.10.57.69:880/jnshu265/pic/sprites2.png) no-repeat 0 @y;
+}
+//弹性模型
+.flex(@row:center,@column:center) {
+  display: flex;
+  justify-content: @row;
+  align-items: @column;
+}
+//超过一行出现省略
+.hidden-dot () {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  display: -webkit-box;
+  line-clamp: 1;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+//字体，有默认样式。
+.font(@font-size:@font-normal,@line-height: 3rem,@font-color:@color-gray,@font-wight: 900) {
+  font: normal @font-wight @font-size/@line-height  "宋体";
+  color: @font-color;
+}
+//顶部navigation 按钮
+.top-button {
+  .flex();
+  background-color: #5fc0cd;
+  .btn-info {
+    background-color: #55a8b3;
+    font-size: @font-normal+0.3rem;
+    margin:1vw 0;
+  }
+  .btn-default {
+    font-size: 1.8rem;
+  }
+}
+
+//location小图标
+.location {
+  .flex();
+  position: absolute;
+  right: @font-normal - 1rem;
+  img {
+    width: 70%;
+    object-fit: contain;
+  }
+}
+//顶部下拉按钮
+.container {
+  width: 100%;
+  border-bottom: solid .1vw @color-gray;
+  .col-xs-4 {
+    padding: 0;
+  }
+  .form-control {
+    border: none;
+    font-size: @font-normal;
+    color: @color-gray;
+    border-radius: 0;
+    padding-left: 6vw;
+  }
+}
+//表格
+.table {
+  margin-top: 7rem;
+  .background1 {
+    .sprites(0);
+  }
+  .background2 {
+    .sprites(-18px);
+  }
+  .font1 {
+
+  .font(@line-height: 0;);
+    margin-left:1vw;
+  }
+  .font2 {
+    margin: 0 0 0 2vw;
+  .font(@font-color: #000,@font-wight: 500);
+    .hidden-dot();
+  }
+  .price {
+    .font(@font-color: @color-red)
+  }
+}
+//底部按钮
+.navbar-fixed-bottom {
+  .flex(space-between,center);
+  .foot {
+    width: @font-normal*2;
+  }
+  .foot2 {
+    width: @font-normal*4;
+  }
+}
+

@@ -1,0 +1,112 @@
+@charset "UTF-8";
+/*
+---------------------------------
+Site: http://zengyupei.cn
+Author: zengyupei.cn
+Updated: 2017/3/16 and 15:30
+Updated by: Mosqlee
+---------------------------------
+*/
+/*
+---------------------------------
+COLORS
+nav-Body background: #5fc0cd
+font-color: gray:#a8a8a8,blue:#5fc0cd,red:#ff4f00,white:#fff,blasck:#000
+Container background: #fff #5fc0cd
+Main Text: #000 #a8a8a8
+Links: none
+Visited links: none
+Hover links: none
+H1, H2, H3: #960
+H4, H5, H6: #000
+---------------------------------
+*/
+/*通用参数*/
+.top-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #5fc0cd;
+}
+.top-button .btn-info {
+  background-color: #55a8b3;
+  font-size: 1.8rem;
+  margin: 1vw 0;
+}
+.top-button .btn-default {
+  font-size: 1.8rem;
+}
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0.5rem;
+}
+.location img {
+  width: 70%;
+  object-fit: contain;
+}
+.container {
+  width: 100%;
+  border-bottom: solid 0.1vw #d3d3d3;
+}
+.container .col-xs-4 {
+  padding: 0;
+}
+.container .form-control {
+  border: none;
+  font-size: 1.5rem;
+  color: #d3d3d3;
+  border-radius: 0;
+  padding-left: 6vw;
+}
+.table {
+  margin-top: 7rem;
+}
+.table .background1 {
+  display: inline-block;
+  float: left;
+  width: 18px;
+  height: 18px;
+  background: url(http://119.10.57.69:880/jnshu265/pic/sprites2.png) no-repeat 0 0;
+}
+.table .background2 {
+  display: inline-block;
+  float: left;
+  width: 18px;
+  height: 18px;
+  background: url(http://119.10.57.69:880/jnshu265/pic/sprites2.png) no-repeat 0 -18px;
+}
+.table .font1 {
+  font: normal 900 1.5rem/0 "宋体";
+  color: #d3d3d3;
+  margin-left: 1vw;
+}
+.table .font2 {
+  margin: 0 0 0 2vw;
+  font: normal 500 1.5rem/3rem "宋体";
+  color: #000000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  display: -webkit-box;
+  line-clamp: 1;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.table .price {
+  font: normal 900 1.5rem/3rem "宋体";
+  color: #e63b0e;
+}
+.navbar-fixed-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-fixed-bottom .foot {
+  width: 3rem;
+}
+.navbar-fixed-bottom .foot2 {
+  width: 6rem;
+}

@@ -1,0 +1,165 @@
+@charset "UTF-8";
+/*
+---------------------------------
+Site: http://zengyupei.cn
+Author: zengyupei.cn
+Updated: 2017/3/15 and 21:00
+Updated by: Mosqlee
+---------------------------------
+*/
+/*
+---------------------------------
+COLORS
+nav-Body background: #5fc0cd
+font-color: gray:#a8a8a8,blue:#5fc0cd,red:#ff4f00,white:#fff,blasck:#000
+Container background: #fff #5fc0cd
+Main Text: #000 #a8a8a8
+Links: none
+Visited links: none
+Hover links: none
+H1, H2, H3: #960
+H4, H5, H6: #000
+---------------------------------
+*/
+//通用参数
+@font: 5vw;
+@color-blue: #5fc0cd;
+@color-gray: #a8a8a8;
+@color-red: #ff4f00;
+@color-white: #fff;
+//弹性布局
+.flex() {
+    display: flex;
+}
+//头部定位
+.fixed() {
+    position: fixed;
+    .flex();
+    z-index: 1;
+    width: 100%;
+}
+/*绝对定位*/
+.posa(@left-distance,@top-distance) {
+    position: absolute;
+    left: @left-distance;
+    top: @top-distance;
+}
+//来两个边框函数
+.border (left,@width:.1vw,@border-color: @color-gray) {
+    border-left: @width @border-color solid;
+}
+.border (bottom,@width:.1vw,@border-color: @color-gray) {
+    border-bottom: @width @border-color solid;
+}
+//字体函数
+.font(@font-size:5vw,@line-height: 10vw,@font-color:@color-gray,@font-wight: 900) {
+    font: normal @font-wight @font-size/@line-height  "宋体";
+    color: @font-color;
+}
+.button(@back-color: @color-blue,@color: #fff) {
+    border: .5vw @color-blue solid;
+    color: @color;
+    width: 41.67vw;
+    height:12.5vw;
+    font-size: @font;
+    background: none @back-color;
+    border-radius:1vw;
+}
+body {
+    margin: 0;
+}
+/*我来组成头部*/
+header {
+    .fixed();
+    top: 0;
+    align-items: center;
+    height: @font*2.2;
+    background-color: @color-blue;
+    a {
+        .flex();
+        margin-right: 33vw;
+        img {
+            margin-left:3vw;
+            width:3vw;
+            object-fit:contain;
+        }
+    }
+    h1 {
+        .font(5vw,10vw,#fff);
+
+    }
+}
+/*我来组成底部*/
+footer {
+    .fixed();
+    justify-content: space-around;
+    bottom: @font/5;
+    .first-button {
+        .button(@color-white, @color-blue)
+    }
+    .second-button {
+        .button(@color-blue, @color-white)
+    }
+}
+/*图片简介*/
+.introduce-img {
+    .posa(0,11vw);
+    position: relative;
+        width: 100%;
+        height: 45.83vw;
+    background: url(http://119.10.57.69:880/jnshu265/pic/background.png) no-repeat ;
+    -webkit-background-size: cover;
+    background-size: cover;
+    .head {
+        width: 23.61vw;
+        margin:10vw 0 0 6vw;
+        border-radius:50%;
+    }
+    .name {
+        .posa(34.4vw,7vw);
+        .font(5vw,10vw,#fff);
+    }
+    .adress {
+        .posa(34.4vw,22vw);
+        .font(3vw,10vw,#fff)
+
+    }
+}
+/*表单*/
+.table {
+    .flex();
+    flex-direction: column;
+    .posa(0,56.5vw);
+    [class$="floor"] {
+        margin-left: @font+0.56vw;
+        .border(bottom);
+        .font(4.5vw,10vw,#000,900)
+    }
+    [class$="left"] {
+        color: @color-gray;
+    }
+    [class$="right"] {
+        padding-left: 5.56vw;
+        .border(left)
+    }
+    .first-floor {
+        .flex();
+        margin: 0;
+        padding-right: @font;
+        .introduce-detail {
+            .font(3.5vw,6vw,#000,600)
+        }
+        .introduce-by-self {
+            flex-shrink: 0;
+            align-self: center;
+            margin: 0 2vw 0 5vw;
+        }
+        .skill {
+            margin: 3.56vw;
+            padding-left: 2vw;
+            .border(left,1vw,@color-blue);
+            line-height: 4.5vw;
+        }
+    }
+
+}

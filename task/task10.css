@@ -103,7 +103,7 @@ nav-list {
     top: 15px;
     z-index: -1; /*放置在数字层后面*/
     content: '';
-    width: 100%;
+    width: 200%;
     height: 2px;
     background-color: #f99e6a;
 }

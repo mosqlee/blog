@@ -64,6 +64,13 @@ H4, H5, H6: #000
 .table {
   margin-top: 7rem;
 }
+.table .date11 {
+  border-top: 0;
+}
+.table .prices {
+  text-align: center;
+  vertical-align: middle;
+}
 .table .background1 {
   display: inline-block;
   float: left;
@@ -84,7 +91,8 @@ H4, H5, H6: #000
   margin-left: 1vw;
 }
 .table .font2 {
-  margin: 0 0 0 2vw;
+  text-align: center;
+  margin: 0;
   font: normal 500 1.5rem/3rem "宋体";
   color: #000000;
   overflow: hidden;

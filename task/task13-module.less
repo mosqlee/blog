@@ -20,19 +20,81 @@ Hover links: none
 @color-light-blue: #b9e9f5;
 @color-white: #fff;
 @color-black: #000;
-
+@color-orange: #f8b445;
+//顶部fixed
+.nav-top() {
+    .fixed(top);
+    .flex();
+    //display: flex;
+    //justify-content: space-between;
+    //align-items: center;
+}
+//底部fixed
+.nav-bottom() {
+    .fixed(bottom);
+    .flex();
+}
+//菜单图标
 .menu（）{
-    .flex(@column: center);
-    display:flex;
-    align-items: center;
+    .flex(@row: flex-start);
+    //display:flex;
+    //align-items: center;
     height: 5.5rem;
     padding-left:1rem;
     background-color: @color-blue;
-    .oblong() {
+    div {
         width: 2rem;
         height: .25rem;
         background-color: @color-white;
         margin: .5rem;
     }
 }
+//底部小点组
+.dot-group {
+  .flex();
+  //display: flex;
+  //flex-direction:row;
+  margin-bottom: 1rem;
+  div {
+    width:1rem;
+    height: 1rem;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+    background-color: @color-white;
+  }
+  .dot1 {
+    background: @color-blue;
+  }
+}
+//侧边三角
+.triangle () {
+    .fixed(right);
+    width: 2rem;
+}
+//背景大框标题
+.bh() {
+    padding:3rem 30vw;
+    color: @color-white;
+}
+//按钮
+.btn(@width:40vw) {
+    display: block;
+    margin: 0 auto;
+    width: @width;
+    border: none;
+    border-radius: 10px;
+    background-color: @color-orange;
+}
+//九宫格正方形容器，里面元素弹性布局
+.square() {
+  .flex(@direction: column);
+  float: left;
+  width: 21vw;
+  height: 21vw;
+  margin:5.9vw 5.9vw 2vw;
+  border: .8vw solid @color-white;
+  background-color: @color-orange;
+}
+//不hover隐藏，hover显示。
 

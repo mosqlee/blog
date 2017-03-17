@@ -1,0 +1,38 @@
+@charset "UTF-8";
+@import url(../task/task13-layout.less);
+//This less doc is used to writting some module of the project
+/*
+---------------------------------
+COLORS
+nav-Body background: BLUE,#69d1e9,gray:#f0f0f0,light-blue:#b9e9f5
+font-color: gray:#a8a8a8,white:#fff,black:#000
+Container background: #fff BLUE,#69d1e9
+Main Text: #000 #a8a8a8
+button:red#f37072,yellow#f8b445
+Links: none
+Visited links: none
+Hover links: none
+---------------------------------
+*/
+// common variable
+@color-blue: #69d1e9;
+@color-gray: #f0f0f0;
+@color-light-blue: #b9e9f5;
+@color-white: #fff;
+@color-black: #000;
+
+.menu（）{
+    .flex(@column: center);
+    display:flex;
+    align-items: center;
+    height: 5.5rem;
+    padding-left:1rem;
+    background-color: @color-blue;
+    .oblong() {
+        width: 2rem;
+        height: .25rem;
+        background-color: @color-white;
+        margin: .5rem;
+    }
+}
+

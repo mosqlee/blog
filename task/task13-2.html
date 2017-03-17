@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task13-2</title>
+    <meta name="viewport" content="width= device-width, inital-scale=1, user-scalable=no">
+</head>
+<body>
+<header>
+<nav class="fixed-top">
+    <div class="vote-head">
+        <a href="" class="menu"><img src="http://119.10.57.69:880/jnshu265/pic/menu.png"></a>
+        <span class="vote">投票</span>
+        <a class="back" href="http://zengyupei.cn/task/task7-1.html">
+            <span class="vote">X</span>
+        </a>
+    </div>
+</nav>
+    <div class="filler"></div>
+</header>
+<main>
+    <div class="audio-play">
+        <div class="fixed">
+            <h3 class="tittle">发言讨论结束，大家请投票</h3>
+            <audio id="test" src="http://119.10.57.69:880/jnshu265/music/badsong.mp3">
+            </audio>
+            <button class="play" type="button" onclick="play()"><img class="start" src="http://119.10.57.69:880/jnshu265/pic/start.png">
+            </button>
+        </div>
+    </div>
+    <img class="point" src="http://119.10.57.69:880/jnshu265/pic/point.png">
+    <h4>点击得票数最多人的头像</h4>
+    <div class="selection">
+        <div class="square">
+            <div class="degree"><span>水民</span></div>
+            <div class="num"><span>1号</span></div>
+        </div>
+        <div class="hidden-icon">
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/kill.png"></a>
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/search.png"></a>
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/position.png"></a>
+            <a href="" class="icon"><img class="pictrue" src="http://119.10.57.69:880/jnshu265/pic/heal.png"></a>
+        </div>
+    </div>
+</main>
+<footer>
+    <nav class="fixed-bottom">
+        <button class="submit" type="button" onclick="window.location.href='http://zengyupei.cn/task/task7-3.html'">
+            投死
+        </button>
+    </nav>
+</footer>
+<script>
+    var isPlaying = false;
+    function play() {
+        var player = document.getElementById('test');
+        if (isPlaying){
+            player.pause();
+            player.src = "";
+            isPlaying = false;
+        } else {
+            player.src = "http://119.10.57.69:880/jnshu265/music/badsong.mp3";
+            player.play();
+            isPlaying = true;
+        }
+    }
+</script>
+</body>
+</html>

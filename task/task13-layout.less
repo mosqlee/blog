@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/*
+this stylesheet fuction is css reset and reduce the diffrence between browser, make the css be in common use.
+---------------------------------*/
+/*
+---------------------------------
+Site: http://zengyupei.cn
+Author: zengyupei.cn
+Updated: 2017/3/16 and 11:00
+Updated by: Mosqlee
+---------------------------------
+*/
+//common layout
+.flex(@row: space-between,@column: center,@direction: row) {
+  display: flex;
+  justify-content: @row;
+  align-items: @column;
+  flex-direction: @direction;
+}
+.fixed(top) {
+  position: fixed;
+  width: 100%;
+  background: @color-blue;
+}
+.fixed(bottom) {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: @color-light-blue;
+}
+.fixed(right) {
+  position: fixed;
+  right: 2.5rem;
+  top: 36rem;
+}

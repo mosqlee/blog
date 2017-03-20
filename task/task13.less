@@ -1,5 +1,206 @@
+@charset "UTF-8";
+@import url(../task/task13-reset.less);
+@import url(../task/task13-layout.less);
+@import url(../task/task13-module.less);
+//This less doc is used to writting some module of the project
+/*
+---------------------------------
+COLORS
+nav-Body background: BLUE,#69d1e9,gray:#f0f0f0,light-blue:#b9e9f5
+font-color: gray:#a8a8a8,white:#fff,black:#000
+Container background: #fff BLUE,#69d1e9
+Main Text: #000 #a8a8a8
+button:red#f37072,yellow#f8b445
+Links: none
+Visited links: none
+Hover links: none
+---------------------------------
+*/
+//
+body {
+  background: @color-blue;
+}
+.body {
+  background: @color-gray;
+}
+.fixed-top {
+  .nav-top();
+  //top: 0;
+  height: 15vh;
+  .menu {
+    .menu();
+    /*page 2*/
+    img {
+      width: 6vw;
+    }
+  }
+  /*page 3*/
+  .result {
+    .font(@font-color: @color-white,@font-wight: 300)
+  }
+  }
+/*page 2*/
+.vote {
+  .font(@font-size: 6vw,@font-color: @color-white);
+  margin-right:3vw;
+}
+.game-play {
+  background: @color-blue;
+  .audio-play {
+    .flex(space-around);
+    height: 15vh;
+    background: @color-light-blue;
+    button {
+      border: none;
+      background: none;
+      &:visited {
+        border: none;
+      }
+    }
 
+  }
+  .point {
+    .flex();
+    margin-left: 2vw;
+  }
+  h4 {
+    .font(@font-color: @color-white,@font-size: 4vw,@line-height: 0,@font-wight: 300);
+    margin-left: 2vw;
+  }
+  .selection {
+    .square {
+      .square();
 
+    }
+    .hidden-icon {
+      .hidden-icon()
+    }
+    .selection();
+  }
+}
+
+.degree {
+  margin-bottom: 6vw;
+  font-size:4vw;
+}
+.num {
+  width: 21vw;
+  text-align: center;
+  font-size:3vw;
+  color:#fff;
+  background-color: #83b09a;
+}
+/*page 3*/
+.game-report {
+  text-align: center;
+  margin: 0 12vw;
+  .game-roles {
+    text-align: left;
+    p {
+      color: @color-white;
+    }
+    .victor-span {
+      .font(@font-color: @color-orange,@font-size: 3.5vw,@line-height: 5vw)
+    }
+  }
+}
+.game-daily {
+  padding: 2vh 12vw;
+  background: @color-white;
+  border-bottom: .2vw @color-gray solid;
+  .date {
+    font-size:3.5vw;
+  }
+  .time {
+    float: right;
+    color: #d6d6d6;
+    font-size: 2.5vw;
+  }
+  p {
+    .font(@font-size: 2.5vw,@font-color: #d6d6d6,@line-height: 2.5vw,@font-wight: 300)
+  }
+}
+.filler {
+  height: 15vh;
+}
+.tittle {
+  .flex(@row: space-around);
+  width: 80vw;
+  height: 20vh;
+  font-size: 3.9vw;
+  margin: 3vh 10vw 1.6rem;
+  background-color:white;
+  color: #a8a8a8;
+  p {
+    margin-left: 10vw;
+  }
+  img {
+  margin-top: .5rem;
+}
+}
+.icon img {
+  width: 4vw;
+}
+.unit-list {
+  .flex(@direction: column);
+  width: 80vw;
+  margin: 0 10vw;
+  background: @color-white;
+  text-align: center;
+  p {
+    .font(@font-size: 3.9vw,@line-height: 6vw,@font-color: @color-orange);
+    padding: 0 32vw 3vw;
+    border-bottom: solid .1rem @color-orange;
+  }
+  h3 {
+    .font(@font-color: @color-white);
+    padding: 5vh 25vw;
+    background: @color-blue;
+  }
+  img {
+    .triangle()
+  }
+  h5 {
+    font-weight: 300;
+  }
+}
+.dot-group {
+  .dot-group();
+  .dot1 {
+    .dot1()
+  }
+}
+/*page 2*/
+.fixed-bottom {
+  .nav-bottom();
+  .submit {
+    width:80vw;
+    margin:4vw 11vw;
+    text-align: center;
+    font-size:6vw;
+    color: #fff;
+    background-color: #fbb435;
+  }
+
+}
+.fixed-bottom2 {
+  .nav-bottom();
+  background: rgba(41,189,224,0.5);
+  .btn-danger {
+    width: 40vw;
+    border: none;
+    .font(@font-wight: 300,@font-color: @color-white);
+    background: #c9302c;
+  }
+  .btn-warning {
+    width: 40vw;
+    border: none;
+    margin:2vh 0;
+    .font(@font-wight: 300,@font-color: @color-white);
+    background: #ec971f;
+  }
+
+}
 
 
 

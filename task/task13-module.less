@@ -1,26 +1,32 @@
 @charset "UTF-8";
 @import url(../task/task13-layout.less);
 //This less doc is used to writting some module of the project
-/*
----------------------------------
-COLORS
-nav-Body background: BLUE,#69d1e9,gray:#f0f0f0,light-blue:#b9e9f5
-font-color: gray:#a8a8a8,white:#fff,black:#000
-Container background: #fff BLUE,#69d1e9
-Main Text: #000 #a8a8a8
-button:red#f37072,yellow#f8b445
-Links: none
-Visited links: none
-Hover links: none
----------------------------------
-*/
+
+//---------------------------------
+
+//COLORS
+//nav-Body background: BLUE,#69d1e9,gray:#f0f0f0,light-blue:#b9e9f5
+//font-color: gray:#a8a8a8,white:#fff,black:#000
+//Container background: #fff BLUE,#69d1e9
+//Main Text: #000 #a8a8a8
+//button:red#f37072,yellow#f8b445
+//Links: none
+//Visited links: none
+//Hover links: none
+//---------------------------------
+//
 // common variable
-@color-blue: #69d1e9;
+@color-blue: #29bde0;
 @color-gray: #f0f0f0;
 @color-light-blue: #b9e9f5;
 @color-white: #fff;
 @color-black: #000;
 @color-orange: #f8b445;
+//字体函数
+.font(@font-size:2rem,@line-height: 4rem,@font-color:@color-gray,@font-wight: 900) {
+  font: normal @font-wight @font-size/@line-height  "微软雅黑";
+  color: @font-color;
+}
 //顶部fixed
 .nav-top() {
     .fixed(top);
@@ -32,26 +38,26 @@ Hover links: none
 //底部fixed
 .nav-bottom() {
     .fixed(bottom);
-    .flex();
+    .flex(@row: space-around);
 }
 //菜单图标
-.menu（）{
+.menu() {
     .flex(@row: flex-start);
     //display:flex;
     //align-items: center;
-    height: 5.5rem;
-    padding-left:1rem;
+    height: 5.5vh;
+    padding-left:1vw;
     background-color: @color-blue;
     div {
-        width: 2rem;
-        height: .25rem;
+        width: 4vw;
+        height: 1vh;
         background-color: @color-white;
-        margin: .5rem;
+        margin: 1vw;
     }
 }
 //底部小点组
-.dot-group {
-  .flex();
+.dot-group() {
+  .flex(@row: center);
   //display: flex;
   //flex-direction:row;
   margin-bottom: 1rem;
@@ -61,16 +67,16 @@ Hover links: none
     -webkit-border-radius:50%;
     -moz-border-radius:50%;
     border-radius:50%;
-    background-color: @color-white;
+    background-color: @color-gray;
   }
-  .dot1 {
-    background: @color-blue;
-  }
+}
+.dot1() {
+  background: @color-blue;
 }
 //侧边三角
 .triangle () {
     .fixed(right);
-    width: 2rem;
+    width: 4vw;
 }
 //背景大框标题
 .bh() {
@@ -88,7 +94,7 @@ Hover links: none
 }
 //九宫格正方形容器，里面元素弹性布局
 .square() {
-  .flex(@direction: column);
+  .flex(@direction: column,@row: flex-end);
   float: left;
   width: 21vw;
   height: 21vw;
@@ -97,4 +103,16 @@ Hover links: none
   background-color: @color-orange;
 }
 //不hover隐藏，hover显示。
+.selection() {
+  height:32vw;
+  float: left;
+  width:32vw;
+  &:hover .hidden-icon {
+    opacity: 1;
+  }
+  }
 
+.hidden-icon() {
+  margin-left: 8vw;
+  opacity: 0;
+}

@@ -1,0 +1,152 @@
+@charset "UTF-8";
+/*
+this stylesheet fuction is css layout, make the css be in common use.
+---------------------------------*/
+///*
+//---------------------------------
+//Site: http://zengyupei.cn
+//Author: zengyupei.cn
+//Updated: 2017/3/21 and 16:43
+//Updated by: Mosqlee
+//---------------------------------
+//*/
+//var
+@grid-columns: 12;
+@screen-sm-min: 768px;
+@screen-md-min: 992px;
+@screen-lg-min: 1200px;
+.flex(@row: space-between,@column: center,@direction: row) {
+    display: flex;
+    justify-content: @row;
+    align-items: @column;
+    flex-direction: @direction;
+}
+.float-left() {
+    float: left;
+}
+//清除浮动
+.clearfix() {
+    &:before,
+    &:after {
+      content: '';
+      display: table;
+    }
+    &:after {
+      clear: both;
+    }
+    *room: 1;
+}
+//grid布局
+//容器
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.container-fluid {
+    .container
+}
+@media (min-width: @screen-sm-min) {
+    .container {
+      width: 750px;
+    }
+    .container-fluid {
+      width: 100%;
+    }
+}
+@media (min-width: @screen-md-min) {
+    .container {
+      width: 970px;
+    }
+    .container-fluid {
+      width: 100%;
+  }
+}
+@media (min-width: @screen-lg-min) {
+    .container {
+      width: 1170px;
+    }
+    .container-fluid {
+      width: 100%;
+  }
+}
+
+//行
+.row {
+    margin: 0 -15px;
+}
+//列
+//.make-grid-columns() {
+//  .col(@index) {
+//    float: left;
+//    @item: ~".col-xs-@{index}, .col-sm-@{index}, .col-md-@{index}, .col-lg-@{index}";
+//
+//    .col((@index+1), @item)
+//  }
+//  .col(@index,@list) when (@index =< @grid-columns) {
+//    @item: ~".col-xs-@{index}, .col-sm-@{index}, .col-md-@{index}, .col-lg-@{index}";
+//    .col((@index+1), ~"@{list}, @{item}")
+//  }
+//  .col(@index, @list) when (@index > @grid-columns) { // terminal
+//    @{list} {
+//      position: relative;
+//      // Prevent columns from collapsing when empty
+//      min-height: 1px;
+//      // Inner gutter via padding
+//      padding-left: ceil(15px);
+//      padding-right: floor(15px);
+//    }
+//  }
+//}
+.col-xs-loop(@n,@index:1) when (@index <= @n) {
+    .col-xs-@{index} {
+      position: relative;
+      float: left;
+      padding: 0 15px;
+      width: percentage((@index / @n));
+    }
+    .col-xs-loop(@n, (@index+1))
+}
+.col-sm-loop(@n,@index:1) when (@index <= @n) {
+    .col-sm-@{index} {
+      position: relative;
+      float: left;
+      padding: 0 15px;
+      width: percentage((@index / @n));
+    }
+    .col-sm-loop(@n, (@index+1))
+}
+.col-md-loop(@n,@index:1) when (@index <= @n) {
+    .col-md-@{index} {
+      position: relative;
+      float: left;
+      padding: 0 15px;
+      width: percentage((@index / @n));
+    }
+    .col-md-loop(@n, (@index+1))
+}
+.col-lg-loop(@n,@index:1) when (@index <= @n) {
+    .col-lg-@{index} {
+      position: relative;
+      float: left;
+      padding: 0 15px;
+      width: percentage((@index / @n));
+    }
+    .col-lg-loop(@n, (@index+1))
+}
+//媒体查询
+@media (max-width: @screen-sm-min) {
+    .col-xs-loop(@grid-columns)
+}
+@media (min-width: @screen-sm-min) {
+    .col-sm-loop(@grid-columns)
+}
+@media (min-width: @screen-md-min) {
+    .col-md-loop(@grid-columns)
+}
+@media (min-width: @screen-lg-min) {
+    .col-lg-loop(@grid-columns)
+}
+//文字居中
+.text-center {
+    text-align: center;
+}

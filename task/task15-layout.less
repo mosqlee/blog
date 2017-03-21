@@ -133,19 +133,50 @@ this stylesheet fuction is css layout, make the css be in common use.
     }
     .col-lg-loop(@n, (@index+1))
 }
+//offset栅格布局右偏移
+.col-xs-offset-loop(@n,@index:1) when (@index <= @n) {
+  .col-xs-offset-@{index} {
+    margin-left: percentage((@index / @n));
+  }
+  .col-xs-offset-loop(@n, (@index+1))
+}
+.col-sm-offset-loop(@n,@index:1) when (@index <= @n) {
+  .col-sm-offset-@{index} {
+    margin-left: percentage((@index / @n));
+  }
+  .col-sm-offset-loop(@n, (@index+1))
+}
+.col-md-offset-loop(@n,@index:1) when (@index <= @n) {
+  .col-md-offset-@{index} {
+    margin-left: percentage((@index / @n));
+  }
+  .col-md-offset-loop(@n, (@index+1))
+}
+.col-lg-offset-loop(@n,@index:1) when (@index <= @n) {
+  .col-lg-offset-@{index} {
+    margin-left: percentage((@index / @n));
+  }
+  .col-lg-offset-loop(@n, (@index+1))
+}
+
 //媒体查询
 @media (max-width: @screen-sm-min) {
-    .col-xs-loop(@grid-columns)
+    .col-xs-loop(@grid-columns);
+    .col-xs-offset-loop(@grid-columns)
 }
 @media (min-width: @screen-sm-min) {
-    .col-sm-loop(@grid-columns)
+    .col-sm-loop(@grid-columns);
+  .col-sm-offset-loop(@grid-columns)
 }
 @media (min-width: @screen-md-min) {
-    .col-md-loop(@grid-columns)
+    .col-md-loop(@grid-columns);
+  .col-md-offset-loop(@grid-columns)
 }
 @media (min-width: @screen-lg-min) {
-    .col-lg-loop(@grid-columns)
+    .col-lg-loop(@grid-columns);
+  .col-lg-offset-loop(@grid-columns)
 }
+
 //文字居中
 .text-center {
     text-align: center;

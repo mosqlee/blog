@@ -1,0 +1,486 @@
+@charset "UTF-8";
+/*
+this stylesheet fuction is css layout, make the css be in common use.
+---------------------------------*/
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.container-fluid {
+  margin: 0 auto;
+  padding: 0 15px;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+  .container-fluid {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+  .container-fluid {
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+  .container-fluid {
+    width: 100%;
+  }
+}
+.row {
+  margin: 0 -15px;
+}
+/*列*/
+/*offset栅格布局右偏移*/
+/*媒体查询*/
+@media (max-width: 768px) {
+  .col-xs-1 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 8.33333333%;
+  }
+  .col-xs-2 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 16.66666667%;
+  }
+  .col-xs-3 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 25%;
+  }
+  .col-xs-4 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 33.33333333%;
+  }
+  .col-xs-5 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 41.66666667%;
+  }
+  .col-xs-6 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 50%;
+  }
+  .col-xs-7 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 58.33333333%;
+  }
+  .col-xs-8 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 66.66666667%;
+  }
+  .col-xs-9 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 75%;
+  }
+  .col-xs-10 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 83.33333333%;
+  }
+  .col-xs-11 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 91.66666667%;
+  }
+  .col-xs-12 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 100%;
+  }
+  .col-xs-offset-1 {
+    margin-left: 8.33333333%;
+  }
+  .col-xs-offset-2 {
+    margin-left: 16.66666667%;
+  }
+  .col-xs-offset-3 {
+    margin-left: 25%;
+  }
+  .col-xs-offset-4 {
+    margin-left: 33.33333333%;
+  }
+  .col-xs-offset-5 {
+    margin-left: 41.66666667%;
+  }
+  .col-xs-offset-6 {
+    margin-left: 50%;
+  }
+  .col-xs-offset-7 {
+    margin-left: 58.33333333%;
+  }
+  .col-xs-offset-8 {
+    margin-left: 66.66666667%;
+  }
+  .col-xs-offset-9 {
+    margin-left: 75%;
+  }
+  .col-xs-offset-10 {
+    margin-left: 83.33333333%;
+  }
+  .col-xs-offset-11 {
+    margin-left: 91.66666667%;
+  }
+  .col-xs-offset-12 {
+    margin-left: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .col-sm-1 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 8.33333333%;
+  }
+  .col-sm-2 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 16.66666667%;
+  }
+  .col-sm-3 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 25%;
+  }
+  .col-sm-4 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 33.33333333%;
+  }
+  .col-sm-5 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 41.66666667%;
+  }
+  .col-sm-6 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 50%;
+  }
+  .col-sm-7 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 58.33333333%;
+  }
+  .col-sm-8 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 66.66666667%;
+  }
+  .col-sm-9 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 75%;
+  }
+  .col-sm-10 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 83.33333333%;
+  }
+  .col-sm-11 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 91.66666667%;
+  }
+  .col-sm-12 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 100%;
+  }
+  .col-sm-offset-1 {
+    margin-left: 8.33333333%;
+  }
+  .col-sm-offset-2 {
+    margin-left: 16.66666667%;
+  }
+  .col-sm-offset-3 {
+    margin-left: 25%;
+  }
+  .col-sm-offset-4 {
+    margin-left: 33.33333333%;
+  }
+  .col-sm-offset-5 {
+    margin-left: 41.66666667%;
+  }
+  .col-sm-offset-6 {
+    margin-left: 50%;
+  }
+  .col-sm-offset-7 {
+    margin-left: 58.33333333%;
+  }
+  .col-sm-offset-8 {
+    margin-left: 66.66666667%;
+  }
+  .col-sm-offset-9 {
+    margin-left: 75%;
+  }
+  .col-sm-offset-10 {
+    margin-left: 83.33333333%;
+  }
+  .col-sm-offset-11 {
+    margin-left: 91.66666667%;
+  }
+  .col-sm-offset-12 {
+    margin-left: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .col-md-1 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 8.33333333%;
+  }
+  .col-md-2 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 16.66666667%;
+  }
+  .col-md-3 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 25%;
+  }
+  .col-md-4 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 33.33333333%;
+  }
+  .col-md-5 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 41.66666667%;
+  }
+  .col-md-6 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 50%;
+  }
+  .col-md-7 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 58.33333333%;
+  }
+  .col-md-8 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 66.66666667%;
+  }
+  .col-md-9 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 75%;
+  }
+  .col-md-10 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 83.33333333%;
+  }
+  .col-md-11 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 91.66666667%;
+  }
+  .col-md-12 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 100%;
+  }
+  .col-md-offset-1 {
+    margin-left: 8.33333333%;
+  }
+  .col-md-offset-2 {
+    margin-left: 16.66666667%;
+  }
+  .col-md-offset-3 {
+    margin-left: 25%;
+  }
+  .col-md-offset-4 {
+    margin-left: 33.33333333%;
+  }
+  .col-md-offset-5 {
+    margin-left: 41.66666667%;
+  }
+  .col-md-offset-6 {
+    margin-left: 50%;
+  }
+  .col-md-offset-7 {
+    margin-left: 58.33333333%;
+  }
+  .col-md-offset-8 {
+    margin-left: 66.66666667%;
+  }
+  .col-md-offset-9 {
+    margin-left: 75%;
+  }
+  .col-md-offset-10 {
+    margin-left: 83.33333333%;
+  }
+  .col-md-offset-11 {
+    margin-left: 91.66666667%;
+  }
+  .col-md-offset-12 {
+    margin-left: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .col-lg-1 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 8.33333333%;
+  }
+  .col-lg-2 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 16.66666667%;
+  }
+  .col-lg-3 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 25%;
+  }
+  .col-lg-4 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 33.33333333%;
+  }
+  .col-lg-5 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 41.66666667%;
+  }
+  .col-lg-6 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 50%;
+  }
+  .col-lg-7 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 58.33333333%;
+  }
+  .col-lg-8 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 66.66666667%;
+  }
+  .col-lg-9 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 75%;
+  }
+  .col-lg-10 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 83.33333333%;
+  }
+  .col-lg-11 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 91.66666667%;
+  }
+  .col-lg-12 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 100%;
+  }
+  .col-lg-offset-1 {
+    margin-left: 8.33333333%;
+  }
+  .col-lg-offset-2 {
+    margin-left: 16.66666667%;
+  }
+  .col-lg-offset-3 {
+    margin-left: 25%;
+  }
+  .col-lg-offset-4 {
+    margin-left: 33.33333333%;
+  }
+  .col-lg-offset-5 {
+    margin-left: 41.66666667%;
+  }
+  .col-lg-offset-6 {
+    margin-left: 50%;
+  }
+  .col-lg-offset-7 {
+    margin-left: 58.33333333%;
+  }
+  .col-lg-offset-8 {
+    margin-left: 66.66666667%;
+  }
+  .col-lg-offset-9 {
+    margin-left: 75%;
+  }
+  .col-lg-offset-10 {
+    margin-left: 83.33333333%;
+  }
+  .col-lg-offset-11 {
+    margin-left: 91.66666667%;
+  }
+  .col-lg-offset-12 {
+    margin-left: 100%;
+  }
+}
+/*文字居中*/
+.text-center {
+  text-align: center;
+}

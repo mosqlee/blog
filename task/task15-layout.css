@@ -13,6 +13,7 @@ this stylesheet fuction is css layout, make the css be in common use.
 @media (min-width: 768px) {
   .container {
     width: 750px;
+
   }
   .container-fluid {
     width: 100%;

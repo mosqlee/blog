@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <title>task15-1</title>
     <meta name="viewport" content= "width= device-width, inital-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="../task/task15-module.css">
+    <link rel="stylesheet" href="../task/task15-1.css">
+    <style type="text/css">
+
+    </style>
 </head>
 <body>
 <header>
     <div class="container">
         <div class="row share">
-            <div class="col-md-8 hidden-xs">
+            <div class="col-sm-8 hidden-xs">
                 <span class="phonenum">咨询电话：2304023423</span>
             </div>
-            <div class="col-md-4 hidden-xs">
+            <div class="col-sm-4 hidden-xs">
                 <a href="#" class="background1"></a>
                 <a href="#" class="background2"></a>
                 <a href="#" class="background3"></a>
@@ -25,95 +28,79 @@
         </div>
     </div>
 
-    <nav class="navbar navbar-default navbar-static-top">
+    <nav class="navbar-static-top">
         <div class="container-fluid">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse-2" aria-expanded="false">
+                <button type="button" class="navbar-toggle">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="bs-navbar-collapse-2">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li role="presentation" class="active"><a id="naviga" href="http://zengyupei.cn/task/task8-1.html">首页</a> </li>
-                        <li role="presentation" class="nav-hover"><a id="naviga" href="http://zengyupei.cn/task/task8-2.html">职业</a> </li>
-                        <li role="presentation" class="nav-hover"><a id="naviga" href="">学习</a> </li>
-                        <li role="presentation" class="nav-hover"><a id="naviga" href="http://zengyupei.cn/task/task8-3.html">关于</a> </li>
-                    </ul>
-                </div>
                 <a href="http://zengyupei.cn/task/task8-1.html"><img class="logo" src="http://119.10.57.69:880/jnshu265/pic/task8/logo.jpg" alt="potato is justice"></a>
             </div>
-            <div class="collapse navbar-collapse" id="bs-navbar-collapse-2">
+            <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li role="presentation" class="active"><a id="naviga" href="http://zengyupei.cn/task/task8-1.html">首页</a> </li>
-                    <li role="presentation" class="nav-hover"><a id="naviga" href="http://zengyupei.cn/task/task8-2.html">职业</a> </li>
-                    <li role="presentation" class="nav-hover"><a id="naviga" href="">学习</a> </li>
-                    <li role="presentation" class="nav-hover"><a id="naviga" href="http://zengyupei.cn/task/task8-3.html">关于</a> </li>
+                    <li class="active"><a id="naviga" href="http://zengyupei.cn/task/task8-1.html">首页</a> </li>
+                    <li class="nav-hover"><a id="naviga" href="http://zengyupei.cn/task/task8-2.html">职业</a> </li>
+                    <li class="nav-hover"><a id="naviga" href="">学习</a> </li>
+                    <li class="nav-hover"><a id="naviga" href="http://zengyupei.cn/task/task8-3.html">关于</a> </li>
                 </ul>
             </div>
         </div>
     </nav>
 </header>
 <main>
-    <div id="carousels" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
+<!--轮播图-->
+    <div class="carousel-caption">
+        <h2 class="slogen1 text-right">作为你一个初级菜鸟，你是否想要了解</h2>
+        <h1 class="slogen2 text-right"><strong>50万</strong>年薪的程序员，都会那些技能呢？</h1>
+    </div>
+    <div id="container">
+        <div id="list" style="left: -100vw;">
+            <img src="http://www.jnshu.com/images/banner-1.jpg" alt="1" />
+            <img src="http://www.jnshu.com/images/banner-2.jpg" alt="1" />
+            <img src="http://www.jnshu.com/images/banner-3.jpg" alt="2" />
+            <img src="http://www.jnshu.com/images/banner-4.jpg" alt="3" />
+            <img src="http://www.jnshu.com/images/banner-5.jpg" alt="4" />
+            <img src="http://www.jnshu.com/images/banner-6.jpg" alt="5" />
+            <img src="http://www.jnshu.com/images/banner-6.jpg" alt="5" />
 
-        <ol class="carousel-indicators">
-            <li data-target="#carousels" data-slide-to="0" class="active"></li>
-            <li data-target="#carousels" data-slide-to="1"></li>
-            <li data-target="#carousels" data-slide-to="2"></li>
-        </ol>
-
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
-            <div class="item active">
-                <img class="img-responsive" src="http://119.10.57.69:880/jnshu265/pic/fighting.png">
-                <div class="carousel-caption">
-                    <h2 class="slogen1 text-right">作为你一个初级菜鸟，你是否想要了解</h2>
-                    <h1 class="slogen2 text-right"><strong>50万</strong>年薪的程序员，都会那些技能呢？</h1>
-                </div>
-            </div>
-            <div class="item">
-                <img class="img-responsive" src="http://how2j.cn/img/site/step/3491.png">
-            </div>
-            <div class="item">
-                <img class="img-responsive" src="http://how2j.cn/img/site/step/3494.png">
-            </div>
         </div>
-        <!-- Controls -->
-        <a class="left carousel-control" href="#carousels" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        </a>
-
-        <a class="right carousel-control" href="#carousels" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        </a>
+        <div id="buttons">
+            <span index="1" class="on"></span>
+            <span index="2"></span>
+            <span index="3"></span>
+            <span index="4"></span>
+            <span index="5"></span>
+        </div>
+        <a href="javascript:;" id="prev" class="arrow">&lt;</a>
+        <a href="javascript:;" id="next" class="arrow">&gt;</a>
     </div>
     <div class="container text">
-        <div class="row">
-            <div class="col-sm-3 tag">
+        <div class="row text-center">
+            <div class="col-sm-3 tag col-xs-12">
                 <img src="http://119.10.57.69:880/jnshu265/pic/rocket.png">
                 <h3>高效</h3>
-                <p class="text-left">将五到七年的成长时间，缩短到一年到三年。</p>
+                <p>将五到七年的成长时间，缩短到一年到三年。</p>
             </div>
-            <div class="col-sm-3 tag">
+            <div class="col-sm-3 tag col-xs-12">
                 <img class="trim" src="http://119.10.57.69:880/jnshu265/pic/books.png">
                 <h3>规范</h3>
-                <p class="text-left">标准的实战教程，不会走弯路</p>
+                <p>标准的实战教程，不会走弯路</p>
             </div>
-            <div class="col-sm-3 tag">
+            <div class="col-sm-3 tag col-xs-12">
                 <img class="trim" src="http://119.10.57.69:880/jnshu265/pic/friends.png">
                 <h3>人脉</h3>
-                <p class="text-left">同班好友，同院学长，技术大师，
+                <p>同班好友，同院学长，技术大师，
                     入学就混入职脉圈，为以后铺平
                     道路。</p>
             </div>
-            <div class="col-sm-3 aside">
+            <div class="col-sm-3 aside col-xs-12">
                 <div class="box">
-                    <span class="glyphicon glyphicon-user">&nbsp12400</span>
+                    <img class="glyphicon" src="http://119.10.57.69:880/jnshu265/pic/task8/little-head.png">&nbsp12400</>
                     <h4>累计在线学习人数</h4>
-                    <span class="glyphicon glyphicon-user">&nbsp12400</span>
+                    <img class="glyphicon" src="http://119.10.57.69:880/jnshu265/pic/task8/little-head.png">&nbsp12400</span>
                     <h4>学员已经找到满意工作</h4>
                 </div>
             </div>
@@ -121,48 +108,48 @@
         </div>
         <div class="row tittle">
             <h3 class="text-center col-xs-12 learn">如何学习</h3>
-            <div class="col-sm-6 col-xs-12 col-md-3 flexbox">
-                <div class="circle text-center"><span>1</span></div>
-                <span class="step">匹配你现在的个人情况<br />
+            <div class=" col-xs-12 col-sm-3 flexbox">
+                <div class="circle text-center col-md-2"><span>1</span></div>
+                <span class="step col-xs-7">匹配你现在的个人情况
                     寻找适合自己的岗位</span>
             </div>
-            <div class="col-sm-6 col-xs-12 col-md-3  flexbox">
-                <i class="background4 hidden-xs"></i>
-                <div class="circle text-center"><span>2</span></div>
-                <span class="step">了解职业前景薪金<br />待遇、竞争压力等</span>
+            <div class=" col-xs-12 col-sm-3  flexbox">
+                <i class="background4 hidden-xs col-md-2"></i>
+                <div class="circle text-center col-md-2"><span>2</span></div>
+                <span class="step col-xs-7">了解职业前景薪金待遇、竞争压力等</span>
             </div>
-            <div class="col-sm-6 col-xs-12 col-md-3  flexbox">
-                <i class="background4 hidden-xs"></i>
-                <div class="circle text-center"><span>3</span></div>
-                <span class="step">掌握行业内顶级技能</span>
+            <div class="col-xs-12 col-sm-3  flexbox">
+                <i class="background4 hidden-xs col-md-2"></i>
+                <div class="circle text-center col-md-2"><span>3</span></div>
+                <span class="step col-xs-7">掌握行业内顶级技能</span>
             </div>
-            <div class="col-sm-6 col-xs-12 col-md-3  flexbox">
-                <i class="background4 hidden-xs"></i>
-                <div class="circle text-center"><span>4</span></div>
-                <span class="step">掌握行业内顶级技能
+            <div class="col-xs-12 col-sm-3  flexbox">
+                <i class="background4 hidden-xs col-md-2"></i>
+                <div class="circle text-center col-md-2"><span>4</span></div>
+                <span class="step col-xs-7">掌握行业内顶级技能
                     </span>
 
             </div>
         </div>
         <div class="row tittle">
-            <div class="col-sm-6 col-xs-12 col-md-3 flexbox">
-                <div class="circle text-center"><span>5</span></div>
-                <span class="step">参考学习资源，掌握<br />技能点，逐个完成任务</span>
+            <div class="col-xs-12 col-sm-3 flexbox">
+                <div class="circle text-center col-md-2"><span>5</span></div>
+                <span class="step col-xs-7">参考学习资源，掌握技能点，逐个完成任务</span>
             </div>
-            <div class="col-sm-6 col-xs-12 col-md-3 flexbox">
-                <i class="background4 hidden-xs"></i>
-                <div class="circle text-center"><span>6</span></div>
-                <span class="step">加入班级和小伙伴们<br>互帮互助一块学</span>
+            <div class="col-xs-12 col-sm-3 flexbox">
+                <i class="background4 hidden-xs col-md-2"></i>
+                <div class="circle text-center col-md-2"><span>6</span></div>
+                <span class="step col-xs-7">加入班级和小伙伴们互帮互助一块学</span>
             </div>
-            <div class="col-sm-6 col-xs-12 col-md-3 flexbox">
-                <i class="background4 hidden-xs"></i>
-                <div class="circle text-center"><span>7</span></div>
-                <span class="step">选择导师，一路引导<br />加速自己成长</span>
+            <div class="col-xs-12 col-sm-3 flexbox">
+                <i class="background4 hidden-xs col-md-2"></i>
+                <div class="circle text-center col-md-2"><span>7</span></div>
+                <span class="step col-xs-7">选择导师，一路引导加速自己成长</span>
             </div>
-            <div class="col-sm-6 c  ol-xs-12 col-md-3 flexbox">
-                <i class="background4 hidden-xs"></i>
-                <div class="circle text-center"><span>8</span></div>
-                <span class="step">完成职业技能，升级<br>业界大牛</span>
+            <div class="col-xs-12 col-sm-3 flexbox">
+                <i class="background4 hidden-xs col-md-2"></i>
+                <div class="circle text-center col-md-2"><span>8</span></div>
+                <span class="step col-xs-7">完成职业技能，升级业界大牛</span>
 
             </div>
         </div>
@@ -281,10 +268,10 @@
                     </div>
                 </div>
 
-                <div class="col-md-3 col-md-offset-1">
+                <div class="col-md-3 col-md-offset-1 ">
                     <h4>旗下网站</h4>
                     <div class="row ourwebs">
-                        <a class="col-md-6" href="#">草船云孵化站</a>
+                        <a class="col-md-6 " href="#">草船云孵化站</a>
                         <a class="col-md-6" href="#">最强IT特训营</a>
                     </div>
                     <div class="row ourwebs">
@@ -308,5 +295,96 @@
         </div>
     </div>
 </footer>
+<script type="text/javascript">
+    /* 知识点：        */
+    /*       this用法 */
+    /*       DOM事件 */
+    /*       定时器 */
+
+    window.onload = function() {
+        var container = document.getElementById('container');
+        var list = document.getElementById('list');
+        var buttons = document.getElementById('buttons').getElementsByTagName('span');
+        var prev = document.getElementById('prev');
+        var next = document.getElementById('next');
+        var index = 1;
+        var timer;
+
+        function animate(offset) {
+            //获取的是style.left，是相对左边获取距离，所以第一张图后style.left都为负值，
+            //且style.left获取的是字符串，需要用parseInt()取整转化为数字。
+            var newLeft = parseInt(list.style.left) + offset;
+            list.style.left = newLeft + 'vw';
+            //无限滚动判断
+            if (newLeft > -100) {
+                list.style.left = -500 + 'vw';
+            }
+            if (newLeft < -500) {
+                list.style.left = -100 + 'vw';
+            }
+        }
+
+        function play() {
+            //重复执行的定时器
+            timer = setInterval(function() {
+                next.onclick();
+            }, 2000)
+        }
+
+        function stop() {
+            clearInterval(timer);
+        }
+
+        function buttonsShow() {
+            //将之前的小圆点的样式清除
+            for (var i = 0; i < buttons.length; i++) {
+                if (buttons[i].className == "on") {
+                    buttons[i].className = "";
+                }
+            }
+            //数组从0开始，故index需要-1
+            buttons[index - 1].className = "on";
+        }
+
+        prev.onclick = function() {
+            index -= 1;
+            if (index < 1) {
+                index = 5
+            }
+            buttonsShow();
+            animate(100);
+        };
+
+        next.onclick = function() {
+            //由于上边定时器的作用，index会一直递增下去，我们只有5个小圆点，所以需要做出判断
+            index += 1;
+            if (index > 5) {
+                index = 1
+            }
+            animate(-100);
+            buttonsShow();
+        };
+
+        for (var i = 0; i < buttons.length; i++) {
+            (function(i) {
+                buttons[i].onclick = function() {
+
+                    /*   这里获得鼠标移动到小圆点的位置，用this把index绑定到对象buttons[i]上，去谷歌this的用法  */
+                    /*   由于这里的index是自定义属性，需要用到getAttribute()这个DOM2级方法，去获取自定义index的属性*/
+                    var clickIndex = parseInt(this.getAttribute('index'));
+                    var offset = 100 * (index - clickIndex); //这个index是当前图片停留时的index
+                    animate(offset);
+                    index = clickIndex; //存放鼠标点击后的位置，用于小圆点的正常显示
+                    buttonsShow();
+                }
+            })(i)
+        }
+
+        container.onmouseover = stop;
+        container.onmouseout = play;
+        play();
+
+    }
+</script>
 </body>
 </html>

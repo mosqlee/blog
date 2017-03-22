@@ -163,21 +163,27 @@ this stylesheet fuction is css layout, make the css be in common use.
   }
   .col-lg-offset-loop(@n, (@index+1))
 }
-
 /*媒体查询*/
 @media (max-width: @screen-sm-min) {
     .col-xs-loop(@grid-columns);
     .col-xs-offset-loop(@grid-columns)
 }
 @media (min-width: @screen-sm-min) {
+  .col-xs-loop(@grid-columns);
     .col-sm-loop(@grid-columns);
   .col-sm-offset-loop(@grid-columns)
 }
+
 @media (min-width: @screen-md-min) {
+  .col-xs-loop(@grid-columns);
+  .col-sm-loop(@grid-columns);
     .col-md-loop(@grid-columns);
   .col-md-offset-loop(@grid-columns)
 }
 @media (min-width: @screen-lg-min) {
+  .col-xs-loop(@grid-columns);
+  .col-sm-loop(@grid-columns);
+  .col-md-loop(@grid-columns);
     .col-lg-loop(@grid-columns);
   .col-lg-offset-loop(@grid-columns)
 }
@@ -197,4 +203,7 @@ this stylesheet fuction is css layout, make the css be in common use.
 /*文字居中*/
 .text-center {
     text-align: center;
+}
+.text-left {
+  text-align: left;
 }

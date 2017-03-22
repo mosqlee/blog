@@ -11,10 +11,31 @@ this stylesheet fuction is css module, make the css be in common use.
 @color-gray: #a8a8a8;
 @color-orange: #f99e6a;
 @color-red: #f01400;
+/*phone num*/
+.share {
+  padding:10px 0;
+  .phonenum {
+    color: @color-green;
+    line-height: 30px;
+  }
+  .background1 {
+    .background()
+  }
+  .background2 {
+    .background(-24px,0)
+  }
+  .background3 {
+    .background(-49px,0)
+  }
+  a.login {
+    padding-right:.5vw;
+    border-right:#29b078 solid .5vw;
+  }
+}
 /*sprites*/
 .background(@x:0,@y:0) {
   float: right;
-  width: 27px;
+  width: 22px;
   height: 24px;
   margin: 2px;
   background: url("http://119.10.57.69:880/jnshu265/pic/task8-sprites.png") no-repeat  @x @y;
@@ -26,7 +47,7 @@ this stylesheet fuction is css module, make the css be in common use.
   border:none;
   background-color: @color-green;
     }
-
+//大于768px，隐藏按钮
 @media (min-width: @screen-sm-min) {
   .navbar-header {
     margin: 10px 0;
@@ -36,6 +57,7 @@ this stylesheet fuction is css module, make the css be in common use.
     display: none!important;
     }
   }
+/*小屏幕手机导航显示按钮*/
 @media (max-width: @screen-sm-min) {
   button.navbar-toggle {
     display: block;
@@ -97,9 +119,82 @@ this stylesheet fuction is css module, make the css be in common use.
   .collapse {
     display: none;
   }
-  button.navbar-toggle {
+  .container-fluid {
     &:hover .collapse {
       display: block!important;
+      ul {
+        .float-right();
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        .text-center;
+        li {
+          width: 100vw;
+          padding: 15px;
+          background: @color-green;
+          border-bottom: 3px solid transparent;
+          &:hover {
+            border-bottom: 3px solid @color-white;
+          }
+          a {
+            padding: 15px;
+            color: @color-white;
+          }
+        }
+
+      }
     }
   }
+}
+li.active {
+  border-bottom: 3px solid @color-white!important;
+}
+//footer
+.footbox1 {
+  padding: 0 15px 1rem;
+  background: @color-green;
+  color: @color-white;
+  border-bottom: .2vw solid #32c086;
+  a {
+    color: @color-white;
+  }
+  .barcode {
+    width: 10vw;
+  }
+
+}
+@media (max-width: @screen-md-min) {
+  .footbox1 {
+    .row {
+      margin: 0;
+    }
+    .about-us {
+      margin: 5rem 0 0;
+    }
+  }
+}
+
+@media (min-width: @screen-md-min) {
+  .footbox1 {
+    .row {
+      margin:0 -15px;
+    }
+    .about-us {
+      margin: 5rem 0 0 -15px;
+    }
+    }
+  }
+/*底部文字*/
+.footbox2 {
+  color: @color-white;
+  background: @color-green;
+}
+/*dots*/
+.dot(@bgcolor:@color-bule) {
+  width:1rem;
+  height: 1rem;
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+  border-radius:50%;
+  background-color: @bgcolor;
 }

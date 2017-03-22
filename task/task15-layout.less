@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import "../task/task15-reset";
 /*
 this stylesheet fuction is css layout, make the css be in common use.
 ---------------------------------*/
@@ -23,6 +24,9 @@ this stylesheet fuction is css layout, make the css be in common use.
 }
 .float-left() {
     float: left;
+}
+.float-right() {
+  float: right;
 }
 //清除浮动
 .clearfix() {
@@ -74,7 +78,7 @@ this stylesheet fuction is css layout, make the css be in common use.
 .row {
     margin: 0 -15px;
 }
-//列
+
 //.make-grid-columns() {
 //  .col(@index) {
 //    float: left;
@@ -97,6 +101,7 @@ this stylesheet fuction is css layout, make the css be in common use.
 //    }
 //  }
 //}
+/*列*/
 .col-xs-loop(@n,@index:1) when (@index <= @n) {
     .col-xs-@{index} {
       position: relative;
@@ -133,7 +138,7 @@ this stylesheet fuction is css layout, make the css be in common use.
     }
     .col-lg-loop(@n, (@index+1))
 }
-//offset栅格布局右偏移
+/*offset栅格布局右偏移*/
 .col-xs-offset-loop(@n,@index:1) when (@index <= @n) {
   .col-xs-offset-@{index} {
     margin-left: percentage((@index / @n));
@@ -159,7 +164,7 @@ this stylesheet fuction is css layout, make the css be in common use.
   .col-lg-offset-loop(@n, (@index+1))
 }
 
-//媒体查询
+/*媒体查询*/
 @media (max-width: @screen-sm-min) {
     .col-xs-loop(@grid-columns);
     .col-xs-offset-loop(@grid-columns)
@@ -176,8 +181,20 @@ this stylesheet fuction is css layout, make the css be in common use.
     .col-lg-loop(@grid-columns);
   .col-lg-offset-loop(@grid-columns)
 }
+//隐藏，显示
 
-//文字居中
+@media (max-width: @screen-sm-min) {
+  .hidden-xs {
+    display: none!important;
+  }
+  .visible-xs {
+    display: block!important;
+  }
+}
+.visible-xs {
+  display: none;
+}
+/*文字居中*/
 .text-center {
     text-align: center;
 }

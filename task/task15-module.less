@@ -1,0 +1,105 @@
+@charset "UTF-8";
+@import "task15-layout.less";
+/*
+this stylesheet fuction is css module, make the css be in common use.
+---------------------------------*/
+//var
+@color-white: #fff;
+@color-background: #fafafa;
+@color-green: #29b078;
+@color-bule: #69d1e9;
+@color-gray: #a8a8a8;
+@color-orange: #f99e6a;
+@color-red: #f01400;
+/*sprites*/
+.background(@x:0,@y:0) {
+  float: right;
+  width: 27px;
+  height: 24px;
+  margin: 2px;
+  background: url("http://119.10.57.69:880/jnshu265/pic/task8-sprites.png") no-repeat  @x @y;
+}
+//navigation
+.navbar-static-top {
+  position: relative;
+  margin:0;
+  border:none;
+  background-color: @color-green;
+    }
+
+@media (min-width: @screen-sm-min) {
+  .navbar-header {
+    margin: 10px 0;
+    .float-left()
+  }
+  button.navbar-toggle {
+    display: none!important;
+    }
+  }
+@media (max-width: @screen-sm-min) {
+  button.navbar-toggle {
+    display: block;
+    position: relative;
+    .float-right();
+    padding: 5px 5px;
+    margin: 8px 30px 8px 0;
+    border: 1px solid @color-gray;
+    background-color: transparent;
+    &:hover {
+      background: @color-gray;
+    }
+    &:hover .collapse {
+      display: block!important;
+    }
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+      }
+      .icon-bar {
+        display: block;
+        margin: 4px 0;
+        width: 22px;
+        height: 2px;
+        background: @color-white;
+      }
+    }
+  }
+
+@media (min-width: @screen-sm-min) {
+  .collapse {
+    .float-right();
+    height: auto;
+    padding-bottom: 0;
+    overflow: visible;
+    ul {
+      .float-right();
+      margin: 0;
+      list-style: none;
+      li {
+        .float-left();
+        margin: 0;
+        padding: 28px 0;
+        border-bottom: 3px solid transparent;
+        &:hover {
+          border-bottom: 3px solid @color-white;
+        }
+        a {
+          padding: 15px;
+          color: @color-white;
+          }
+        }
+      }
+    }
+  }
+@media (max-width: @screen-sm-min) {
+  .collapse {
+    display: none;
+  }
+  button.navbar-toggle {
+    &:hover .collapse {
+      display: block!important;
+    }
+  }
+}

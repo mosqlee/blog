@@ -1339,22 +1339,10 @@ li.active {
 /*圆角*/
 /*边框*/
 /*shadow*/
-/*table*/
-table {
-  border-spacing: 0;
-  border-collapse: collapse;
-}
-.table-bordered > tbody > tr > td,
-.table-bordered > tbody > tr > th,
-.table-bordered > tfoot > tr > td,
-.table-bordered > tfoot > tr > th,
-.table-bordered > thead > tr > td,
-.table-bordered > thead > tr > th {
-  border: 0.1vw #ededed solid;
-}
 /*
 this less fuction is task15 page 1 css.
 ---------------------------------*/
+/*function*/
 /*隐藏横向滚动条*/
 html {
   overflow-x: hidden;
@@ -1411,7 +1399,7 @@ html {
   margin-right: 5px;
   width: 10px;
   height: 10px;
-  border: 1px solid #fff;
+  border: 0.1vw #ffffff solid;
   border-radius: 50%;
   background: #333;
   cursor: pointer;
@@ -1492,6 +1480,7 @@ div.tittle {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-direction: row;
 }
 .step {
   font-size: 1.2vw;
@@ -1522,7 +1511,6 @@ div.tittle {
   }
   .flexbox .step {
     font-size: 2vw;
-    vertical-align: middle;
   }
   .flexbox .circle {
     display: block;
@@ -1549,12 +1537,10 @@ div.tittle {
 .advisers .box2 {
   margin: 1rem;
   padding-bottom: 1rem;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 .advisers .adviser {
   margin-top: 1rem;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
   border-radius: 50%;
 }
 /*dots*/

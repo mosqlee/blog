@@ -1339,19 +1339,6 @@ li.active {
 /*圆角*/
 /*边框*/
 /*shadow*/
-/*table*/
-table {
-  border-spacing: 0;
-  border-collapse: collapse;
-}
-.table-bordered > tbody > tr > td,
-.table-bordered > tbody > tr > th,
-.table-bordered > tfoot > tr > td,
-.table-bordered > tfoot > tr > th,
-.table-bordered > thead > tr > td,
-.table-bordered > thead > tr > th {
-  border: 0.1vw #ededed solid;
-}
 /*
 this less fuction is task15 page 3 css.
 ---------------------------------*/

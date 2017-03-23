@@ -4,19 +4,32 @@
 /*
 this less fuction is task15 page 1 css.
 ---------------------------------*/
+/*function*/
+.por() {
+  position: relative;
+}
+.poa() {
+  position: absolute;
+}
+.block() {
+  display: block;
+}
+.none() {
+  display: none;
+}
 /*隐藏横向滚动条*/
 html {
   overflow-x: hidden;
 }
  /*轮播图*/
 #container {
-  position: relative;
+  .por();
   width: 100vw;
   height: 30vw;
   .hidden-over;
   .arrow {
-    display: none;
-    position: absolute;
+    .none();
+    .poa();
     top: 12vw;
     z-index: 2;
     width: 40px;
@@ -24,7 +37,7 @@ html {
     font-size: 36px;
     font-weight: bold;
     line-height: 39px;
-    text-align: center;
+    .text-center;
     color: #fff;
     background-color: RGBA(0, 0, 0, .3);
     cursor: pointer;
@@ -34,41 +47,41 @@ html {
   }
 
   &:hover .arrow {
-    display: block;
+    .block();
   }
 }
 
 #list {
-  position: absolute;
+  .poa();
   z-index: 1;
   width: 600vw;
   height: 30vw;
   img {
-    float: left;
+    .float-left();
     width: 100vw;
     height: 30vw;
   }
 }
 
 #buttons {
-  position: absolute;
+  .poa();
   left: 50vw;
   bottom: 20px;
   z-index: 2;
   height: 10px;
   width: 100px;
   span {
-    float: left;
+    .float-left();
     margin-right: 5px;
     width: 10px;
     height: 10px;
-    border: 1px solid #fff;
-    border-radius: 50%;
+    .border(@color: @color-white);
+    .radius(50%);
     background: #333;
     cursor: pointer;
   }
   .on {
-    background: #a8a8a8;
+    background: @color-gray;
   }
 }
 #prev {
@@ -79,7 +92,7 @@ html {
   right: 40px;
 }
 .carousel-caption {
-  position: absolute;
+  .poa();
   left: 30vw;
   top: 100px;
   z-index: 1000;
@@ -94,7 +107,7 @@ html {
 
 @media (max-width: 768px) {
   .carousel-caption {
-    position: absolute;
+    .poa();
     left: 20vw;
     top: 5vh;
   }
@@ -127,16 +140,14 @@ html {
   span {
     line-height:4vw;
     font-size:1.5vw;
-    color: #29b078;
+    color: @color-green;
   }
 }
 div.tittle {
   margin-top:10vw;
 }
 .flexbox {
-  display: flex;
-  justify-content:space-around;
-  align-items: center;
+  .flex(@row: space-around);
 }
 .step {
   font-size:1.2vw;
@@ -159,7 +170,6 @@ div.tittle {
     }
     .step {
       font-size:2vw;
-      vertical-align: middle;
     }
     .circle {
       .circle(8vw,8vw);
@@ -176,13 +186,11 @@ div.tittle {
   .box2 {
     margin: 1rem;
     padding-bottom: 1rem;
-    background-color: #fff;
+    background-color: @color-white;
   }
   .adviser {
     margin-top:1rem;
-    -webkit-border-radius:50%;
-    -moz-border-radius:50%;
-    border-radius:50%;
+    .radius(50%);
   }
 }
 /*dots*/

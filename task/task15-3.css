@@ -1,0 +1,1463 @@
+@charset "UTF-8";
+/*
+this stylesheet fuction is css reset and reduce the diffrences between browser, make the css be in common use.
+---------------------------------*/
+/*
+---------------------------------
+Site: http://zengyupei.cn
+Author: zengyupei.cn
+Updated: 2017/3/21 and 16:43
+Updated by: Mosqlee
+---------------------------------
+*/
+/*css reset*/
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Correct the line height in all browsers.
+ * 3. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ * 4.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  line-height: 1.15;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 3 */
+  -webkit-text-size-adjust: 100%;
+  /* 3 */
+}
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ * Setting the font size 14px.
+ */
+body {
+  margin: 0;
+  font-size: 14px;
+}
+/**
+ * Add the correct display in IE 9-.
+ */
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+main {
+  /* 1 */
+  display: block;
+  position: relative;
+  padding-bottom: 10vh;
+  background: #fafafa;
+}
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */
+  text-decoration: none;
+}
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+a:active,
+a:hover {
+  outline-width: 0;
+}
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+strong {
+  font-weight: inherit;
+}
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+strong {
+  font-weight: bolder;
+}
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none;
+}
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+}
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+/*清除浮动带来的，脱离文档流*/
+.btn-group-vertical > .btn-group:after,
+.btn-group-vertical > .btn-group:before,
+.btn-toolbar:after,
+.btn-toolbar:before,
+.clearfix:after,
+.clearfix:before,
+.container-fluid:after,
+.container-fluid:before,
+.container:after,
+.container:before,
+.dl-horizontal dd:after,
+.dl-horizontal dd:before,
+.form-horizontal .form-group:after,
+.form-horizontal .form-group:before,
+.modal-footer:after,
+.modal-footer:before,
+.modal-header:after,
+.modal-header:before,
+.nav:after,
+.nav:before,
+.navbar-collapse:after,
+.navbar-collapse:before,
+.navbar-header:after,
+.navbar-header:before,
+.navbar:after,
+.navbar:before,
+.pager:after,
+.pager:before,
+.panel-body:after,
+.panel-body:before,
+.row:after,
+.row:before {
+  display: table;
+  content: '';
+  clear: both;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+h3 {
+  font-size: 24px;
+  font-weight: 500;
+}
+h4 {
+  font-size: 18px;
+  font-weight: 500;
+}
+/*
+this stylesheet fuction is css layout, make the css be in common use.
+---------------------------------*/
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.container-fluid {
+  margin: 0 auto;
+  padding: 0 15px;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+  .container-fluid {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+  .container-fluid {
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+  .container-fluid {
+    width: 100%;
+  }
+}
+.row {
+  margin: 0 -15px;
+}
+/*列*/
+/*offset栅格布局右偏移*/
+/*媒体查询*/
+@media (max-width: 768px) {
+  .col-xs-1 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 8.33333333%;
+  }
+  .col-xs-2 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 16.66666667%;
+  }
+  .col-xs-3 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 25%;
+  }
+  .col-xs-4 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 33.33333333%;
+  }
+  .col-xs-5 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 41.66666667%;
+  }
+  .col-xs-6 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 50%;
+  }
+  .col-xs-7 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 58.33333333%;
+  }
+  .col-xs-8 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 66.66666667%;
+  }
+  .col-xs-9 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 75%;
+  }
+  .col-xs-10 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 83.33333333%;
+  }
+  .col-xs-11 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 91.66666667%;
+  }
+  .col-xs-12 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 100%;
+  }
+  .col-xs-offset-1 {
+    margin-left: 8.33333333%;
+  }
+  .col-xs-offset-2 {
+    margin-left: 16.66666667%;
+  }
+  .col-xs-offset-3 {
+    margin-left: 25%;
+  }
+  .col-xs-offset-4 {
+    margin-left: 33.33333333%;
+  }
+  .col-xs-offset-5 {
+    margin-left: 41.66666667%;
+  }
+  .col-xs-offset-6 {
+    margin-left: 50%;
+  }
+  .col-xs-offset-7 {
+    margin-left: 58.33333333%;
+  }
+  .col-xs-offset-8 {
+    margin-left: 66.66666667%;
+  }
+  .col-xs-offset-9 {
+    margin-left: 75%;
+  }
+  .col-xs-offset-10 {
+    margin-left: 83.33333333%;
+  }
+  .col-xs-offset-11 {
+    margin-left: 91.66666667%;
+  }
+  .col-xs-offset-12 {
+    margin-left: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .col-xs-1 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 8.33333333%;
+  }
+  .col-xs-2 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 16.66666667%;
+  }
+  .col-xs-3 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 25%;
+  }
+  .col-xs-4 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 33.33333333%;
+  }
+  .col-xs-5 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 41.66666667%;
+  }
+  .col-xs-6 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 50%;
+  }
+  .col-xs-7 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 58.33333333%;
+  }
+  .col-xs-8 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 66.66666667%;
+  }
+  .col-xs-9 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 75%;
+  }
+  .col-xs-10 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 83.33333333%;
+  }
+  .col-xs-11 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 91.66666667%;
+  }
+  .col-xs-12 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 100%;
+  }
+  .col-sm-1 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 8.33333333%;
+  }
+  .col-sm-2 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 16.66666667%;
+  }
+  .col-sm-3 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 25%;
+  }
+  .col-sm-4 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 33.33333333%;
+  }
+  .col-sm-5 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 41.66666667%;
+  }
+  .col-sm-6 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 50%;
+  }
+  .col-sm-7 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 58.33333333%;
+  }
+  .col-sm-8 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 66.66666667%;
+  }
+  .col-sm-9 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 75%;
+  }
+  .col-sm-10 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 83.33333333%;
+  }
+  .col-sm-11 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 91.66666667%;
+  }
+  .col-sm-12 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 100%;
+  }
+  .col-sm-offset-1 {
+    margin-left: 8.33333333%;
+  }
+  .col-sm-offset-2 {
+    margin-left: 16.66666667%;
+  }
+  .col-sm-offset-3 {
+    margin-left: 25%;
+  }
+  .col-sm-offset-4 {
+    margin-left: 33.33333333%;
+  }
+  .col-sm-offset-5 {
+    margin-left: 41.66666667%;
+  }
+  .col-sm-offset-6 {
+    margin-left: 50%;
+  }
+  .col-sm-offset-7 {
+    margin-left: 58.33333333%;
+  }
+  .col-sm-offset-8 {
+    margin-left: 66.66666667%;
+  }
+  .col-sm-offset-9 {
+    margin-left: 75%;
+  }
+  .col-sm-offset-10 {
+    margin-left: 83.33333333%;
+  }
+  .col-sm-offset-11 {
+    margin-left: 91.66666667%;
+  }
+  .col-sm-offset-12 {
+    margin-left: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .col-xs-1 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 8.33333333%;
+  }
+  .col-xs-2 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 16.66666667%;
+  }
+  .col-xs-3 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 25%;
+  }
+  .col-xs-4 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 33.33333333%;
+  }
+  .col-xs-5 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 41.66666667%;
+  }
+  .col-xs-6 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 50%;
+  }
+  .col-xs-7 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 58.33333333%;
+  }
+  .col-xs-8 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 66.66666667%;
+  }
+  .col-xs-9 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 75%;
+  }
+  .col-xs-10 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 83.33333333%;
+  }
+  .col-xs-11 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 91.66666667%;
+  }
+  .col-xs-12 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 100%;
+  }
+  .col-sm-1 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 8.33333333%;
+  }
+  .col-sm-2 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 16.66666667%;
+  }
+  .col-sm-3 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 25%;
+  }
+  .col-sm-4 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 33.33333333%;
+  }
+  .col-sm-5 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 41.66666667%;
+  }
+  .col-sm-6 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 50%;
+  }
+  .col-sm-7 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 58.33333333%;
+  }
+  .col-sm-8 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 66.66666667%;
+  }
+  .col-sm-9 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 75%;
+  }
+  .col-sm-10 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 83.33333333%;
+  }
+  .col-sm-11 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 91.66666667%;
+  }
+  .col-sm-12 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 100%;
+  }
+  .col-md-1 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 8.33333333%;
+  }
+  .col-md-2 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 16.66666667%;
+  }
+  .col-md-3 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 25%;
+  }
+  .col-md-4 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 33.33333333%;
+  }
+  .col-md-5 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 41.66666667%;
+  }
+  .col-md-6 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 50%;
+  }
+  .col-md-7 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 58.33333333%;
+  }
+  .col-md-8 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 66.66666667%;
+  }
+  .col-md-9 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 75%;
+  }
+  .col-md-10 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 83.33333333%;
+  }
+  .col-md-11 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 91.66666667%;
+  }
+  .col-md-12 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 100%;
+  }
+  .col-md-offset-1 {
+    margin-left: 8.33333333%;
+  }
+  .col-md-offset-2 {
+    margin-left: 16.66666667%;
+  }
+  .col-md-offset-3 {
+    margin-left: 25%;
+  }
+  .col-md-offset-4 {
+    margin-left: 33.33333333%;
+  }
+  .col-md-offset-5 {
+    margin-left: 41.66666667%;
+  }
+  .col-md-offset-6 {
+    margin-left: 50%;
+  }
+  .col-md-offset-7 {
+    margin-left: 58.33333333%;
+  }
+  .col-md-offset-8 {
+    margin-left: 66.66666667%;
+  }
+  .col-md-offset-9 {
+    margin-left: 75%;
+  }
+  .col-md-offset-10 {
+    margin-left: 83.33333333%;
+  }
+  .col-md-offset-11 {
+    margin-left: 91.66666667%;
+  }
+  .col-md-offset-12 {
+    margin-left: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .col-xs-1 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 8.33333333%;
+  }
+  .col-xs-2 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 16.66666667%;
+  }
+  .col-xs-3 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 25%;
+  }
+  .col-xs-4 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 33.33333333%;
+  }
+  .col-xs-5 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 41.66666667%;
+  }
+  .col-xs-6 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 50%;
+  }
+  .col-xs-7 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 58.33333333%;
+  }
+  .col-xs-8 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 66.66666667%;
+  }
+  .col-xs-9 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 75%;
+  }
+  .col-xs-10 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 83.33333333%;
+  }
+  .col-xs-11 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 91.66666667%;
+  }
+  .col-xs-12 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 100%;
+  }
+  .col-sm-1 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 8.33333333%;
+  }
+  .col-sm-2 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 16.66666667%;
+  }
+  .col-sm-3 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 25%;
+  }
+  .col-sm-4 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 33.33333333%;
+  }
+  .col-sm-5 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 41.66666667%;
+  }
+  .col-sm-6 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 50%;
+  }
+  .col-sm-7 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 58.33333333%;
+  }
+  .col-sm-8 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 66.66666667%;
+  }
+  .col-sm-9 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 75%;
+  }
+  .col-sm-10 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 83.33333333%;
+  }
+  .col-sm-11 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 91.66666667%;
+  }
+  .col-sm-12 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 100%;
+  }
+  .col-md-1 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 8.33333333%;
+  }
+  .col-md-2 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 16.66666667%;
+  }
+  .col-md-3 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 25%;
+  }
+  .col-md-4 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 33.33333333%;
+  }
+  .col-md-5 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 41.66666667%;
+  }
+  .col-md-6 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 50%;
+  }
+  .col-md-7 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 58.33333333%;
+  }
+  .col-md-8 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 66.66666667%;
+  }
+  .col-md-9 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 75%;
+  }
+  .col-md-10 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 83.33333333%;
+  }
+  .col-md-11 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 91.66666667%;
+  }
+  .col-md-12 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 100%;
+  }
+  .col-lg-1 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 8.33333333%;
+  }
+  .col-lg-2 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 16.66666667%;
+  }
+  .col-lg-3 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 25%;
+  }
+  .col-lg-4 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 33.33333333%;
+  }
+  .col-lg-5 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 41.66666667%;
+  }
+  .col-lg-6 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 50%;
+  }
+  .col-lg-7 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 58.33333333%;
+  }
+  .col-lg-8 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 66.66666667%;
+  }
+  .col-lg-9 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 75%;
+  }
+  .col-lg-10 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 83.33333333%;
+  }
+  .col-lg-11 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 91.66666667%;
+  }
+  .col-lg-12 {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    width: 100%;
+  }
+  .col-lg-offset-1 {
+    margin-left: 8.33333333%;
+  }
+  .col-lg-offset-2 {
+    margin-left: 16.66666667%;
+  }
+  .col-lg-offset-3 {
+    margin-left: 25%;
+  }
+  .col-lg-offset-4 {
+    margin-left: 33.33333333%;
+  }
+  .col-lg-offset-5 {
+    margin-left: 41.66666667%;
+  }
+  .col-lg-offset-6 {
+    margin-left: 50%;
+  }
+  .col-lg-offset-7 {
+    margin-left: 58.33333333%;
+  }
+  .col-lg-offset-8 {
+    margin-left: 66.66666667%;
+  }
+  .col-lg-offset-9 {
+    margin-left: 75%;
+  }
+  .col-lg-offset-10 {
+    margin-left: 83.33333333%;
+  }
+  .col-lg-offset-11 {
+    margin-left: 91.66666667%;
+  }
+  .col-lg-offset-12 {
+    margin-left: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .hidden-xs {
+    display: none!important;
+  }
+  .visible-xs {
+    display: block!important;
+  }
+}
+.visible-xs {
+  display: none;
+}
+/*文字居中*/
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.hidden-over {
+  overflow: hidden;
+}
+/*
+this stylesheet fuction is css module, make the css be in common use.
+---------------------------------*/
+/*phone num*/
+.share {
+  padding: 10px 0;
+}
+.share .phonenum {
+  color: #29b078;
+  line-height: 30px;
+}
+.share .background1 {
+  float: right;
+  width: 22px;
+  height: 24px;
+  margin: 2px;
+  background: url("http://119.10.57.69:880/jnshu265/pic/task8-sprites.png") no-repeat 0 0;
+}
+.share .background2 {
+  float: right;
+  width: 22px;
+  height: 24px;
+  margin: 2px;
+  background: url("http://119.10.57.69:880/jnshu265/pic/task8-sprites.png") no-repeat -24px 0;
+}
+.share .background3 {
+  float: right;
+  width: 22px;
+  height: 24px;
+  margin: 2px;
+  background: url("http://119.10.57.69:880/jnshu265/pic/task8-sprites.png") no-repeat -49px 0;
+}
+.share a.login {
+  padding-right: .5vw;
+  border-right: #29b078 solid .5vw;
+}
+/*sprites*/
+.navbar-static-top {
+  position: relative;
+  margin: 0;
+  border: none;
+  background-color: #29b078;
+}
+@media (min-width: 768px) {
+  .navbar-header {
+    margin: 10px 0;
+    float: left;
+  }
+  button.navbar-toggle {
+    display: none!important;
+  }
+}
+/*小屏幕手机导航显示按钮*/
+@media (max-width: 768px) {
+  button.navbar-toggle {
+    display: block;
+    position: relative;
+    float: right;
+    padding: 5px 5px;
+    margin: 8px 30px 8px 0;
+    border: 1px solid #a8a8a8;
+    background-color: transparent;
+  }
+  button.navbar-toggle:hover {
+    background: #a8a8a8;
+  }
+  button.navbar-toggle:hover .collapse {
+    display: block!important;
+  }
+  button.navbar-toggle .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+  button.navbar-toggle .icon-bar {
+    display: block;
+    margin: 4px 0;
+    width: 22px;
+    height: 2px;
+    background: #ffffff;
+  }
+}
+@media (min-width: 768px) {
+  .collapse {
+    float: right;
+    height: auto;
+    padding-bottom: 0;
+    overflow: visible;
+  }
+  .collapse ul {
+    float: right;
+    margin: 0;
+    list-style: none;
+  }
+  .collapse ul li {
+    float: left;
+    margin: 0;
+    padding: 28px 0;
+    border-bottom: 3px solid transparent;
+  }
+  .collapse ul li:hover {
+    border-bottom: 3px solid #ffffff;
+  }
+  .collapse ul li a {
+    padding: 15px;
+    color: #ffffff;
+  }
+}
+@media (max-width: 768px) {
+  .collapse {
+    display: none;
+  }
+  .container-fluid:hover .collapse {
+    display: block!important;
+  }
+  .container-fluid:hover .collapse ul {
+    float: right;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+  }
+  .container-fluid:hover .collapse ul li {
+    width: 100vw;
+    padding: 15px;
+    border-bottom: 3px solid transparent;
+  }
+  .container-fluid:hover .collapse ul li:hover {
+    border-bottom: 3px solid #ffffff;
+  }
+  .container-fluid:hover .collapse ul li a {
+    padding: 15px;
+    color: #ffffff;
+  }
+}
+li.active {
+  border-bottom: 3px solid #ffffff !important;
+}
+.footbox1 {
+  padding: 0 15px 1rem;
+  background: #29b078;
+  color: #ffffff;
+  border-bottom: .2vw solid #32c086;
+}
+.footbox1 a {
+  color: #ffffff;
+}
+.footbox1 .barcode {
+  width: 10vw;
+}
+@media (max-width: 992px) {
+  .footbox1 .row {
+    margin: 0;
+  }
+  .footbox1 .about-us {
+    margin: 5rem 0 0;
+  }
+}
+@media (min-width: 992px) {
+  .footbox1 .row {
+    margin: 0 -15px;
+  }
+  .footbox1 .about-us {
+    margin: 5rem 0 0 -15px;
+  }
+}
+/*底部文字*/
+.footbox2 {
+  color: #ffffff;
+  background: #29b078;
+}
+/*dots*/
+/*circle*/
+/*圆角*/
+/*边框*/
+/*shadow*/
+/*table*/
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.table-bordered > tbody > tr > td,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > td,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > thead > tr > th {
+  border: 0.1vw #ededed solid;
+}
+/*
+this less fuction is task15 page 3 css.
+---------------------------------*/
+/*类面包屑*/
+.bread {
+  margin: 1.5vw 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.bread a {
+  color: #29b078;
+}
+/*第二个导航条*/
+.nav-2 {
+  border-top: .1vw #ededed solid;
+  border-bottom: .1vw #ededed solid;
+  background: #fafafa;
+}
+.nav-2 .navbar-brand {
+  line-height: 3rem;
+  font-size: 1.2rem;
+}
+.nav-2 .collapse ul li a {
+  color: #000000;
+}
+.nav-2 .collapse ul li a:hover {
+  color: #ffffff;
+  background: #29b078;
+}
+.nav-2 .collapse ul li.active a {
+  color: #ffffff;
+  background: #29b078;
+}
+/*第二导航条小屏幕样式*/
+@media (max-width: 768px) {
+  .nav-2 button.navbar-toggle .icon-bar {
+    background: #888;
+  }
+  .nav-2 .container-fluid:hover .collapse ul li a {
+    color: #000000;
+    padding: 0;
+  }
+  .nav-2 .container-fluid:hover li:hover {
+    background: #29b078;
+  }
+  .nav-2 .container-fluid:hover li:hover a {
+    color: #ffffff !important;
+  }
+  .nav-2 .container-fluid:hover .collapse ul li.active {
+    background: #29b078;
+  }
+  .nav-2 .container-fluid:hover .collapse ul li.active a {
+    color: #ffffff;
+  }
+}
+/*标题*/
+.tittle {
+  margin: 3vw 0;
+  padding-bottom: 1vw;
+  border-bottom: solid .1vw #d0d6d9;
+}
+.tittle h4 {
+  font-size: 1.3rem;
+  font-weight: 900;
+}
+table td {
+  padding: .5rem;
+  color: #c6c6c6;
+}
+table img {
+  margin: .5rem;
+  float: left;
+}
+table .web-engnieer {
+  padding: .5rem;
+}
+table .level {
+  margin: 0 0 .2rem .5rem;
+}
+table .highlight {
+  color: #f01400;
+  font-weight: 700;
+}
+table .black-font {
+  color: #000000;
+}
+table .justify span {
+  font-weight: 600;
+  color: #000000;
+}
+table .salary {
+  float: right;
+}
+.hover {
+  position: relative;
+}
+.hover:hover .hidden-hover {
+  opacity: 0.7;
+}
+.hover div.hidden-hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 2vw ;
+  font-size: 1rem;
+  color: #fff;
+  background: #000;
+  opacity: 0;
+}

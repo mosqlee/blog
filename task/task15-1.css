@@ -64,6 +64,8 @@ h1 {
 main {
   /* 1 */
   display: block;
+  position: relative;
+  background: #fafafa;
 }
 /**
  * 1. Remove the gray background on active links in IE 10.
@@ -1156,6 +1158,9 @@ this stylesheet fuction is css layout, make the css be in common use.
 .text-left {
   text-align: left;
 }
+.hidden-over {
+  overflow: hidden;
+}
 /*
 this stylesheet fuction is css module, make the css be in common use.
 ---------------------------------*/
@@ -1330,20 +1335,41 @@ li.active {
   background: #29b078;
 }
 /*dots*/
+/*circle*/
 /*
 this less fuction is task15 page 1 css.
 ---------------------------------*/
+/*隐藏横向滚动条*/
 html {
   overflow-x: hidden;
-  overflow-y: auto;
 }
 /*轮播图*/
 #container {
   position: relative;
   width: 100vw;
   height: 30vw;
-  border: none;
   overflow: hidden;
+}
+#container .arrow {
+  display: none;
+  position: absolute;
+  top: 12vw;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 39px;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+#container .arrow:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+#container:hover .arrow {
+  display: block;
 }
 #list {
   position: absolute;
@@ -1377,27 +1403,6 @@ html {
 #buttons .on {
   background: #a8a8a8;
 }
-.arrow {
-  position: absolute;
-  top: 12vw;
-  z-index: 2;
-  display: none;
-  width: 40px;
-  height: 40px;
-  font-size: 36px;
-  font-weight: bold;
-  line-height: 39px;
-  text-align: center;
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-}
-.arrow:hover {
-  background-color: rgba(0, 0, 0, 0.7);
-}
-#container:hover .arrow {
-  display: block;
-}
 #prev {
   left: 20px;
 }
@@ -1423,7 +1428,7 @@ html {
     left: 20vw;
     top: 5vh;
   }
-  .box {
+  .people {
     text-align: center;
   }
 }
@@ -1434,20 +1439,21 @@ html {
 .text .trim {
   margin-top: 8px;
 }
-.text .box {
+.text .people {
   margin-top: 18px;
 }
 @media (min-width: 768px) {
   p {
     text-align: left;
   }
-  .box {
+  .people {
     text-align: left;
   }
 }
+/*小圆圈*/
 .circle {
-  flex-shrink: 0;
   display: block;
+  flex-shrink: 0;
   float: left;
   width: 4vw;
   height: 4vw;
@@ -1458,13 +1464,13 @@ html {
   box-shadow: 1px 1px 1px 1px #a8a8a8;
   background-color: #fff;
 }
-div.tittle {
-  margin-top: 10vw;
-}
 .circle span {
   line-height: 4vw;
   font-size: 1.5vw;
   color: #29b078;
+}
+div.tittle {
+  margin-top: 10vw;
 }
 .flexbox {
   display: flex;
@@ -1479,18 +1485,20 @@ div.tittle {
   margin-bottom: 5vw;
 }
 .background4 {
-  display: block;
-  vertical-align: middle;
-  flex-shrink: 0;
-  margin: 2px;
-  background: url(http://119.10.57.69:880/jnshu265/pic/task8-sprites.png) no-repeat;
-  width: 30px;
+  float: right;
+  width: 22px;
   height: 24px;
-  background-position: -76px 0;
+  margin: 2px;
+  background: url("http://119.10.57.69:880/jnshu265/pic/task8-sprites.png") no-repeat -76px 0;
+  width: 30px;
 }
+/*小屏幕的时候流程图显示*/
 @media (max-width: 768px) {
   .flexbox {
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
     padding: 2vh 10vw;
   }
   .flexbox p {
@@ -1501,8 +1509,8 @@ div.tittle {
     vertical-align: middle;
   }
   .flexbox .circle {
-    flex-shrink: 0;
     display: block;
+    flex-shrink: 0;
     float: left;
     width: 8vw;
     height: 8vw;

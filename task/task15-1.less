@@ -4,18 +4,38 @@
 /*
 this less fuction is task15 page 1 css.
 ---------------------------------*/
-
+/*隐藏横向滚动条*/
 html {
   overflow-x: hidden;
-  overflow-y: auto;
 }
  /*轮播图*/
 #container {
   position: relative;
   width: 100vw;
   height: 30vw;
-  border: none;
-  overflow: hidden;
+  .hidden-over;
+  .arrow {
+    display: none;
+    position: absolute;
+    top: 12vw;
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 39px;
+    text-align: center;
+    color: #fff;
+    background-color: RGBA(0, 0, 0, .3);
+    cursor: pointer;
+  }
+  .arrow:hover {
+    background-color: RGBA(0, 0, 0, .7);
+  }
+
+  &:hover .arrow {
+    display: block;
+  }
 }
 
 #list {
@@ -23,12 +43,11 @@ html {
   z-index: 1;
   width: 600vw;
   height: 30vw;
-}
-
-#list img {
-  float: left;
-  width: 100vw;
-  height: 30vw;
+  img {
+    float: left;
+    width: 100vw;
+    height: 30vw;
+  }
 }
 
 #buttons {
@@ -38,47 +57,20 @@ html {
   z-index: 2;
   height: 10px;
   width: 100px;
+  span {
+    float: left;
+    margin-right: 5px;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background: #333;
+    cursor: pointer;
+  }
+  .on {
+    background: #a8a8a8;
+  }
 }
-
-#buttons span {
-  float: left;
-  margin-right: 5px;
-  width: 10px;
-  height: 10px;
-  border: 1px solid #fff;
-  border-radius: 50%;
-  background: #333;
-  cursor: pointer;
-}
-
-#buttons .on {
-  background: #a8a8a8;
-}
-
-.arrow {
-  position: absolute;
-  top: 12vw;
-  z-index: 2;
-  display: none;
-  width: 40px;
-  height: 40px;
-  font-size: 36px;
-  font-weight: bold;
-  line-height: 39px;
-  text-align: center;
-  color: #fff;
-  background-color: RGBA(0, 0, 0, .3);
-  cursor: pointer;
-}
-
-.arrow:hover {
-  background-color: RGBA(0, 0, 0, .7);
-}
-
-#container:hover .arrow {
-  display: block;
-}
-
 #prev {
   left: 20px;
 }
@@ -106,7 +98,7 @@ html {
     left: 20vw;
     top: 5vh;
   }
-  .box {
+  .people {
     .text-center
   }
 }
@@ -116,8 +108,7 @@ html {
   .trim {
     margin-top: 8px;
   }
-
-  .box {
+  .people {
     margin-top: 18px;
   }
 }
@@ -126,30 +117,21 @@ html {
   p {
     text-align: left;
   }
-  .box {
+  .people {
     .text-left
   }
   }
+/*小圆圈*/
 .circle {
-  flex-shrink: 0;
-  display: block;
-  float: left;
-  width: 4vw;
-  height: 4vw;
-  -webkit-border-radius:50%;
-  -moz-border-radius:50%;
-  border: solid #fff 1px;
-  border-radius:50%;
-  box-shadow: 1px 1px 1px 1px #a8a8a8;
-  background-color: #fff;
+  .circle();
+  span {
+    line-height:4vw;
+    font-size:1.5vw;
+    color: #29b078;
+  }
 }
 div.tittle {
   margin-top:10vw;
-}
-.circle span {
-  line-height:4vw;
-  font-size:1.5vw;
-  color: #29b078;
 }
 .flexbox {
   display: flex;
@@ -164,18 +146,13 @@ div.tittle {
   margin-bottom:5vw;
 }
 .background4 {
-  display: block;
-  vertical-align: middle;
-  flex-shrink: 0;
-  margin: 2px;
-  background: url(http://119.10.57.69:880/jnshu265/pic/task8-sprites.png) no-repeat;
+  .background(-76px, 0);
   width: 30px;
-  height: 24px;
-  background-position: -76px 0;
 }
+/*小屏幕的时候流程图显示*/
 @media (max-width: 768px) {
   .flexbox {
-    justify-content: space-between;
+    .flex();
     padding: 2vh 10vw;
     p {
       .text-left
@@ -185,17 +162,7 @@ div.tittle {
       vertical-align: middle;
     }
     .circle {
-      flex-shrink: 0;
-      display: block;
-      float: left;
-      width: 8vw;
-      height: 8vw;
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
-      border: solid #fff 1px;
-      border-radius: 50%;
-      box-shadow: 1px 1px 1px 1px @color-gray;
-      background-color: #fff;
+      .circle(8vw,8vw);
       span {
         line-height: 8vw;
         font-size: 3vw;

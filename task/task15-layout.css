@@ -64,6 +64,8 @@ h1 {
 main {
   /* 1 */
   display: block;
+  position: relative;
+  background: #fafafa;
 }
 /**
  * 1. Remove the gray background on active links in IE 10.
@@ -1155,4 +1157,7 @@ this stylesheet fuction is css layout, make the css be in common use.
 }
 .text-left {
   text-align: left;
+}
+.hidden-over {
+  overflow: hidden;
 }

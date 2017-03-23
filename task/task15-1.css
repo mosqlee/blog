@@ -65,6 +65,7 @@ main {
   /* 1 */
   display: block;
   position: relative;
+  padding-bottom: 10vh;
   background: #fafafa;
 }
 /**
@@ -1287,7 +1288,6 @@ this stylesheet fuction is css module, make the css be in common use.
   .container-fluid:hover .collapse ul li {
     width: 100vw;
     padding: 15px;
-    background: #29b078;
     border-bottom: 3px solid transparent;
   }
   .container-fluid:hover .collapse ul li:hover {
@@ -1336,6 +1336,22 @@ li.active {
 }
 /*dots*/
 /*circle*/
+/*圆角*/
+/*边框*/
+/*shadow*/
+/*table*/
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.table-bordered > tbody > tr > td,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > td,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > thead > tr > th {
+  border: 0.1vw #ededed solid;
+}
 /*
 this less fuction is task15 page 1 css.
 ---------------------------------*/
@@ -1461,7 +1477,7 @@ html {
   -moz-border-radius: 50%;
   border: solid #fff 1px;
   border-radius: 50%;
-  box-shadow: 1px 1px 1px 1px #a8a8a8;
+  box-shadow: 1px 1px 1px 1px #ededed;
   background-color: #fff;
 }
 .circle span {
@@ -1518,7 +1534,7 @@ div.tittle {
     -moz-border-radius: 50%;
     border: solid #fff 1px;
     border-radius: 50%;
-    box-shadow: 1px 1px 1px 1px #a8a8a8;
+    box-shadow: 1px 1px 1px 1px #ededed;
     background-color: #fff;
   }
   .flexbox .circle span {

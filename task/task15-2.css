@@ -65,6 +65,7 @@ main {
   /* 1 */
   display: block;
   position: relative;
+  padding-bottom: 10vh;
   background: #fafafa;
 }
 /**
@@ -1287,7 +1288,6 @@ this stylesheet fuction is css module, make the css be in common use.
   .container-fluid:hover .collapse ul li {
     width: 100vw;
     padding: 15px;
-    background: #29b078;
     border-bottom: 3px solid transparent;
   }
   .container-fluid:hover .collapse ul li:hover {
@@ -1336,9 +1336,97 @@ li.active {
 }
 /*dots*/
 /*circle*/
+/*圆角*/
+/*边框*/
+/*shadow*/
+/*table*/
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.table-bordered > tbody > tr > td,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > td,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > thead > tr > th {
+  border: 0.1vw #ededed solid;
+}
 /*
 this less fuction is task15 page 2 css.
 ---------------------------------*/
-.tittle {
+.tittle-img {
   width: 100%;
+  overflow: hidden;
+}
+.homepage {
+  margin: 2vw 0;
+}
+.homepage a {
+  color: #337ab7;
+}
+.companies {
+  padding: 0;
+  margin-bottom: 40px;
+  border-radius: 2%;
+  border: 0.1vw #ededed solid;
+  background: #ffffff;
+  box-shadow: 1px 1px 1px 1px #ededed;
+}
+.companies ul {
+  padding: 0;
+  text-align: center;
+  list-style: none;
+}
+.companies ul .list-group-item {
+  padding: 10px 30px;
+  border-bottom: .1vw solid #ededed;
+}
+.companies ul h4 {
+  margin: 0 0 10px 0;
+}
+.companies ul li {
+  padding: 10px 45px;
+}
+.companies ul a {
+  color: #29b078;
+}
+.companies ul a:hover,
+.companies ul a:visited {
+  color: #f99e6a;
+}
+.companies ul a:hover span {
+  background: #f99e6a;
+}
+.companies ul span {
+  display: inline-block;
+  display: block;
+  flex-shrink: 0;
+  float: left;
+  width: 1rem;
+  height: 1rem;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border: solid #fff 1px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 1px 1px #ededed;
+  background-color: #fff;
+  border: solid 0.1rem #f99e6a;
+}
+.main-body {
+  margin-bottom: 40px;
+  border-radius: 2%;
+  border: 0.1vw #ededed solid;
+  background: #ffffff;
+  box-shadow: 1px 1px 1px 1px #ededed;
+  color: #a8a8a8;
+}
+@media (max-width: 767px) {
+  .companies ul li {
+    padding: 10px 30vw;
+  }
+  .main-body {
+    padding: 15px 30px;
+    text-align: center;
+  }
 }

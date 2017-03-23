@@ -4,6 +4,73 @@
 /*
 this less fuction is task15 page 2 css.
 ---------------------------------*/
-.tittle {
+.tittle-img {
   width: 100%;
+  .hidden-over
+}
+.homepage {
+  margin:2vw 0;
+  a {
+    color: @color-dark-blue;
+  }
+}
+.companies {
+  padding: 0;
+  margin-bottom: 40px;
+  .radius();
+  .border();
+  background: @color-white;
+  .shadow();
+  ul {
+    padding: 0;
+    .text-center;
+    list-style: none;
+    .list-group-item {
+      padding: 10px 30px;
+      border-bottom:  .1vw solid #ededed;
+    }
+    h4 {
+      margin: 0 0 10px 0;
+    }
+    li {
+      padding: 10px 45px;
+    }
+    a {
+      color: @color-green;
+      &:hover,
+      &:visited {
+        color: @color-orange;
+      }
+      &:hover span
+       {
+        background: @color-orange;
+      }
+    }
+    span {
+      display: inline-block;
+      .circle(1rem,1rem);
+      border:solid .1rem @color-orange;
+    }
+  }
+}
+.main-body {
+  margin-bottom: 40px;
+  .radius();
+  .border();
+  background: @color-white;
+  .shadow();
+  color: @color-gray;
+}
+@media (max-width: 767px) {
+  .companies {
+    ul {
+      li {
+        padding: 10px 30vw;
+      }
+    }
+  }
+  .main-body {
+    padding:15px 30px;
+    .text-center;
+  }
 }

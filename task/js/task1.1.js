@@ -7,11 +7,11 @@ var click = true;
 // button2，cover other color，stop Interval
 document.getElementById("button-2").addEventListener("click", function() {
 
-        get_div(1);
+        get_div(click = false);
     }
 
 );
-//这个函数用来开始或者停止改变颜色,点击
+//这个函数用来开始或者停止改变颜色,点击按钮一改变颜色，再次点击停止改变（之前有bug再次点击会增加一个改变颜色的事情），按钮二只能用于返回初始情况，不会改变颜色。
 
 function get_div() {
     if (click) {

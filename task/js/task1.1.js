@@ -13,7 +13,7 @@ document.getElementById("button-2").addEventListener("click", function() {
 //这个函数用来开始或者停止改变颜色
 function get_div(t) {
     if (t == 0) {
-        t2 = setInterval("shink();", 200);
+        t2 = setInterval("shink();", 1000);
     }
     else if(t !== 0) {
         var square = document.getElementsByTagName("div");

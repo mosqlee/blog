@@ -3,6 +3,7 @@
  */
 //js会自动销毁变量，所以这个变量必须设成全局变量
 var t2;
+var click = true;
 // button2，cover other color，stop Interval
 document.getElementById("button-2").addEventListener("click", function() {
 
@@ -10,12 +11,15 @@ document.getElementById("button-2").addEventListener("click", function() {
     }
 
 );
-//这个函数用来开始或者停止改变颜色
-function get_div(t) {
-    if (t == 0) {
-        t2 = setInterval("shink();", 1000);
+//这个函数用来开始或者停止改变颜色,点击
+
+function get_div() {
+    if (click) {
+        click = false;
+        t2 = setInterval("shink();", 200);
     }
-    else if(t !== 0) {
+    else {
+        click = true;
         var square = document.getElementsByTagName("div");
         for (a = 0; a < 9; a++) {
             square[a].style.backgroundColor = "#FFA500";

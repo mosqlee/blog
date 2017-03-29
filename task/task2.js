@@ -13,7 +13,7 @@ function play() {
         alert("请正确输入玩家数量");
     }
     else {
-        killer.firstChild.nodeValue = Math.ceil(player/4);
+        killer.firstChild.nodeValue = Math.ceil(player / 4);
         fammer.firstChild.nodeValue = player - killer.firstChild.nodeValue;
     }
     // //还可以取余
@@ -38,12 +38,6 @@ function play() {
     //     return alert("请正确输入玩家数量")
     // }
 }
-function control() {
-    var player = document.getElementById("player").value;
-    if (player !== 12) {
-        play()
-    }
-}
 //     clock(time = true)
 // }
 // function clock(time) {
@@ -55,7 +49,7 @@ function control() {
 //     }
 // }
 
-
+//发牌，任务二暂时用不到
 function send_card() {
     var player = document.getElementById("player").value;
     var per = new Array(player);

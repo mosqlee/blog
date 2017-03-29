@@ -1,0 +1,75 @@
+@charset "UTF-8";
+/*
+this stylesheet fuction is css reset and reduce the diffrences between browser, make the css be in common use.
+---------------------------------*/
+/*
+---------------------------------
+Site: http://zengyupei.cn
+Author: zengyupei.cn
+Updated: 2017/3/27 and 19:53
+Updated by: Mosqlee
+---------------------------------
+*/
+body {
+  margin: 0;
+  padding: 0;
+  background: #47c4e5;
+}
+body header div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 3rem;
+  color: #fff;
+  border-bottom: solid #2cccf2 2px;
+}
+body header div h2 {
+  margin: 0;
+}
+body header div .glyphicon {
+  color: #fff;
+  margin: 10px 0 0;
+}
+.card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  margin: 5vh 10vw;
+  background-color: #ffedc5;
+  border: solid #fff .6vw;
+}
+.card .circle {
+  position: absolute;
+  top: -3vw;
+  left: 37vw;
+  display: block;
+  float: left;
+  width: 6vw;
+  height: 6vw;
+  text-align: center;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border: solid #fff 1px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.card .circle span {
+  font-size: 6vw;
+  color: #f7d1a8;
+  line-height: 6vw;
+}
+.card img {
+  max-width: 60vw;
+  max-height: 60vh;
+  border-radius: 50%;
+}
+.navbar-fixed-bottom {
+  bottom: 3vh;
+}
+.navbar-fixed-bottom button {
+  height: 8vh;
+  width: 86vw;
+  border-radius: 0;
+}

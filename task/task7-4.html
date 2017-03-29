@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>玩家配比</title>
+    <meta name="viewport" content= "width= device-width, inital-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap/3.3.6/bootstrap.min.css">
+    <link rel="stylesheet" href="../task/task7-4.css">
+</head>
+<body>
+<header>
+    <nav class="nav navbar nav-fixed-top">
+        <a href=""><span class="glyphicon glyphicon-menu-left"></span></a>
+    </nav>
+</header>
+<main>
+    <div class="container">
+        <div class="roles row">
+            <div class="text-center distribution"><h2>玩家配比</h2></div>
+            <div class="kill col-xs-6">
+                <span class="glyphicon glyphicon-tint"></span>
+                <span>杀手</span>
+                <span id="killer">3</span>
+                <span>人</span>
+            </div>
+            <div class="people col-xs-6">
+                <span class="glyphicon glyphicon-user"></span>
+                <span>平民</span>
+                <span id="person">9</span>
+                <span>人</span>
+            </div>
+    <form class="col-xs-12">
+        <label>请输入玩家数量
+            <input type="number" id="player" value="12" oninput="control()"onpropertychange="control()"><span>&nbsp&nbsp&nbsp玩家数量为4-18</span>
+        </label>
+    </form>
+        </div>
+    </div>
+</main>
+<footer class="navbar-fixed-bottom text-center">
+    <button type="button" class="btn btn-warning" onclick="send_card()" >去发牌</button>
+</footer>
+<script src="../task/task2.js"></script>
+</body>
+</html>

@@ -2,6 +2,7 @@
  * Created by mosqlee on 2017/3/28.
  */
 var player;
+//自动根据value值改变杀手和平民人数
 function play() {
     player = document.getElementById("player").value;
     var killer = document.getElementById("killer");

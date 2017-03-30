@@ -37,8 +37,9 @@ function oninput_play() {
     killer.firstChild.nodeValue = Math.ceil(player / 4);
     fammer.firstChild.nodeValue = player - killer.firstChild.nodeValue;
 }
-//发牌，创建一个跟输入数字一样长度的数组，里面包括0和1,1代表杀手，0代表平民任务二暂时用不到
+//发牌，创建一个跟输入数字一样长度的数组，里面包括0和1,1代表杀手，0代表平民,保存到session里面
     function send_card() {
+
         var player = players.value;
         var per = new Array(player);
         var roles = [];
@@ -99,7 +100,14 @@ function oninput_play() {
                 alert(roles[k])
             }
         }
-        return roles;
+        var storage = window.sessionStorage;
+        var p =JSON.stringify(per);
+        var r =JSON.stringify(roles);
+        storage.setItem("data", p);
+        storage.setItem("roles", r);
+        console.log(storage.data);
+        console.log(storage.roles);
+        window.location.href = "../task/task7-5.html"
     }
 
 

@@ -19,12 +19,23 @@
 </header>
 <main>
     <div class="card">
-        <div class="circle"><span>1</span></div>
+        <div class="circle"><span id="num">1</span></div>
         <img src="http://119.10.57.69:880/jnshu265/pic/card1.png">
+    </div>
+    <div class="roles">
+        <div class="circle"><span id="role-num">1</span></div>
+        <img src="http://119.10.57.69:880/jnshu265/pic/jstask2/wowo.png">
+        <strong id="role">杀手</strong>
     </div>
 </main>
 <footer class="navbar-fixed-bottom text-center">
-    <button type="button" class="btn btn-warning">查看<span id="num">1</span>号身份</button>
+    <button type="button" class="btn btn-warning" onclick="click()">
+        <span id="before-num">查看</span>
+        <span id="num">1</span>
+        <span id="after-num">号身份</span>
+    </button>
 </footer>
+<script src="../jquery/jquery-3.2.0.min.js"></script>
+<script src="../task/task3.js"></script>
 </body>
 </html>

@@ -49,7 +49,7 @@ body {
     }
   }
 }
-.card {
+.card , .roles {
   position: relative;
   display: flex;
   justify-content: center;
@@ -76,6 +76,16 @@ body {
     border-radius: 50%;
   }
 }
+.roles {
+  display: none;
+  flex-direction: column;
+  strong {
+    font-size: 3rem;
+    line-height: 6rem;
+    color: @color-blue;
+  }
+}
+
 .navbar-fixed-bottom {
   bottom: 3vh;
   button {

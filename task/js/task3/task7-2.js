@@ -5,7 +5,6 @@ var storage = window.sessionStorage;
 var r = storage.roles;
 var roles = JSON.parse(r);
 var player = roles.length;
-alert(roles);
 $(document).ready(function() {
     var $element1 = $("main").html();
     var $role = $("main>div:first .degree");

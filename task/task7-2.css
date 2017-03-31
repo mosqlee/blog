@@ -116,6 +116,7 @@ h4 {
     opacity:1;
 }
 .navbar-fixed-bottom {
+    margin-top: 10vh;
     background-color:#29bde0;
 }
 .submit {
@@ -125,7 +126,4 @@ h4 {
     font-size:6vw;
     color: #fff;
     background-color: #fbb435;
-}
-footer {
-    margin-top: 10vh;
 }

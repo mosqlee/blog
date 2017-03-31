@@ -105,7 +105,7 @@ function oninput_play() {
         storage.setItem("roles", r);
         console.log(storage.data);
         console.log(storage.roles);
-        window.location.href = "../task/task7-5.html"
+        window.location.href = "task7-5.html"
     }
 
 

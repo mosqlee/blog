@@ -1,0 +1,55 @@
+@charset "UTF-8";
+/*
+this stylesheet fuction is css reset and reduce the diffrences between browser, make the css be in common use.
+---------------------------------*/
+/*
+---------------------------------
+Site: http://zengyupei.cn
+Author: zengyupei.cn
+Updated: 2017/3/27 and 19:53
+Updated by: Mosqlee
+---------------------------------
+*/
+body {
+  margin: 0;
+  padding: 0;
+  background: #fcfcfc;
+}
+header {
+  background-color: #47c4e5;
+}
+header .nav {
+  display: flex;
+  align-items: center;
+  padding-left: 3vw;
+}
+header span {
+  font-size: 3rem;
+}
+.distribution {
+  margin: 0 2vw 3vh;
+  padding: 1vh 0;
+  box-shadow: 1px 1px 1px #a8a8a8;
+  border: solid #a8a8a8 1px;
+}
+form {
+  margin: 27vh 0;
+}
+form label {
+  font-size: 1.5rem;
+}
+form label span {
+  font-size: 1rem;
+  color: #ec971f;
+}
+form label input {
+  width: 3rem;
+}
+.navbar-fixed-bottom {
+  bottom: 5vh;
+}
+.navbar-fixed-bottom button {
+  height: 8vh;
+  width: 96vw;
+  border-radius: 0;
+}

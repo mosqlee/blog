@@ -60,7 +60,7 @@ var $i = 1;
              }
              //加判断，最后一个再点击就跳转链接到法官查看页面
              else if ($i > roles.length){
-                 window.location.href = "../task/task7-2.html";
+                 window.location.href = "task7-2.html";
 
              }
          }

@@ -108,9 +108,9 @@ h4 {
     opacity:0;
 }
 .box1 {
-    height:32vw;
+    height:31vw;
     float: left;
-    width:32vw;
+    width:31vw;
 }
 .box1:hover .hidden-icon {
     opacity:1;

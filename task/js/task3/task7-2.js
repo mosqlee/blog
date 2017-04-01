@@ -14,11 +14,24 @@ $(document).ready(function() {
     $num.text("1号");
     for (var i = 1; i < player;i++) {
         $("main").append($element1);
-        // var $rolek = ;
-        // var $numk = ;
         $(".degree").eq(i).text(roles[i]);
         $(".num").eq(i).text(i+1+"号");
-        // $("main>div:eq(1) .degree").text(roles[1]);
-        // $("main>div:eq(i) .num").text((i+1)+"号")
     }
 });
+var menu = {
+    //当前状态
+    currentState: 'first_day',
+
+    //绑定事件
+    initialize: function() {
+        var self = this;
+        self.on("click", self.transition);
+    },
+
+    //转换状态
+    transition: function () {
+        switch (this.currentState) {
+            case "";
+        }
+    }
+};

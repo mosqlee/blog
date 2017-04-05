@@ -1,0 +1,107 @@
+@charset "UTF-8";
+//Created by mosqlee in 2017/4/4 10:02 AM
+@color-blue: #29bde0;
+@color-gray: #f0f0f0;
+@color-white: #fff;
+body {
+  margin: 0;
+  background: @color-gray;
+}
+.navbar-fixed-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  background: @color-blue;
+  a {
+    text-decoration: none;
+  }
+  span {
+    color: @color-white;
+    font-size: 2rem;
+  }
+}
+.filler {
+  height: 12vh;
+  background: @color-gray;
+}
+.triangle-up {
+  top: -10px;
+  position: relative;
+  width: 0;
+  height: 0;
+  border-width: 0 10px 10px 10px;
+  border-style: solid;
+  border-color: transparent transparent #fff;
+  margin: 0 auto;
+}
+.dropdown {
+  display: flex;
+  justify-content: center;
+  .btn-default {
+    width: 96%;
+    font-size: 2rem;
+    color: @color-blue;
+    &:hover {
+      background-color: #fff;
+
+    }
+  }
+  div.dropdown-menu {
+    left: auto;
+    width: 96%;
+    ul {
+      position: relative;
+      display: block;
+      list-style: none;
+      li {
+        position: relative;
+        width: 70vw;
+        margin: 5px 7vw;
+        padding: 10px 0;
+        font-size: 1.8rem;
+        text-align: center;
+        color: @color-white;
+        background: #24a7c6;
+        a {
+          padding: 10px 20vw;
+          color: @color-white;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+        span {
+          padding: 10px 10vw;
+        }
+      }
+    }
+  }
+}
+.triangle-left {
+  position: absolute;
+  left: -10px;
+  top: 10px;
+  width: 0;
+  height: 0;
+  border-width: 10px 15px 10px 0;
+  border-style: solid;
+  border-color: transparent #24a7c6 transparent transparent;
+}
+.gly {
+  position: absolute;
+  left: 5vw;
+  //width: 7vw;
+  height: 194px;
+  margin: 5px 0 0 0;
+}
+footer {
+  .navbar-fixed-bottom {
+    padding: 15px 0;
+    background: rgba(41,189,224,0.5);
+  }
+  .btn {
+    width: 40vw;
+    margin:0 3vw;
+    font-size: 2rem;
+  }
+}

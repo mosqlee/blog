@@ -1,0 +1,140 @@
+body {
+    background-color:#29bde0
+}
+.navbar-default {
+    background-color: #29bde0;
+}
+.vote-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:1rem;
+    font-size: 2.5rem;
+    color: #fff;
+}
+.glyphicon-menu-left {
+    color: #fff;
+}
+
+.vote {
+    display: block;
+    display: -webkit-box;
+    margin-right:1rem;
+    font-size:2.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-clamp: 1;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    color: #fff;
+}
+.back {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none
+;}
+.start {
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+}
+.fixed {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: 1rem;
+}
+.tittle {
+    display: block;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size:2rem;
+    line-clamp: 1;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.box {
+    background-color:  #b9e9f5;
+}
+.point {
+    display: flex;
+    margin:0 2rem;
+}
+h4 {
+    display: block;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 15rem 3vw 3vw;
+    font-size:2rem;
+    line-clamp: 1;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    color: #fff;
+}
+.square {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    float: left;
+    width:21vw;
+    height: 21vw;
+    margin:5.9vw 5.9vw 2vw;
+    border-style:solid;
+    border-width:.8vw;
+    border-color: #fff;
+    background-color: #f5c97b;
+}
+.degree {
+    text-align: center;
+    margin-bottom: 3vw;
+    font-size:4vw;
+}
+.num {
+    text-align: center;
+    font-size:3vw;
+    color:#fff;
+    background-color: #83b09a;
+}
+.play {
+    border:none;
+    background: none;
+}
+.icon {
+    border:none;
+    background:none;
+}
+.pictrue {
+    width:4vw;
+}
+.hidden-icon {
+    margin-left:7vw;
+    opacity:0;
+}
+.box1 {
+    height:31vw;
+    float: left;
+    width:31vw;
+}
+.box1:hover .hidden-icon {
+    opacity:1;
+}
+.navbar-fixed-bottom {
+    background-color:rgba(71,196,229,0.5);
+
+}
+.submit {
+    width:80vw;
+    margin:4vw 11vw;
+    text-align: center;
+    font-size:6vw;
+    color: #fff;
+    background-color: #fbb435;
+}
+
+main {
+    display: inline-block;
+    margin: 15vh 0;
+}

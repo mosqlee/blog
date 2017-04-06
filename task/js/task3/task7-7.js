@@ -17,4 +17,7 @@ $(document).ready(function () {
         $(".num").eq(i).text(i+1+"号");
     }
 });
+//生死状态机
+var alive_or_not = {
 
+};

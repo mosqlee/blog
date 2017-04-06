@@ -27,6 +27,9 @@
 //         }
 //     }
 // };
+// var storage = window.sessionStorage;
+// var m = storage.data;
+// var menu = JSON.parse(m);
 var killer = document.getElementById("kill");
 var dead = document.getElementById("death");
 var speach = document.getElementById("speaches");
@@ -48,7 +51,8 @@ btn.onclick = function (){
     }
 };
 // change_color(kill);
-//状态机判断是否点击过，只能顺序点击，四个都点击过就跳转界面，点击第一个之后只能点下一个，点击其他的会弹提示
+//状态机判断是否点击过，只能顺序点击，四个都点击过就跳转界面，
+// 点击第一个之后只能点下一个，点击其他的会弹提示
 var menu = {
 //      当前状态
     currentState: 'unclicked',
@@ -136,7 +140,7 @@ killer.onclick = function() {
     var m = JSON.stringify(menu);
     storage.setItem("data", m);
     console.log(storage.data);
-    window.location.href = "task7-7.html";
+    // window.location.href = "task7-7.html";
     };
 //写个循环，让后面的都没办法点
 for (var y = 1;y < btns.length;y++) {
@@ -146,3 +150,4 @@ for (var y = 1;y < btns.length;y++) {
 }
     // window.location.href="task7-7.html";
 //将变量menu保存在sessionstorage里面
+

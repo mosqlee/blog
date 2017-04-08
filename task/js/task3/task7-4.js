@@ -6,6 +6,7 @@ var killer = document.getElementById("killer");
 var fammer = document.getElementById("person");
 var blur =  document.getElementById("player");
 var player;
+
 function play() {
     player = players.value;
     const regex = /^([4-9])|(1[0-8])$/;
@@ -87,6 +88,26 @@ function oninput_play() {
             }
 
         }
+        player_data = {
+            //记录天数
+            day: 0,
+            //存储天数
+            days:["一","二","三","四","五","六","七","八"],
+            //记录步骤,step[0]给第一天的按钮用，依次类推，多一天加一个数组长度
+            step: 1,
+            //记录第几天那个按钮开启或者关闭，
+            // 判断这个值达到1开启，0关闭的目的，close_open[0]给第一天用，多一天加一个数组长度
+            close_open: 1,
+            //记录生死状态，貌似没必要，死亡情况可以写到数组里面，
+            alive_death: 1,
+            //杀手和投票界面，方块是否被选中，选中改变样式，通过这个值判断
+            selected_none: 0,
+            //选中的人,包括3种情况，0代表平民，1代表杀手，2代表死亡的人
+            role: 0,
+            //选中的人,包括3种情况，0代表平民，1代表杀手，2代表死亡的人,通过操作
+            // 改变状态，然后通过这个值判断点击事件执行哪种
+            killer_person: per
+        };
         per.sort(function () {
             return Math.random() > .5 ? -1 : 1;
         });
@@ -101,10 +122,13 @@ function oninput_play() {
         var storage = window.sessionStorage;
         var p =JSON.stringify(per);
         var r =JSON.stringify(roles);
+        var play = JSON.stringify(player_data);
         storage.setItem("data", p);
         storage.setItem("roles", r);
+        storage.setItem("player", play);
         console.log(storage.data);
         console.log(storage.roles);
+        console.log(storage.player);
         window.location.href = "task7-5.html"
     }
 

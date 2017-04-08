@@ -18,4 +18,3 @@ $(document).ready(function() {
         $(".num").eq(i).text(i+1+"号");
     }
 });
-

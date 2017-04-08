@@ -32,8 +32,7 @@ body {
   margin: 0 auto;
 }
 .dropdown {
-  display: flex;
-  justify-content: center;
+  margin-bottom: 1rem;
 }
 .dropdown .btn-default {
   width: 96%;
@@ -44,6 +43,7 @@ body {
   background-color: #fff;
 }
 .dropdown div.dropdown-menu {
+  position: relative;:
   left: auto;
   width: 96%;
 }
@@ -96,4 +96,9 @@ footer .btn {
   width: 40vw;
   margin: 0 3vw;
   font-size: 2rem;
+}
+#kill_text,
+#vote_text {
+  display: none;
+  background: none;
 }

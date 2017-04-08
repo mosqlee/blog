@@ -66,6 +66,52 @@ Step.prototype = {
         }
     }
 };
+// killer.onclick = function() {
+//     if (num == 1) {
+//         Step1.trans1();
+//         c_color(this);
+//       }
+//     else {
+//         confirm("请进行下一项活动");
+//     }
+// };
+// dead.onclick = function() {
+//     if (num == 2) {
+//         Step1.trans1();
+//         c_color(this);
+//         confirm("请死者亮明身份并且发表遗言");
+//     }
+//     else if (num > 2) {
+//         confirm("请进行下一项活动");
+//     }
+//     else {
+//         confirm("")
+//     }
+// };
+// speaches.onclick = function() {
+//     if (num == 3) {
+//         Step1.trans1();
+//         c_color(this);
+//     }
+//     else if (num > 3) {
+//         confirm("请进行下一项活动");
+//     }
+//     else {
+//         confirm("请按顺序操作")
+//     }
+// };
+// vote.onclick = function() {
+//     if (num == 4) {
+//         Step1.trans1();
+//         c_color(this);
+//     }
+//     else if (num > 4) {
+//         confirm("请进行下一项活动");
+//     }
+//     else {
+//         confirm("请按顺序操作")
+//     }
+// };
 //循环写法
 
 function change_click() {
@@ -123,4 +169,33 @@ function c_color(a) {
 btn.onclick = function() {
     Step1.trans2(this);
 };
-
+// function change_click() {
+//     var i = 0;
+//     btns[i].onclick = function () {
+//         for (var i = 0; i < btns.length; i++) {
+//                 var num = player_data.step;
+//             if (i < num - 1) {
+//                 c_color(btns[i]);
+//                 confirm("请进行下一项活动");
+//             }
+//             else if (i == num - 1) {
+//                 if (num == 1) {
+//                     var play = JSON.stringify(player_data);
+//                     storage.setItem("data", play);
+//                     //window.location.href="task7-7.html";
+//                 }
+//                 else if (num == 2) {
+//                     confirm("请死者亮明身份并且发表遗言")
+//                 }
+//                 else if (num == 3) {
+//                     confirm("玩家依次发言");
+//                 }
+//                 else if (num == 4) {
+//                     var play = JSON.stringify(player_data);
+//                     storage.setItem("data", play);
+//                     window.location.href = "task7-8.html";
+//                 }
+//             }
+//         }
+//     }
+// }

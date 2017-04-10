@@ -110,7 +110,7 @@ h4 {
     width:4vw;
 }
 .hidden-icon {
-    opacity:0;
+    display:none;
 }
 .box1 {
     height:31vw;
@@ -118,7 +118,7 @@ h4 {
     width:31vw;
 }
 .box1:hover .hidden-icon {
-    opacity:1;
+    display:block;
 }
 .navbar-fixed-bottom {
     background-color:rgba(71,196,229,0.5);

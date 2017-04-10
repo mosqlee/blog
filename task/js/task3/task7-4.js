@@ -102,7 +102,9 @@ function oninput_play() {
             }
         }
         for (var i = 0; i < per.length;i++) {
-            per_arr[i] = new Object();
+            per_arr[i] = new object();
+            per_kill[i] = -1;
+            per_vote[i] = -1;
             per_selected[i] = 0;
             per_arr[i].role = per[i];
             per_arr[i].alive = 1;
@@ -113,15 +115,17 @@ function oninput_play() {
             day: 0,
             //存储天数
             days:["一","二","三","四","五","六","七","八"],
-            //记录死亡人的号数
-            number: 1,
+            //记录杀手杀的那个人的号数
+            number_kill: per_kill,
+            //记录投票投死的那个人的号数
+            number_vote: per_vote,
             //记录步骤,step[0]给第一天的按钮用，依次类推，多一天加一个数组长度
             step: 1,
             //记录第几天那个按钮开启或者关闭，
             // 判断这个值达到1开启，0关闭的目的，close_open[0]给第一天用，多一天加一个数组长度
             close_open: 1,
             //杀手和投票界面，方块是否被选中，选中改变样式，通过这个值判断
-            selected_none: per_selected[i],
+            selected_none: per_selected,
             //数组里面是对象，对象有两个属性，一个角色属性，一个平民属性
             killer_person_alive: per_arr
         };
@@ -132,6 +136,7 @@ function oninput_play() {
         storage.setItem("data", p);
         storage.setItem("roles", r);
         storage.setItem("player", play);
+        console.log(player_data.selected_none);
         console.log(storage.data);
         console.log(storage.roles);
         console.log(storage.player);

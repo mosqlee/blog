@@ -10,7 +10,8 @@ var btns;
 var button = document.getElementsByClassName("dropdown-toggle");
 var div = document.getElementsByClassName("dropdown");
 var div_inner =div[0].innerHTML;
-
+var kill_text = document.getElementsByClassName("kill_text");
+var vote_text = document.getElementsByClassName("kill_text");
 //定义数据对象
 
 console.log(player_data);
@@ -167,6 +168,30 @@ function open(a) {
             a.parentNode.className = "open dropdown";
         }
 
+    }
+}
+
+function kill_des(a) {
+    k = player_data.number_kill[player_data.day];
+    if (k < 0) {
+        kill_text[a].style.display = "block";
+        kill_text[a].innerText = "昨天是平安夜"
+    }
+    else if(j >= 0) {
+        kill_text[a].style.display = "block";
+        kill_text[a].innerText = k+"被杀手杀死，真实身份是"+roles[a]
+    }
+    else {
+        alert("you jump!I stay here")
+    }
+}
+function vote_des(a) {
+    v = player_data.number_kill[player_data.day];
+    if(v >= 0) {
+        kill_text[a].style.display = "block";
+        kill_text[a].innerText = v+"被杀手杀死，真实身份是"+roles[a]
+    }
+    else {
     }
 }
 

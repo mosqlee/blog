@@ -4,6 +4,9 @@
 var storage = window.sessionStorage;
 var r = storage.roles;
 roles = JSON.parse(r);
+var play = storage.player;
+var player_data = JSON.parse(play);
+console.log(player_data);
 var player = roles.length;
 $(document).ready(function () {
     var $element1 = $("main").html();
@@ -29,11 +32,11 @@ Alive_dead.prototype = {
         switch (this.checked) {
             case "none":
                 this.checked = "selected";
-                player_data.close_open[a] = 1;
+                player_data.selected_none[a] = 1;
                 break;
             case "selected":
                 this.checked = "none";
-                player_data.close_open[a] = 0;
+                player_data.selected_none[a] = 0;
                 break;
         }
     },
@@ -52,29 +55,56 @@ Alive_dead.prototype = {
     }
 };
 var Alive = new Alive_dead();
+var m;
 //
-for (var i = 0;i < roles.length;i++) {
-    //小方块的点击事件
-    $(".square")[i].click(function()  {
-        Alive.trans2(i);
-        //被选中了,切换状态为选中状态，选中之后其他小方块切换为未选中
-        //小方块的隐藏按钮显示
-        //改变confirm的事件
-        if (player_data.close_open[i] = 1) {
-
-        }
-    });
+$("body").ready(function() {
+    var a = $(".square");
+    for (var i = 0;i < roles.length;i++) {
+        //先把数据归零
+        player_data.selected_none[i] = 0;
+        //小方块的点击事件
+        a.eq(i).eq(0).click(function(){
+            m = a.index($(this));
+            visited(m);
+        })
+    }
+});
+function visited(m) {
+    Alive.trans1(m);
+    //被选中了,切换状态为选中状态，选中之后其他小方块切换为未选中
+    //小方块的隐藏按钮显示
+    //改变confirm的事件
+    if (player_data.selected_none[m] = 1) {
+        //点击一个，显示一个下标，
+        color_cover();
+        $(".hidden-icon").eq(m).css("display","block");
+    }
 }
 //confirm事件改变
-function confirm(a) {
-    $(".submit").click(function() {
-        if (jQuery.inArray(1,player_data.selected_none)) {
-
+$(".submit").click(function() {
+    if (player_data.selected_none[m] == 1&&
+        player_data.killer_person_alive[m].role ==0) {
+        //改变生死
+        player_data.killer_person_alive[m].alive = 0;
+        //记录第一天死的人的号数
+        player_data.number_kill[player_data.day] = m;
+        window.location.href = "task7-6.html"
+    }
+    else if (player_data.selected_none[m] == 1&&
+        player_data.killer_person_alive[m].role ==1) {
+        alert("不能自刀哦！")
+    }
+    else {
+            window.location.href = "task7-6.html"
         }
-        else {
-
-        }
-    })
+    var storage = window.sessionStorage;
+    var play = JSON.stringify(player_data);
+    storage.setItem("player", play);
+    });
+function color_cover() {
+    for (var i = 0;i < roles.length;i++) {
+        $(".hidden-icon").eq(i).css("display","none");
+    }
 }
 
 

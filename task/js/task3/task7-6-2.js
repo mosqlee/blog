@@ -53,11 +53,9 @@ Step.prototype = {
     state2: "1",
     trans2: function() {
         switch(this.state2) {
-
             case "1":
                 this.state2 = "2";
                 player_data.close_open = 2;
-
                 break;
             case "2":
                 this.state2 = "1";
@@ -89,7 +87,7 @@ function change_click(btns) {
                     var play = JSON.stringify(player_data);
                     storage.setItem("player", play);
                     console.log(play);
-                    //window.location.href="task7-7.html";
+                    window.location.href="task7-7.html";
                 }
                 else if (num == 2) {
                     confirm("请死者亮明身份并且发表遗言")
@@ -151,10 +149,6 @@ function c_color(a) {
         "transparent #83b09a transparent transparent";
 }
 //调用状态机将第一天设为可以关闭和开启
-// btn.onclick = function() {
-//
-//     open(this)
-// };
 function open_onload(a) {
     if (player_data.close_open == 2) {
         a.parentNode.className = "dropdown";
@@ -176,17 +170,4 @@ function open(a) {
     }
 }
 
-// //自己写个获取元素子节点的选择器
-// function get_element(a) {
-//     var b = {};
-//     for (var i = 0,x = 0;i < a.length;i++) {
-//         if (a[i].nodeType == 1&&) {
-//             b[x] = a[i];
-//         }
-//     }
-// }
-//innerafter函数
-// function inSertAfter() {
-//
-// }
 

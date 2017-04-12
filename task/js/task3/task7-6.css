@@ -3,6 +3,7 @@ body {
   margin: 0;
   background: #f0f0f0;
 }
+
 .navbar-fixed-top {
   display: flex;
   justify-content: space-between;

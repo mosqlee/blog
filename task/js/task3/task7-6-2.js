@@ -169,10 +169,10 @@ function open_onload(a) {
 function open(a) {
     a.onclick = function () {
         Step1.trans2();
-        if (player_data.close_open == 2) {
+        if (a.parentNode.className == "open dropdown") {
             a.parentNode.className = "dropdown";
         }
-        else if (player_data.close_open == 1) {
+        else if (a.parentNode.className == "dropdown") {
             a.parentNode.className = "open dropdown";
         }
 

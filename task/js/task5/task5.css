@@ -1,5 +1,52 @@
 body {
     margin: 0;
     padding: 0;
+    height: 100vh;
     background: url("http://119.10.57.69:880/jnshu265/pic/jstask5/background.png") no-repeat;
+    background-size: 100vw 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box {
+    padding:10px 30px;
+    background: #D5D9E1;
+    text-align: center;
+}
+.account {
+    position: relative;
+    text-align: left;
+}
+.password {
+    position: relative;
+    text-align: left;
+}
+h3 {
+    line-height: 0;
+    color: #03a9f4;
+}
+.id,.psw {
+    width: 160px;
+    height: 30px;
+    padding-left: 40px;
+    margin-top:5px;
+
+    border: none;
+}
+button {
+    width: 200px;
+    height: 30px;
+    margin-top: 35px;
+    border:none;
+    background: #03a9f4;
+    color: #fff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 4px;
+}
+img {
+    position: absolute;
+    z-index: 1000;
+    top: 12px;
+    left: 10px;
 }

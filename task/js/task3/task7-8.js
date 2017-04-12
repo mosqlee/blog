@@ -121,7 +121,6 @@ function color_change(b) {
 }
 //判断游戏继续
 function game_over() {
-    var killer = 0,person = 0;
     game_over1();
     if (killer == 0||killer >= person&&killer != 0) {
         //游戏结束

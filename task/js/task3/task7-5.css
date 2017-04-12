@@ -86,3 +86,10 @@ body header div .glyphicon {
   width: 86vw;
   border-radius: 0;
 }
+#close {
+  color: #fff;
+  text-decoration: none;
+}
+#close:hover {
+  text-decoration: none;
+}

@@ -100,5 +100,8 @@ footer .btn {
 #kill_text,
 #vote_text {
   display: none;
-  background: none;
+  background: #fff;
+  font-size: 1rem;
+    color: #000;
+    text-align: left;
 }

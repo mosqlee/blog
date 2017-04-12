@@ -8,6 +8,10 @@ var blur =  document.getElementById("player");
 var player;
 var per_arr = [];
 var per_selected = [];
+var per_kill = new Array;
+var per_vote = new Array;
+var per_step = new Array;
+var per_merry = new Array;
 function play() {
     player = players.value;
     const regex = /^([4-9])|(1[0-8])$/;
@@ -41,7 +45,6 @@ function oninput_play() {
 }
 //发牌，创建一个跟输入数字一样长度的数组，里面包括0和1,1代表杀手，0代表平民,保存到session里面
     function send_card() {
-
         var player = players.value;
         var per = new Array(player);
         var roles = [];
@@ -102,7 +105,9 @@ function oninput_play() {
             }
         }
         for (var i = 0; i < per.length;i++) {
-            per_arr[i] = new object();
+            per_arr[i] = new Object();
+            per_step[i] = 1;
+            per_merry[i] = true;
             per_kill[i] = -1;
             per_vote[i] = -1;
             per_selected[i] = 0;
@@ -113,9 +118,13 @@ function oninput_play() {
         player_data = {
             //记录天数
             day: 0,
+            //辅助判断是否为平安夜，空点击改变这个值，执行完之后改回来
+            merry: per_merry,
+            //判断是否点击过杀人
+            kill: 0,
             //存储天数
             days:["一","二","三","四","五","六","七","八"],
-            //记录杀手杀的那个人的号数
+            //记录每天杀手杀的那个人的号数
             number_kill: per_kill,
             //记录投票投死的那个人的号数
             number_vote: per_vote,

@@ -58,7 +58,6 @@ Alive_dead.prototype = {
 var Alive = new Alive_dead();
 var m;
 //
-
 function visited(m) {
     Alive.trans1(m);
     //被选中了,切换状态为选中状态，选中之后其他小方块切换为未选中
@@ -72,42 +71,36 @@ function visited(m) {
 }
 //confirm事件改变
 $(".submit").click(function() {
-    player_data.kill =1;
     //判断游戏是否结束
     //有选中，角色是平民，人还没死
     if (player_data.selected_none[m] == 1&&
-        player_data.killer_person_alive[m].role ==0&&
         player_data.killer_person_alive[m].alive == 1) {
         //改变生死
         player_data.killer_person_alive[m].alive = 0;
         //记录第一天死的人的号数
-        player_data.number_kill[player_data.day] = m;
+        player_data.number_vote[player_data.day] = m;
         game_over();
     }
-    //死人没法再杀，先判断，不会出现杀手死了还弹无法自刀
+    //死人没法再杀
     else if (player_data.selected_none[m] == 1&&
         player_data.killer_person_alive[m].alive == 0) {
         confirm("当前玩家已死亡，请选择其他玩家");
     }
-    //有选中，角色是杀手，不能杀
-    else if (player_data.selected_none[m] == 1&&
-        player_data.killer_person_alive[m].role ==1) {
-        alert("不能自刀哦！")
-    }
-
+    //
     else {
-        game_over();
-        }
+        confirm("请进行操作");
+    }
     var storage = window.sessionStorage;
     var play = JSON.stringify(player_data);
     storage.setItem("player", play);
-    });
+});
 function color_cover() {
     for (var i = 0;i < roles.length;i++) {
         $(".hidden-icon").eq(i).css("display","none");
     }
 }
 $("body").ready(function() {
+    game_over1();
     var a = $(".square");
     for (var i = 0;i < roles.length;i++) {
         //先把数据归零
@@ -126,9 +119,25 @@ $("body").ready(function() {
 function color_change(b) {
     b.css("background","#83b09a")
 }
-//判断是否游戏结束
+//判断游戏继续
 function game_over() {
     var killer = 0,person = 0;
+    game_over1();
+    if (killer == 0||killer >= person&&killer != 0) {
+        //游戏结束
+        window.location.href = "task7-3.html"
+    }
+    else {
+        //游戏继续
+        player_data.day++;
+        window.location.href = "task7-6.html"
+    }
+}
+//判断游戏结束
+var killer,person;
+function game_over1() {
+    killer = 0;
+    person = 0;
     for(var i =0;i <player_data.killer_person_alive.length;i++) {
         if (player_data.killer_person_alive[i].role == 1&&
             player_data.killer_person_alive[i].alive == 1) {
@@ -139,18 +148,9 @@ function game_over() {
             person++
         }
     }
-    if (killer == 0||killer > person&&killer != 0) {
+    if (killer == 0||killer >= person&&killer != 0) {
         //游戏结束
         window.location.href = "task7-3.html"
-    }
-    //如果谁都不选
-    else if(m == undefined) {
-        //游戏继续
-        player_data.merry[player_data.day] = false;
-        window.location.href = "task7-6.html"
-    }
-    else {
-        window.location.href = "task7-6.html"
     }
 }
 function click() {
@@ -161,5 +161,4 @@ function click() {
 $("#back").click(function() {
     click()
 });
-
 

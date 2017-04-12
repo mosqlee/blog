@@ -77,3 +77,11 @@ var $i = 1;
      //
 
 );
+function click() {
+    if (confirm("本局游戏是否已结束")) {
+        window.location.href="task7-1.html";
+    }
+}
+$("#close").click(function() {
+    click()
+});

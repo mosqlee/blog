@@ -5,13 +5,15 @@
 var storage = window.sessionStorage;
 var play = storage.player;
 var player_data = JSON.parse(play);
+var r = storage.roles;
+roles = JSON.parse(r);
 console.log(player_data);
 var btns;
 var button = document.getElementsByClassName("dropdown-toggle");
 var div = document.getElementsByClassName("dropdown");
 var div_inner =div[0].innerHTML;
 var kill_text = document.getElementsByClassName("kill_text");
-var vote_text = document.getElementsByClassName("kill_text");
+var vote_text = document.getElementsByClassName("vote_text");
 //定义数据对象
 
 console.log(player_data);
@@ -98,12 +100,10 @@ function change_click(btns) {
                 }
                 else if (num == 4) {
                     c_color(this);
-                    player_data.day++;
                     var storage = window.sessionStorage;
                     var play = JSON.stringify(player_data);
                     storage.setItem("player", play);
                     console.log(play);
-
                     window.location.href="task7-8.html";
                 }
             }
@@ -117,6 +117,7 @@ function change_click(btns) {
 }
 //加载
 document.getElementsByTagName("body")[0].onload = function() {
+
     for (var i = 0;i < player_data.day;i++) {
         var div1 = document.createElement("div");
         div1.innerHTML = div_inner;
@@ -124,22 +125,29 @@ document.getElementsByTagName("body")[0].onload = function() {
         button[i+1].parentNode.className = "open dropdown";
         button[i+1].innerHTML = "第"+player_data.days[i+1]+"天";
     }
+    des();
+    //关闭过往天数，打开最后一天
     for (var i =0;i <= player_data.day;i++) {
         var btn = button[i];
         var btns = div[i].getElementsByClassName("li");
         if (i < player_data.day) {
             player_data.step = 5;
             player_data.close_open = 2;
-            open(btn);
         }
-        else if (i = player_data.day) {
-            player_data.step = 1;
+        else if (i == player_data.day) {
             player_data.close_open = 1;
-            open(btn);
+            if (player_data.kill ==1 ) {
+                player_data.step = 2;
+                player_data.kill =0;
+            }
+            else if(player_data.kill == 0) {
+                player_data.step = 1;
+            }
         }
-            change_click(btns);
-            open(btn);
-            open_onload(btn);
+        change_click(btns);
+        open(btn);
+        open_onload(btn);
+
     }
     console.log(btns);
 };
@@ -170,29 +178,37 @@ function open(a) {
 
     }
 }
+//描述
+function des() {
+    //需要多加一个判断，不然最新的那天自动刷新出来昨晚平安夜
+    for (var i=0;i <= player_data.day;i++) {
+        k = player_data.number_kill[i];
+        v = player_data.number_vote[i];
+        if (k<0&&!player_data.merry[i]) {
+            kill_text[i].style.display = "block";
+            kill_text[i].innerText = "昨天是平安夜"
+        }
+        else if(k>=0) {
+            kill_text[i].style.display = "block";
+            kill_text[i].innerText = (k+1)+"号被杀手杀死，真实身份是"+roles[k]
+        }
+        if(v >= 0) {
+            vote_text[i].style.display = "block";
+            vote_text[i].innerText = v+1+"号被投票投死了，真实身份是"+roles[v]
+        }
 
-function kill_des(a) {
-    k = player_data.number_kill[player_data.day];
-    if (k < 0) {
-        kill_text[a].style.display = "block";
-        kill_text[a].innerText = "昨天是平安夜"
     }
-    else if(j >= 0) {
-        kill_text[a].style.display = "block";
-        kill_text[a].innerText = k+"被杀手杀死，真实身份是"+roles[a]
-    }
-    else {
-        alert("you jump!I stay here")
+
+}
+//其他小按钮
+function click() {
+    if (confirm("本局游戏是否已结束")) {
+        window.location.href="task7-3.html";
     }
 }
-function vote_des(a) {
-    v = player_data.number_kill[player_data.day];
-    if(v >= 0) {
-        kill_text[a].style.display = "block";
-        kill_text[a].innerText = v+"被杀手杀死，真实身份是"+roles[a]
-    }
-    else {
-    }
-}
-
-
+document.getElementById("back").onclick =function() {
+    click()
+};
+document.getElementById("over").onclick =function() {
+    click()
+};

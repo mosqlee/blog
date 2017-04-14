@@ -36,7 +36,7 @@ h3 {
 button {
     width: 200px;
     height: 30px;
-    margin-top: 35px;
+    margin-top: 15px;
     border:none;
     background: #03a9f4;
     color: #fff;
@@ -49,4 +49,8 @@ img {
     z-index: 1000;
     top: 12px;
     left: 10px;
+}
+#remind {
+    font-size: 6px;
+    color: red;
 }

@@ -1,0 +1,7 @@
+(function () {
+    "use strict"
+    app.controller("mainCtrl", mainCtrlFn);
+    function mainCtrlFn() {
+        this.value = "Hello World";
+    }
+}())

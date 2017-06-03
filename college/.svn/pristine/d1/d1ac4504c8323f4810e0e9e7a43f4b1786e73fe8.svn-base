@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<script>
+  var timeStart = new Date();
+</script>
+<!--[if lte IE 7]>
+<script>window.location.href = 'http://cdn.dmeng.net/upgrade-your-browser.html?referrer=' + location.href;</script><![endif]-->
+<html lang="en" ng-app="college">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>北京信息科技大学信息与计算科学系</title>
+  </head>
+  <body>
+    <div ui-view=""></div>
+  </body>
+  <script type="text/javascript" src="vendor/angular-1.2.9/angular.min.js"></script>
+  <script type="text/javascript" src="vendor/angular-ui-router/angular-ui-router.min.js"></script>
+  <script type="text/javascript" src="vendor/oclazyload/ocLazyLoad.min.js"></script>
+  <script type="text/javascript" src="vendor/Jquery-1.9.1/Jquery.min.js"></script>
+  <script type="text/javascript" src="vendor/bootstrap/bootstrap.min.js"></script>
+  <script type="text/javascript" src="vendor/unslider/unslider-min.js"></script>
+  <script type="text/javascript" src="vendor/angular-ui-bootstrap/ui-bootstrap.min.js"></script>
+
+
+  <script type="text/javascript">
+    var timeEnd = new Date();
+    console.log('总耗时：' + (timeEnd - timeStart));
+  </script>
+</html>

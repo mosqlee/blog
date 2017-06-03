@@ -1,0 +1,30 @@
+
+<div>
+<div class="specialty-banner">
+    <img src="../img/speialty-banner.jpg">
+</div>
+<ol class="breadcrumb">
+    <li><a href="#">首页</a></li>
+    <li class="active">师资队伍</li>
+</ol>
+<div class="container">
+    <div class="row">
+        <div class="col-md-2">
+            <ul>教师团队
+                <li ng-repeat="item in vm.data.facultyTeamIntroduceList">
+                    <a ng-bind="item.name"></a>
+                </li>
+            </ul>
+            <ul>教师简介
+                <li ng-repeat="item in vm.data.facultyTeacherIntroduceList">
+                    <a ng-bind="item.name" ui-sref="footer.header.faculty.facultyContent({teacherId:item.teacherId})" ></a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-offset-1 col-md-7">
+            <div ui-view=""></div>
+        </div>
+    </div>
+
+</div>
+</div>

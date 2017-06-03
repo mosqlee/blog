@@ -1,0 +1,45 @@
+﻿app.config(["$stateProvider","$urlRouterProvider",routeFn]);
+function routeFn($stateProvider,$urlRouterProvider){
+    $urlRouterProvider.otherwise("/footer/header");
+    $stateProvider
+        .state("footer",{
+            url:"/footer",
+            templateUrl:"views/footer.html",
+            controller:"footer",
+            controllerAs:"vm",
+            resolve:{
+                deps:["$ocLazyLoad",function($ocLazyLoad){
+                    return $ocLazyLoad.load("js/controllers/footer.js");
+                }]
+            }
+        })
+        .state("footer.header",{
+            url:"/header",
+            templateUrl:"views/header.html",
+            controller:"header",
+            controllerAs:"vm",
+            resolve:{
+                deps:["$ocLazyLoad",function($ocLazyLoad){
+                    return $ocLazyLoad.load("js/controllers/header.js");
+                }]
+            }
+        })
+        .state("footer.header.specialtyIntroduce",{
+            url:"/specialtyIntroduce",
+            templateUrl:"views/specialtyIntroduce.html",
+            controllerAs:"vm"
+        })
+        .state("footer.header.faculty",{
+            url:"/faculty",
+            templateUrl:"views/faculty.html",
+            controller:"faculty",
+            controllerAs:"vm"
+        })
+        .state("footer.header.faculty.facultyContent",{
+            params:{teacherId:null},
+            url:"/facultyContent?teacherId",
+            templateUrl:"views/facultyContent.html",
+            controller:"facultyContent",
+            controllerAs:"vm"
+        })
+};

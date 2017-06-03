@@ -1,0 +1,23 @@
+<div class="container-fluid fixed-bottom">
+  <div class="row">
+    <div class="col-xs-2 col-xs-offset-1">
+      <a ui-sref="footer.header">联系我们</a>
+    </div>
+    <div class="col-xs-2 col-xs-offset-2">
+      
+    </div>
+    <div class="col-xs-2 col-xs-offset-2">
+      <img src="" alt="二维码">
+      <p>扫描关注官方微信</p>
+    </div>
+  </div>
+  <div class="text-center">
+    <p>
+      copyright @2005——2017 BISTU EDU.CN 北京信息科技大学 版权所有
+    </p>
+    <p>
+      地址：北京市海淀区清河小营东路12号 
+    </p>
+  </div>
+</div>
+<div ui-view=""></div>

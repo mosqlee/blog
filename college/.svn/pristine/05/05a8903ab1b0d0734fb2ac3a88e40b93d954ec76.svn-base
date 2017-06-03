@@ -1,0 +1,28 @@
+﻿"use strict"
+app.config(["$stateProvider","$urlRouterProvider",routeFn]);
+function routeFn($stateProvider,$urlRouterProvider){
+  $urlRouterProvider.otherwise("/footer");
+  $stateProvider
+  .state("footer",{
+    url:"/footer",
+    templateUrl:"views/footer.html",
+    controller:"footer",
+    controllerAs:"vm",
+    resolve:{
+      deps:["$ocLazyLoad",function($ocLazyLoad){
+       return $ocLazyLoad.load("css/header&footer.css");
+      }]
+    }
+  })
+  .state("footer.header",{
+    url:"/header",
+    templateUrl:"views/header.html",
+    controller:"header",
+    controllerAs:"vm",
+    resolve:{
+      deps:["$ocLazyLoad",function($ocLazyLoad){
+        return $ocLazyLoad.load("js/controllers/header.js");
+      }]
+    }
+  })
+};

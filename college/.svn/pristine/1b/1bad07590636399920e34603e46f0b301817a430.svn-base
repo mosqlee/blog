@@ -1,0 +1,46 @@
+"use strict"
+app.config(["$stateProvider","$urlRouterProvider",routeFn]);
+function routeFn($stateProvider,$urlRouterProvider){
+    $urlRouterProvider.otherwise("/main");
+    $stateProvider
+        .state("main",{
+            url:"/main",
+            templateUrl:"views/main.html",
+            controller:"mainCtrl",
+            controllerAs:"main",
+            resolve:{
+                deps:["$ocLazyLoad",function($ocLazyLoad){
+                    return $ocLazyLoad.load("js/controllers/main.js");
+                }]
+            }
+        })
+        .state("adminUser",{
+            url:"/adminUser",
+            templateUrl:"views/adminUser.html",
+            controller:"adminUserCtrl",
+            controllerAs:"adminUser",
+            resolve:{
+                deps:["$ocLazyLoad",function($ocLazyLoad){
+                    return $ocLazyLoad.load("js/controllers/adminUser.js");
+                }]
+            }
+        })
+        .state("specialtyIntroduce",{
+            url:"/specialtyIntroduce",
+            templateUrl:"views/specialtyIntroduce.html",
+            controllerAs:"vm"
+        })
+        .state("faculty",{
+            url:"/faculty",
+            templateUrl:"views/faculty.html",
+            controller:"faculty",
+            controllerAs:"vm"
+        })
+        .state("faculty.facultyContent",{
+            params:{teacherId:null},
+            url:"/facultyContent?teacherId",
+            templateUrl:"views/facultyContent.html",
+            controller:"facultyContent",
+            controllerAs:"vm"
+        })
+};|

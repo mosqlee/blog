@@ -1,27 +1,26 @@
 
 <div>
-<div class="specialty-banner">
-    <img src="../img/speialty-banner.jpg">
-</div>
-<ol class="breadcrumb">
-    <li><a href="#">首页</a></li>
-    <li class="active">师资队伍</li>
-</ol>
+    <div class="container">
+    <div class="specialty-banner">
+        <img src="imgs/speialty-banner.jpg">
+    </div>
+    </div>
+    <div class="container">
+        <div class="text-left specialty-nav ddgray font-s">
+            <span ><a ui-sref="main.homepage">首页</a> - </span><span>专业介绍</span>
+        </div>
+    </div>
 <div class="container">
     <div class="row">
-        <div class="col-md-2">
-            <ul>教师团队
-                <li ng-repeat="item in vm.data.facultyTeamIntroduceList">
-                    <a ng-bind="item.name"></a>
-                </li>
-            </ul>
-            <ul>教师简介
-                <li ng-repeat="item in vm.data.facultyTeacherIntroduceList">
-                    <a ng-bind="item.name" ui-sref="footer.header.faculty.facultyContent({teacherId:item.teacherId})" ></a>
+        <div class="col-xs-2">
+            <ul>
+                <li  ng-click="vm.getTeamTitle(id)">教师团队</li>
+                <li ng-repeat="item in vm.data.introduceList">
+                    <a ng-bind="item.name" ui-sref="main.faculty.facultyContent({teacherId:item.teacherId})" ng-class="{selcected:($index==teacherId)}"></a>
                 </li>
             </ul>
         </div>
-        <div class="col-md-offset-1 col-md-7">
+        <div class="col-xs-offset-1 col-xs-7">
             <div ui-view=""></div>
         </div>
     </div>

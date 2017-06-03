@@ -1,0 +1,83 @@
+@import url(public.less);
+@import url(layout.less);
+.footer {
+  width: 100%;
+  height: 159px;
+  background-color:  @light-blue;
+  padding: 20px 0;
+  p,span {
+    color: @white;
+  }
+}
+.footer-message {
+  p {
+    color: @white;
+  }
+  .message{
+    margin:14px 0;
+  }
+  .last-message{
+    margin: 15px 0;
+  }
+}
+.footer-vertical{
+  width: 1px;
+  height: 80px;
+  margin: 20px 0 20px 23.5px;
+  background: @dark-blue;
+}
+.footer-contect {
+  .float-left;
+  margin: 26px 18.5px;
+  .contact-us{
+    padding-right: 20px;
+    .border-right(@white);
+    color: @white;
+  }
+  .focus-us{
+    padding-left: 20px;
+  }
+  // 底部小图标
+  .footer-icon{
+    margin-top: 20px;
+    a{
+      display: inline-block;
+      margin-right: 8px;
+      width: 30px;
+      height: 30px;
+      span{
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background: url('../imgs/sprite.png') no-repeat;
+      }
+    }
+    .icon-tencent {
+      background-position: 0 0;
+    }
+    .icon-tencent-blog{
+
+      background-position: -30px 0;
+    }
+    .icon-wechat{
+      background-position: -60px 0;
+    }
+    .icon-wechat{
+      background-position: -90px 0;
+    }
+  }
+}
+.footer-barcode{
+  .float-right;
+  width: 115px;
+  height: 124px;
+
+  img{
+    width: 100px;
+    height: 100px;
+    margin: 0 7px 10px 7px;
+  }
+  p{
+    margin-top: 0;
+  }
+}

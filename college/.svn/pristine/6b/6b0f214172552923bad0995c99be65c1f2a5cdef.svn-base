@@ -1,0 +1,48 @@
+<div class="header">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-1">
+        <img src="" alt="学校logo">
+      </div>
+      <div class="col-xs-4">
+        <h2>北京信息科技大学理学院系</h2>
+      </div>
+      <div class="col-xs-3 pull-right text-right" homepage>
+        <a href="">设为首页</a>
+        <form action="">
+          <label for="">
+            <input type="text">
+            <span class="icon-search"></span>
+          </label>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div ui-view="" class="main"></div>
+<div class="footer">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-2 col-xs-offset-1">
+        <a >联系我们</a>
+      </div>
+      <div class="col-xs-2 col-xs-offset-2">
+        
+      </div>
+      <div class="col-xs-2 col-xs-offset-2">
+        <img src="" alt="二维码">
+        <p>扫描关注官方微信</p>
+      </div>
+    </div>
+    <div class="text-center">
+      <p>
+        copyright @2005——2017 BISTU EDU.CN 北京信息科技大学 版权所有
+      </p>
+      <p>
+        地址：北京市海淀区清河小营东路12号 
+      </p>
+    </div>
+  </div>
+</div>  
+

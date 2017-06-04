@@ -1,0 +1,41 @@
+
+<div>
+    <div class="container">
+    <div class="specialty-banner">
+        <img src="../imgs/base-banner.jpg">
+    </div>
+    </div>
+    <div class="container">
+        <div class="text-left specialty-nav ddgray font-s">
+            <span ><a ui-sref="main.homepage">首页</a> - </span><a ui-sref="main.practiceBase">师资团队</a>
+        </div>
+    </div>
+<div class="container base-content">
+        <div class="col-xs-2 base-pic-warp">
+                <div><img src="../imgs/base.png"></div>
+        </div>
+        <div class="col-xs-offset-1 col-xs-7 noPadding">
+          <p class="text-left font-l font-weight specialty-content-title">实习基地•江苏森风集团</p>
+          <p class="font-m">江苏森风汽车集团是全市规模最大的汽车商贸城，同时也是整个华东地区个人投资规模最大的商贸企业。近年来，集团实现了快速扩张，先后建立了北京现代、长安福特、东风标致、雪佛兰、荣威、一汽马自达、奥迪、
+          三菱、斯巴鲁等10个知名品牌汽车4S店，年销售突破15个亿。2009年被市政府列为新兴服务业的重点龙头企业。</p>
+        </div>
+</div>
+  <div class="container base-content">
+    <div class="col-xs-2 base-pic-warp">
+      <div><img src="../imgs/base.png"></div>
+    </div>
+    <div class="col-xs-offset-1 col-xs-7 noPadding">
+      <p class="text-left font-l font-weight specialty-content-title">实习基地•东风悦达起亚汽车有限公司 </p>
+      <p class="font-m">江苏悦达集团为全国520户重点大型国有企业之一，位居全国重点规模企业前百强、江苏省重点规模企业前十强，为江苏长江以北最大的国有企业。集团先后与韩国现代起亚、法国家乐福、日本富士重工以及德国黛安芬、印度马恒达等世界500强企业及国际知名企业携手合作，走出了一条以国际化带动新型工业化的成功之路。</p>
+    </div>
+  </div>
+  <div class="container base-content">
+    <div class="col-xs-2 base-pic-warp">
+      <div><img src="../imgs/base.png"></div>
+    </div>
+    <div class="col-xs-offset-1 col-xs-7 noPadding">
+      <p class="text-left font-l font-weight specialty-content-title">实习基地•盐城中威客车有限公司</p>
+      <p class="font-m">盐城中威客车有限公司系中大集团旗下五家汽车制造企业之一，中大集团是以汽车制造、汽车设备等为核心产业的大型民营股份制企业集团，现已发展成为中国汽车和机械制造领域最具有影响力的著名品牌之一。中大商标系中国驰名商标，中大品牌位居“2006年中国500最具价值品牌”第92位，品牌价值为60.12亿元。</p>
+    </div>
+  </div>
+</div>

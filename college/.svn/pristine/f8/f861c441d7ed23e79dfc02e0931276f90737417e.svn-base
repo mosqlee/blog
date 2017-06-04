@@ -1,0 +1,22 @@
+
+<div>
+    <div class="container">
+    <div class="specialty-banner">
+        <img src="../imgs/communication-banner.jpg">
+    </div>
+    </div>
+    <div class="container">
+        <div class="text-left specialty-nav ddgray font-s">
+            <span ><a ui-sref="main.homepage">首页</a> - </span><a ui-sref="main.practiceBase">学术交流</a>
+        </div>
+    </div>
+  <div class="container">
+      <div class="col-xs-4" ng-repeat="item in vm.communication">
+        <div class="communication-pic" ng-if="item.img!=''">
+          <img ng-src={{item.img}}>
+        </div>
+        <div class="communication-title" ng-bind="item.title|wordsOfNum:25"></div>
+        <div class="communication-content" ng-bind="item.content|wordsOfNum:140"></div>
+      </div>
+    </div>
+</div>

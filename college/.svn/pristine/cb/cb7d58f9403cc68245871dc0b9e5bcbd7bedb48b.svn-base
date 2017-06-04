@@ -1,0 +1,40 @@
+.text-center{
+  text-align: center;
+}
+.displayNone{
+  display: none;
+}
+.visible{
+  height: 0;
+  visibility: hidden;
+}
+.red{
+  color: red;
+}
+.font-s{
+  font-size: 14px;
+}
+.font-m{
+  font-size: 20px;
+}
+.text-left{
+  text-align: left;
+}
+.font-weight{
+  font-weight: 600;
+}
+.white-space{
+  white-space: pre;
+}
+.space-two{
+  display: inline-block;
+  width: 28px;
+}
+// 浮动
+.float-left{
+  float: left;
+}
+.float-right{
+  float:right;
+}
+// 

@@ -1,0 +1,30 @@
+
+<div>
+    <div class="container">
+    <div class="specialty-banner">
+        <img src="../imgs/communication-banner.jpg">
+    </div>
+    </div>
+    <div class="container">
+        <div class="text-left specialty-nav ddgray font-s">
+            <span ><a ui-sref="main.homepage">首页</a> - </span><a ui-sref="main.practiceBase">学术交流</a>
+        </div>
+    </div>
+  <div class="container">
+      <div class="col-xs-4 text-center" ng-repeat="item in vm.communication">
+        <div class="communication-content">
+        <div class="communication-pic" ng-if="item.img!=''">
+          <img ng-src={{item.img}}>
+        </div>
+        <div class="communication-title">
+          <div class="communication-date white">
+            <div class="communication-date-date" ng-bind="item.updateAt|date:'dd'"></div>
+          <div class="communication-date-year font-s" ng-bind="item.updateAt|date:'yyyy-M'"></div>
+          </div>
+          <a class="communication-title-content font-m font-weight black text-left"  ng-bind="item.title" ui-sref="main.communicationContent({id:item.id})"></a>
+        </div>
+        <a class="communication-text ddgray text-left" ng-bind="item.content|wordsOfNum:50:140:item.img" ui-sref="main.communicationContent({id:item.id})"></a>
+      </div>
+    </div>
+  </div>
+</div>

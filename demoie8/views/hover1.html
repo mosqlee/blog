@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    *{margin: 0;padding: 0;}
+    ul {list-style: none;border: 1px solid #000;display: inline-block;text-align: center;position: relative;}
+    li {display: inline-block;width: 80px;height: 30px;border: 1px solid #000;}
+    span {position: absolute;bottom: -1px;left: 1px;width: 80px;height: 5px;background: #F55;}
+    </style>
+    <script src="../js/Jquery.min.js"></script>
+</head>
+<body>
+    <ul>
+        <li>首页</li><!--
+     --><li>专业介绍</li><!-- 
+     --><li>师资团队</li>
+        <span></span>
+    </ul>
+</body>
+<script>
+$("li").eq(0).click(function(){
+    $('span').animate({left: '1px'}, "fast")
+})
+$("li").eq(1).click(function(){
+    $('span').animate({left: '83px'}, "fast")
+})
+$("li").eq(2).click(function(){
+    $('span').animate({left: '166px'}, "fast")
+})
+</script>
+</html>

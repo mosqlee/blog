@@ -1,0 +1,29 @@
+<a href="/setHomePage" id="setHomePage">设为首页</a> 
+<!--[if IE]> 
+<script type="text/javascript"> 
+(function(){ 
+  var el=document.getElementById(’setHomePage’),url=’http://www.aoao.org.cn/’,isHp=false; 
+  el.style.behavior=’url(#default#homepage)’; 
+  function check(){ 
+    try{ 
+      isHp=el.isHomePage(url); 
+    }catch(exia){} 
+    if(isHp){ 
+      //el.style.visibility=’hidden’ 
+      /*AD*/el.innerHTML="《Web标准设计》雷人进行时"; 
+      el.href="http://www.baidu.com/";/**/ 
+      el=null;url=null;isHp=null;check=null; 
+    }else{ 
+      el.onclick=function(){ 
+        try{ 
+          this.setHomePage(url); 
+          check(); 
+          return false; 
+        }catch(exia){return true} 
+      } 
+    } 
+  } 
+  check(); 
+})(); 
+</script> 
+<![endif]-->

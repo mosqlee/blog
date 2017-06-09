@@ -25,5 +25,8 @@
 
   <script type="text/javascript" src="js/app.config.js"></script>
   <script type="text/javascript" src="js/router.config.js"></script>
+  <script type="text/javascript" src="js/controllers/main.js"></script>
+  <script type="text/javascript" src="js/directives/nav/nav.js"></script>
+  <script type="text/javascript" src="js/directives/homepage/setAsHomepage.js"></script>
   <script src="js/directives/directives.js"></script>
 </html>

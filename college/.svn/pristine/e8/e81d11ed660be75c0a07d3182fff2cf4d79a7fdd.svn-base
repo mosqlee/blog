@@ -9,11 +9,7 @@ function routeFn($stateProvider,$urlRouterProvider){
             controllerAs:"vm",
             resolve:{
                 deps:["$ocLazyLoad",function($ocLazyLoad){
-                    return $ocLazyLoad.load([
-                      "js/controllers/main.js",
-                      "js/directives/nav/nav.js",
-                      "js/directives/homepage/setAsHomepage.js"
-                      ]);
+                    return $ocLazyLoad.load("js/controllers/main.js");
                 }]
             }
         })

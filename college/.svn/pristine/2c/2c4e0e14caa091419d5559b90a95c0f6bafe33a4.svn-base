@@ -1,0 +1,38 @@
+/**
+ * Created by Administrator on 2017/6/3.
+ */
+app.controller('Recruit',function(getModule,$state,$stateParams){
+  var vm=this;
+  ($stateParams.index==null)?vm.index=0:vm.index=$stateParams.index;
+  vm.category=4;
+  vm.page='';
+  vm.size='';
+  //获取后台列表及内容
+  vm.getRecruitList=function(){
+    getModule.getModule(vm.category,vm.page,vm.size).then(function(res){
+      vm.data=res.data.data;
+      ($stateParams.id==null)? defaultPage():vm.data=res.data.data;
+    });
+  };
+  vm.getRecruitList();
+  //执行默认跳转
+  function defaultPage(){
+    $state.go('main.recruit.recruitContent',{id:vm.data[0].id})
+  }
+  //点击事件
+  vm.getIndex=function(index){
+    vm.index=index
+  }
+});
+app.controller('RecruitContent',function($stateParams,getModule){
+  var vm=this;
+  var id=$stateParams.id;
+  id=parseInt(id);
+  //获取数据
+  vm.recruitContent=function(){
+    getModule.getSpecificInfo(id).then(function(res){
+      vm.data=res.data.data
+    })
+  };
+  vm.recruitContent();
+});

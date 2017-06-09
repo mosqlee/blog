@@ -1,0 +1,31 @@
+<div>
+  <div class="container">
+    <div class="specialty-banner">
+  <img src="../imgs/outstandingGraduates-banner.jpg">
+</div>
+  </div>
+  <div class="container">
+    <div class="text-left specialty-nav ddgray font-s">
+      <span ><a class="ddgray" ui-sref="main.homepage">首页</a> - </span><span>优秀毕业生</span>
+    </div>
+  </div>
+<div class="container">
+    <div class="col-xs-offset-1 col-xs-10 specialty-content text-center">
+        <p class="font-l font-weight">信息与计算科学系优秀毕业生介绍</p>
+        <table class="outstandingGraduates-table">
+            <tbody class="outstandingGraduates-content text-left ddgray font-s">
+            <tr>
+            <td  class="outstandingGraduates-content-title" >姓名</td>
+            <td  class="outstandingGraduates-content-content" >就业单位</td>
+            </tr>
+            </tbody>
+            <tbody  class="outstandingGraduates-content text-left ddgray font-s" ng-repeat="item in vm.data">
+            <tr>
+                <td  class="outstandingGraduates-content-title" ng-bind="item.title"></td>
+                <td  class="outstandingGraduates-content-content " ng-bind-html="item.content|trustAsHtml"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
+</div>

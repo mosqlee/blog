@@ -1,0 +1,9 @@
+<div>
+  <button class="page-btn" ng-repeat="item in page">1</button>
+  <button class="page-btn">...</button>
+  <button class="page-next">下一页</button>
+  <span>跳转到</span>
+  <input class="page-input">
+  <span>页</span>
+  <button class="page-btn">确定</button>
+</div>

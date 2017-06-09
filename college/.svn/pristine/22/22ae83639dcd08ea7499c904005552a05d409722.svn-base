@@ -1,0 +1,31 @@
+//请求地址
+app.service('ajaxAddress',function($http){
+  //模块请求地址
+
+  this.getModuleAddress='/college.home.com/a/message/search'
+	  //获取具体信息
+	this.getSpecificInfo='／college.home.com/a/message/';
+});
+
+app.service('getModule',function(ajaxAddress,$http,$q){
+  //请求各模块
+  this.getModule=function(category){
+	var defer=$q.defer();
+	defer.resolve(
+	  $http({
+	  method:'GET',
+	  url:ajaxAddress.getModuleAddress+'?category='+category
+	}));
+	return defer.promise;
+	};
+	this.getSpecificInfo=function(id){
+		var defer=$q.defer();
+		defer.resolve(
+			$http({
+				method:'GET',
+				url:ajaxAddress.getSpecificInfo+id
+			})
+		);
+		return defer.promise;
+	}
+});

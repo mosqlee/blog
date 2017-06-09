@@ -1,0 +1,34 @@
+
+<div>
+    <div class="container">
+    <div class="specialty-banner">
+        <img src="../imgs/studentActivities-banner.jpg">
+    </div>
+    </div>
+    <div class="container">
+        <div class="text-left specialty-nav ddgray font-s">
+            <span ><a class="ddgray" ui-sref="main.homepage">首页</a> - </span><a class="ddgray">学生活动</a>
+        </div>
+    </div>
+  <div class="container">
+      <div class="col-xs-4 text-center" ng-repeat="item in vm.data.data">
+        <div class="communication-content">
+        <div class="communication-pic" ng-if="item.img!=''">
+          <img ng-src={{item.img}}>
+        </div>
+        <div class="communication-title">
+          <div class="communication-border"><img src="../imgs/border.png"></div>
+          <div class="communication-date white">
+            <div class="communication-date-date" ng-bind="item.createAt|date:'dd'"></div>
+          <div class="communication-date-year font-s" ng-bind="item.createAt|date:'yyyy-M'"></div>
+          </div>
+          <a class="communication-title-content font-m font-weight black text-left"  ng-bind="item.title" ui-sref="main.eventsContent({id:item.id})"></a>
+        </div>
+        <a class="communication-text ddgray text-left"   print-text="item.img"  ng-bind-html="item.content|trustAsHtml" ui-sref="main.eventsContent({id:item.id})"></a>
+      </div>
+    </div>
+  </div>
+    <div class="container text-center">
+        <pages data="vm.data" size="vm.size"  category="vm.category"  page="vm.page" url="vm.url"></pages>
+    </div>
+</div>

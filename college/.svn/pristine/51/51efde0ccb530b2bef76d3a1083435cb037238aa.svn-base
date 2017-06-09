@@ -1,0 +1,51 @@
+<!-- 轮播图 -->
+<div class="container">
+  <div class="banner" repeat-finish>
+    <ul>
+      <li ng-repeat="x in data" repeat-finish>
+        <a class="banner-link" href="{{'http://'+x.url}}"></a>
+        <img ng-src="{{x.img}}" alt="banner">
+        <span class="text-center" ng-bind="x.title" ></span>
+      </li>
+    </ul>
+    <a class="unslider-arrow prev" href="javascript:void(0)">
+      <span></span>
+    </a>
+    <a class="unslider-arrow next" href="javascript:void(0)">
+      <span></span>
+    </a>
+  </div>
+</div>
+<div class="container-fluid homepage-academic-activity">
+  <div class="container">
+    <div class="col-xs-8 homepage-academic clear-left-padding">
+      <div class="col-xs-12 clear-padding">
+        <span>学术交流</span>
+        <span>Academic&nbspExchange</span>
+        <div class="homepage-more">
+          <span>+MORE</span>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <img src="imgs/test.png" alt="">
+        <p></p>
+        <p></p>
+      </div>
+      <div class="col-xs-6">
+        
+      </div>
+    </div>
+    <div class="col-xs-4 homepage-activity clear-right-padding">
+      <div class="col-xs-12 clear-padding">
+        <span>学生活动</span>
+        <div class="homepage-more">
+          <span>+MORE</span>
+        </div>
+      </div>
+      <img src="" alt="">
+      <div>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>

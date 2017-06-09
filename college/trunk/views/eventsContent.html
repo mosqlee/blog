@@ -1,0 +1,17 @@
+<div>
+  <div class="container">
+    <div class="specialty-banner">
+  <img src="imgs/speialty-banner.jpg">
+</div>
+  </div>
+  <div class="container">
+    <div class="text-left specialty-nav ddgray font-s">
+      <span ><a class="ddgray" ui-sref="main.homepage">首页</a> - </span><span><a class="ddgray"  ui-sref="main.events">学术交流</a></span> - <span ng-bind="vm.data.title"></span>
+    </div>
+  </div>
+<div class="container">
+    <div class="col-xs-offset-1 col-xs-10 communicationContent">
+        <p class="font-s" ng-bind-html="vm.data.content|trustAsHtml"></p>
+    </div>
+  </div>
+</div>

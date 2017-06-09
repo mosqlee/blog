@@ -1,0 +1,26 @@
+
+<div>
+    <div class="container">
+    <div class="specialty-banner">
+        <img src="../imgs/recruit-banner.jpg">
+    </div>
+    </div>
+    <div class="container">
+        <div class="text-left specialty-nav ddgray font-s">
+            <span ><a class="ddgray" ui-sref="main.homepage">首页</a> - </span><span>招生就业</span>
+        </div>
+    </div>
+<div class="container">
+        <div class="noPadding col-xs-2">
+                <div class="faculty-list-tittle white font-l">招生就业</div>
+                <div ng-repeat="item in vm.data">
+                    <a ng-bind="item.title" ui-sref="main.recruit.recruitContent({id:item.id})"
+                       class="faculty-list-content font-m" ng-click="vm.getSelected(item.id)"
+                       ng-class="{selected:($index==vm.id)}"></a>
+                </div>
+        </div>
+        <div class="col-xs-offset-1 col-xs-9">
+            <div ui-view=""></div>
+        </div>
+</div>
+</div>

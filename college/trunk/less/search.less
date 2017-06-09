@@ -1,0 +1,83 @@
+@import url(public.less);
+@import url(layout.less);
+.search-remind{
+  margin:20px 0;
+    font-weight: 700; 
+  span{
+    font-weight: 700;
+    color: @red;
+  }
+}
+.search-content{
+  width: 1000px;
+  margin: 40px 0 40px 100px;
+  a{
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: underline;
+    .font-l;
+    color: #3535ff;
+  }
+  .active{
+    color: @red;
+  }
+  .search-content-content{
+    .font-m;
+    color: @dddgray;
+  }
+  .search-content-link{
+    color: @green;
+  }
+  .search-content-time{
+    color: @green;
+  }
+}
+// 分页
+.search-pages{
+  position: relative;
+  margin-left: 100px;
+  .pages{
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 95px;
+  }
+  .page-btn{
+    padding: 0 14px;
+    height: 38px;
+    border: 1px solid #d8d8d8;
+    border-radius: 0;
+  }
+  .page-next{
+    height: 38px;
+    width: 76px;
+    background: #eef6ff;
+    border: 1px solid @gray;
+    border-radius: 0;
+  }
+  .page-input{
+    height: 38px;
+    width: 38px;
+    border: 1px solid #d8d8d8;
+    outline: none;
+  }
+  form{
+    position: absolute;
+    top: 20px;
+    right: 0;
+    input{
+      position: absolute;
+      top: 0;
+      right: 100px;
+      margin: 0;
+      width: 285px;
+      height: 38px;
+    }
+    .input-search-btn{
+      right: 100px;
+      top: 0;
+      z-index: 100;
+      height: 38px;
+      padding: 7px 0;
+    }
+  }
+}

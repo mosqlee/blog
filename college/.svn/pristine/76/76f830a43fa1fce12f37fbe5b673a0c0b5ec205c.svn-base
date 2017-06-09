@@ -1,0 +1,22 @@
+
+app.directive('repeatFinish',function(fakeData){
+  return {
+    scope: false,
+    restrict:'AE',
+    // replace:false,
+    // templateUrl:'js/directives/carousel/carousel.html',
+    link: function(scope,ele,attrs) {
+       console.log('2312312');
+      scope.data = fakeData.bannerList;
+      if(scope.$last == true){
+        console.log('repeat渲染完毕');
+        var unslide = $(".banner").unslider({dots:true,delay: 3000,});
+        var unslider = unslide.data('unslider');
+        $(".unslider-arrow").click(function(){
+          var fn = this.className.split(' ')[1];
+          unslider[fn]();
+        })
+      }
+    }
+  }
+})

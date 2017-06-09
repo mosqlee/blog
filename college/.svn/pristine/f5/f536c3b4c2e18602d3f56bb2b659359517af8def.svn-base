@@ -1,0 +1,27 @@
+<div class="container">
+  <p class="search-remind">
+    以下为您显示“
+    <span ng-bind="vm.words"></span>
+    “的搜索结果
+  </p>
+  <div class="search-content" ng-repeat="item in vm.data" >
+    <a class="search-title" href="javascript:void(0)" ng-click="vm.searchGo(item.category,item.id)" replace-by-red="vm.words" ng-bind="item.title"></a>
+    <p class="search-content-content" replace-by-red="vm.words"  ng-bind-html="item.content|trustAsHtml">
+    </p>
+    <span class="search-content-link">training.tsinghua.edu.cn/... -</span>
+    <span class="search-content-time" ng-bind="item.createAt | date:'yyyy-MM-dd'"></span>
+
+  </div>
+  <div class="search-pages">
+    <div page="vm.page" category="vm.words" size="10" judge="true" data="vm.data" url="'main.search'" pages></div>
+    <form class="input-search" action="">
+        <a class="input-search-btn text-center" ui-sref="main.search({words:vm.words})">
+          搜索
+        </a>
+      <label for="">
+        <input ng-keyup="func($event)" type="text" ng-model="vm.words" words="vm.words" enter>
+      </label>
+    </form>
+  </div>
+
+</div>

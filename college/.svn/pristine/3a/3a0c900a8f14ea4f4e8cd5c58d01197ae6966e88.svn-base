@@ -1,0 +1,85 @@
+<!-- 轮播图 -->
+<div class="container">
+  <div class="banner" carousel>
+    <ul>
+      <li ng-repeat="x in data" ng-if="x.status == 0" repeat-finish>
+        <a class="banner-link" href="{{x.url}}"></a>
+        <img ng-src="{{x.img}}" alt="banner">
+        <span class="text-center" ng-bind="x.title" ></span>
+      </li>
+    </ul>
+    <a class="unslider-arrow prev" href="javascript:void(0)">
+      <span></span>
+    </a>
+    <a class="unslider-arrow next" href="javascript:void(0)">
+      <span></span>
+    </a>
+  </div>
+</div>
+<div class="container-fluid homepage-academic-activity">
+  <div class="container">
+    <div class="col-xs-8 homepage-academic clear-padding">
+      <div class=" homepage-exchange">
+        <span class="academic">学术交流</span>
+        <span class="academic-english">Academic&nbspExchange</span>
+        <a class="homepage-more" ui-sref="main.communication">
+          <span class="homepage-more-plus">+</span>
+          <span>MORE</span>
+        </a>
+      </div>
+      <div class="col-xs-6 clear-left-padding">
+        <img ng-src="{{vm.exchanges.img}}" alt="图片">
+        <a class="exchanges-title font-m" ng-bind="vm.exchanges.title"></a>
+        <a class="exchanges-content font-s" print-text2="vm.exchanges.img"  ng-bind-html="vm.exchanges.content|trustAsHtml" ui-sref="main.communicationContent({id:vm.exchanges.id})"></a>
+      </div>
+      <div class="col-xs-6 clear-right-padding homepage-exchange-main">
+        <a class="exchanges-titles" ui-sref="main.communicationContent({id:vm.exchanges.id})" ng-repeat="item in vm.academicExchange | limitTo: 5" ng-if="(item.id != vm.exchanges.id)&&(item.status == 0)" ng-bind="item.title" ></a>
+      </div>
+    </div>
+    <div class="col-xs-4 homepage-activity clear-padding">
+      <div class="col-xs-12 activity-title clear-padding">
+        <span class="activity">学生活动</span>
+        <span class="activity-english">Activity</span>
+        <a class="homepage-more" ui-sref="main.events">
+          <span class="homepage-more-plus">+</span>
+          <span>MORE</span>
+        </a>
+      </div >
+      <img ng-src="{{vm.activity.img}}" alt="">
+      <div class="activity-content" ng-repeat="x in vm.activities | limitTo:3" ng-if="x.status == 0">
+        <a ng-bind="x.title | wordsOfNum:'13'"></a>
+        <span ng-bind="x.createAt | date:'yyyy-MM-dd'"></span>
+      </div>
+      <div>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 专业介绍，招生就业 -->
+<div class="container">
+  <div class="col-xs-6 clear-padding homepage-major-job homepage-major">
+    <div class="major-job-padding">
+      <span class="major-job-name-cn">专业介绍</span>
+      <span class="major-job-name-en">Professional&nbspIntroduction</span>
+    </div >
+    <div class="major-job-content">
+      <img src="imgs/banner1.png" alt="">
+      <div>
+        <a ui-sref="main.specialtyIntroduce">简要介绍信息与计算科学系的本科生专业情况</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-6 clear-padding homepage-major-job">
+    <div class="major-job-padding">
+      <span class="major-job-name-cn">招生就业</span>
+      <span class="major-job-name-en">Enrollment&nbspAnd Employment</span>
+    </div >
+    <div class="major-job-content">
+      <img src="imgs/banner2.png" alt="">
+      <div>
+        <a ui-sref="main.recruit">简要介绍信息与计算科学系招生与就业的情况</a>
+      </div>
+    </div>
+  </div>
+</div>

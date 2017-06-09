@@ -1,0 +1,30 @@
+<div>
+  <div class="container">
+    <div class="specialty-banner">
+  <img src="../imgs/communication-banner.jpg">
+</div>
+  </div>
+  <div class="container">
+    <div class="text-left specialty-nav ddgray font-s">
+      <span ><a class="ddgray" ui-sref="main.homepage">首页</a> - </span><span>联系我们</span>
+    </div>
+  </div>
+  <div class="container text-center">
+    <div class="contactUs-content">
+      <div class="contactUs-content-list">
+        <div class="contactUs-content-list-phone"></div>
+        <div class="contactUs-content-list-net"></div>
+        <div class="contactUs-content-list-letter"></div>
+        <div class="contactUs-content-list-address"></div>
+        <div class="contactUs-content-list-title white text-center">北京信息科技大学理学院</div>
+        <div class="contactUs-content-list-content white font-s text-left">010-59478634</div>
+        <div class="contactUs-content-list-content white font-s text-left">fuhua@ptteng.com</div>
+        <div class="contactUs-content-list-content white font-s text-left">www.ptteng.com</div>
+        <div class="contactUs-content-list-content white font-s text-left">北京市海淀区翠微路甲10院225室</div>
+      </div>
+      <div class="contactUs-content-map">
+        <img src="../imgs/map.jpg">
+      </div>
+    </div>
+  </div>
+</div>

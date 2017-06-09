@@ -1,0 +1,194 @@
+@import url(public.less);
+@import url(layout.less);
+// header
+.header{
+  height: 180px;
+  background: url('../imgs/header-background.png');
+  .header-header{
+    margin: 0 15px 14px 0;
+    width: 1200px;
+    height: 14px;
+    background: @light-blue;
+  }
+}
+.header-logo-name{
+  .clear-padding;
+}
+.header-slogan-search{
+  .clear-padding;
+  padding-left: 20px;
+}
+.header-logo{
+  .float-left;
+  width: 140px;
+  height: 140px;
+  margin-right: 20px;
+}
+.header-name{
+  width: 345px;
+  height: 105px;
+  margin: 19px 0;
+}
+.header-slogan{
+  .float-left;
+  width: 333px;
+  height: 105px;
+  margin: 19px 0;
+}
+.header-search{
+  .float-right;
+  margin: 19px 0;
+}
+.set-homepage{
+  color: @ddgray;
+  &:hover{
+    color: @light-blue;
+  }
+}
+.input-normal {
+  a{
+    display: inline-block;
+    position: absolute;
+    z-index: 1000;
+    right: 10px;
+    bottom: 24px;
+    width: 16px;
+    height: 16px;
+  }
+  label{
+    position: relative;
+    margin: 0;
+
+  }
+  input{
+    margin-top: 60px;
+    width: 158px;
+  }
+}
+.icon-search{
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url('../imgs/sprite.png') no-repeat;
+  background-position: -120px 0;
+}
+.set-homepage{
+  margin-bottom: 60px;
+}
+// nav
+.nav-list{
+  position: relative;
+  li{
+    width: 11.11%;
+    height: 80px;
+    padding: 30px 0;
+    text-align: center;
+    .float-left;
+    list-style: none;
+    a{
+      width: 100%;
+      height: 80px;
+      padding: 29px 0;
+      font-size: 22px;
+      color: @dddgray;
+      &:hover{
+        color: @light-blue;
+        text-decoration: none;
+      }
+    }
+    .active{
+      border-top: 2px solid @light-blue;
+      color: @light-blue;
+    }
+  }
+  span{
+    position: absolute;
+    z-index: 10000;
+    display: block;
+    top: 1px;
+    height: 2px;
+    background: @light-blue;
+  }
+}
+// footer
+.footer {
+  width: 100%;
+  height: 159px;
+  background-color:  @light-blue;
+  padding: 20px 0;
+  p,span {
+    color: @white;
+  }
+}
+.footer-message {
+  p {
+    color: @white;
+  }
+  .message{
+    margin:14px 0;
+  }
+  .last-message{
+    margin: 15px 0;
+  }
+}
+.footer-vertical{
+  width: 1px;
+  height: 80px;
+  margin: 20px 0 20px 23.5px;
+  background: @dark-blue;
+}
+.footer-contect {
+  .float-left;
+  margin: 26px 18.5px;
+  .contact-us{
+    padding-right: 20px;
+    .border-right(@white);
+    color: @white;
+  }
+  .focus-us{
+    padding-left: 20px;
+  }
+  // 底部小图标
+  .footer-icon{
+    margin-top: 20px;
+    a{
+      display: inline-block;
+      margin-right: 8px;
+      width: 30px;
+      height: 30px;
+      span{
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background: url('../imgs/sprite.png') no-repeat;
+      }
+    }
+    .icon-tencent {
+      background-position: 0 0;
+    }
+    .icon-tencent-blog{
+
+      background-position: -30px 0;
+    }
+    .icon-wechat{
+      background-position: -60px 0;
+    }
+    .icon-wechat{
+      background-position: -90px 0;
+    }
+  }
+}
+.footer-barcode{
+  .float-right;
+  width: 115px;
+  height: 124px;
+
+  img{
+    width: 100px;
+    height: 100px;
+    margin: 0 7px 10px 7px;
+  }
+  p{
+    margin-top: 0;
+  }
+}

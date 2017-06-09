@@ -1,0 +1,18 @@
+/**
+ * Created by Master on 2017/6/7.
+ */
+app.directive('printText',function ($timeout,$filter) {
+    return {
+        scope:{
+            printText:"="
+        },
+        link:function (scope, ele, attrs) {
+            $timeout(function () {
+                var text=ele.text(),num;
+                num = scope.printText?50:140;
+                console.log(scope.printText);
+                ele.text($filter('limitTo')(text,num)+'...');
+            })
+        }
+    }
+})

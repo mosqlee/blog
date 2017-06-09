@@ -1,0 +1,87 @@
+/**
+ * Created by Administrator on 2017/6/3.
+ */
+app.controller('Communication',function($stateParams,getModule){
+  var vm=this;
+  vm.category=2;
+  if($stateParams.page==null){
+    vm.page=1;
+  }else {
+    vm.page=$stateParams.page
+  }
+  if($stateParams.size==null){
+    vm.size=9;
+  }else {
+    vm.size=$stateParams.size
+  }
+});
+app.controller('CommunicationContent',function(getModule,$stateParams){
+  var vm=this;
+  var id=$stateParams.id;
+  id=parseInt(id);
+  //获取数据
+  //vm.communicationContent=function(){
+  //  getModule.getSpecificInfo(id).then(function(res){
+  //    vm.data=res.data.data;
+  //  })
+  //
+  //};
+  //vm.communicationContent();
+});
+app.controller('Recruit',function(getModule){
+  var vm=this;
+  vm.index=0;
+  vm.category=4;
+  vm.page=1;
+  vm.size=9;
+  //获取后台列表及内容
+  vm.getRecruitList=function(){
+    getModule.getModule(vm.category,vm.page,vm.size).then(function(res){
+      vm.data=res.data.data;
+    });
+  };
+  vm.getRecruitList();
+  //点击事件
+  vm.getIndex=function(index){
+    vm.index=index
+  }
+
+});
+
+app.controller('RecruitContent',function($rootScope,fakeData,$stateParams){
+  var vm=this;
+  //获取文本内容
+  vm.facultyContent=function(){
+    fakeData.recruitContent.forEach(function(item){
+      if ($stateParams.id==item.id){
+        vm.data.content=item.content
+      }
+    })
+  };
+  vm.facultyContent();
+});
+app.controller('Events',function(getModule){
+  var vm=this;
+  vm.category=3;
+  vm.page=1;
+  vm.size=9;
+  //获取数据
+  vm.getEventList=function(){
+    getModule.getModule(vm.category,vm.page,vm.size).then(function(res){
+      vm.data=res.data.data
+    })
+  };
+  vm.getEventList()
+});
+app.controller('EventsContent',function(getModule,$stateParams){
+  var vm=this;
+  var id=$stateParams.id;
+  id=parseInt(id);
+  //获取数据
+  vm.eventContent=function(){
+      getModule.getSpecificInfo(id).then(function(res){
+        vm.data=res.data.data
+      })
+  };
+  vm.eventContent();
+});

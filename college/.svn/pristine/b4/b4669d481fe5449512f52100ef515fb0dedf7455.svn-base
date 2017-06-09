@@ -1,0 +1,21 @@
+/**
+ * footer
+ * Created by pkcms.cn on 2017/6/1.
+ */
+app.controller("homepage",function (getImg,getModule) {
+  var vm = this;
+  var promise = getModule.getModule;
+  vm.exchanges = {};
+  // 获取学术交流
+  vm.exchange = function(){
+    promise(2).then(function(res){
+      vm.academicExchange = res.data.data;
+      console.log(vm.academicExchange);
+      vm.exchanges.img = getImg.getImg(vm.academicExchange,"img");
+      vm.exchanges.title = getImg.getImg(vm.academicExchange,"title");
+      vm.exchanges.content = getImg.getImg(vm.academicExchange,"content");
+      console.log(vm.exchanges);
+    })
+  }
+  vm.exchange();
+})

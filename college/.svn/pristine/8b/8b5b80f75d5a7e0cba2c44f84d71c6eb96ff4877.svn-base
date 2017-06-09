@@ -1,0 +1,5 @@
+app.controller('search', function(getModule,$stateParams){
+  var vm = this;
+  vm.words = $stateParams.words;
+  console.log(vm.words)
+})

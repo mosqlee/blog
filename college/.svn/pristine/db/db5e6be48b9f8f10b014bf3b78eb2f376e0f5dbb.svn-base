@@ -1,0 +1,136 @@
+/**
+ * Created by Master on 2017/6/7.
+ */
+app.directive('printText',function ($timeout,$filter) {
+    return {
+        scope:{
+            printText:"="
+        },
+        link:function (scope, ele, attrs) {
+            $timeout(function () {
+                var text=ele.text(),num;
+                num = scope.printText?50:140;
+                console.log(scope.printText);
+                ele.text($filter('limitTo')(text,num)+'...');
+            })
+        }
+    }
+})
+app.directive('printText2',function($filter,$timeout){
+    return {
+        scope:{
+            printText2:"="
+        },
+        link:function (scope, ele, attrs) {
+            scope.$on('to-child',function(){
+                $timeout(function () {
+                    var text=ele[0].outerText,num;
+                    num = scope.printText2?50:140;
+                    console.log(scope.printText2);
+                    ele.text($filter('limitTo')(text,num)+'...');
+                })
+            }
+        )}
+    }
+})
+app.directive('pages',function ($timeout,getModule,$state) {
+    return {
+        restrict:"AE",
+        scope:{
+            data:"=",
+            size:"=",
+            category:'=',
+            page:"=",
+            url:'='
+        },
+        templateUrl:'views/template/pages.html',
+        link:function (scope, ele, attrs) {
+            //获取数据
+            scope.getCommunicationList=function(){
+                getModule.getModule(scope.category,scope.page,scope.size).then(function(res){
+                    scope.data=res.data;
+                    //计算页数
+                    scope.totalPage=Math.ceil(scope.data.total/scope.data.size);
+                    //页码分组
+                    scope.pageList=getPageList();
+                    //判断上一页，下一页是否存在
+                    getPrePage();
+                    getNextPage()
+                })
+            };
+            scope.getCommunicationList();
+
+            //判断上一页，下一页是否存在
+            function getPrePage(){
+                scope.prePage=(scope.page!=1)
+            }
+            function getNextPage(){
+                scope.nextPage=(scope.page!=scope.totalPage)
+            }
+
+            //页码的数组
+            function getPageList(){
+                var pageList=[];
+                scope.page=parseInt(scope.page);
+                //...在前面
+                if (preDot()&&!nextDot()){
+                    for(var i =scope.totalPage-2;i<=scope.totalPage;i++){
+                        pageList.push(i)
+                    }
+                    pageList.unshift('...');
+                    pageList.unshift(1)
+                }
+                //...在后面
+                if (!preDot()&&nextDot()){
+                    for(var i =0;i<3&&i<scope.totalPage-1;i++){
+                        pageList.push(i+1)
+                    }
+                    pageList.push('...');
+                    pageList.push(scope.totalPage)
+                }
+                //...在两边
+                if (preDot()&&nextDot()){
+                    for(var i =0;i<2;i++){
+                        pageList.push(scope.page+i)
+                    }
+                    pageList.unshift('...');
+                    pageList.unshift(1);
+                    pageList.push('...');
+                    pageList.push(scope.totalPage);
+                }
+                //没有...
+                if(!preDot()&&!nextDot()){
+                    for(var i =0;i<scope.totalPage;i++){
+                        pageList.push(i+1)
+                    }
+                }
+                return pageList;
+            }
+            //跳页
+            scope.confirm=function(){
+                $state.go(scope.url,{page:scope.page});
+            };
+            scope.trunPage=function(item){
+                scope.page=item;
+                $state.go(scope.url,{page:scope.page});
+            };
+            //上一页
+            scope.turnLastPage=function(){
+                scope.page=scope.page-1;
+                $state.go(scope.url,{page:scope.page});
+            };
+            //下一页
+            scope.turnNextPage=function(){
+                scope.page=scope.page+1;
+                $state.go(scope.url,{page:scope.page});
+            };
+            //判断是否有...
+            function preDot(){
+                return(scope.page-1>2)
+            }
+            function nextDot(){
+                return(scope.page<scope.totalPage-2)
+            }
+        }
+    }
+});

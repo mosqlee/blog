@@ -1,0 +1,8 @@
+/**
+ * footer
+ * Created by pkcms.cn on 2017/6/1.
+ */
+app.controller("homepage",function (fakeData) {
+  var vm = this;
+  vm.data = fakeData.bannerList;
+})

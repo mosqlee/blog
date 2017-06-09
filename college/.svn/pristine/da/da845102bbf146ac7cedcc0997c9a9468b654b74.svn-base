@@ -1,0 +1,16 @@
+app.factory('getImg',function(){
+  return {
+    getImg:
+    function (attr,arr){
+      var keepGoing = true;
+      var attri;
+      angular.forEach(attr, function(item){
+        if(!!item.img&&keepGoing){
+          keepGoing = false;
+          return attri = item[arr];
+        }
+      })
+      return attri;
+    }
+  }
+})

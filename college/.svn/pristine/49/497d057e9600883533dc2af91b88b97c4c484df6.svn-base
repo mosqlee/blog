@@ -1,0 +1,30 @@
+/**
+ * Created by Administrator on 2017/6/3.
+ */
+app.filter('wordsOfNum',function(){
+  return function (word,num50,num140,imgLength){
+	if(imgLength!=''){
+		word =word.substring(1,num50)+'......'
+	}else {
+	  word=word.substring(1,num140)+'......'
+	}
+	return word
+  }
+});
+app.filter('trustAsHtml',function($sce){
+  return function (string){
+	string=$sce.trustAsHtml(string);
+  return string
+  };
+});
+app.filter('getAttr',function(){
+  return function(attr,att){
+    var keepGoing = true;
+    angular.forEach(attr, function(item){
+      if(!!item.img&&keepGoing){
+        keepGoing = false;
+        return attr = item[att];
+      }
+    })
+  }
+})

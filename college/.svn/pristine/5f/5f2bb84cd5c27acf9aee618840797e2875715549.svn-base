@@ -1,0 +1,10 @@
+<div class="container">
+  <p class="search-remind">
+    以下为您显示“
+    <span ng-bind="vm.words"></span>
+    “的搜索结果
+  </p>
+  <div class="search-content">
+    
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<div>
+  <div class="container">
+    <div class="specialty-banner">
+  <img src="../imgs/outstandingGraduates-banner.jpg">
+</div>
+  </div>
+  <div class="container">
+    <div class="text-left specialty-nav ddgray font-s">
+      <span ><a class="ddgray" ui-sref="main.homepage">首页</a> - </span><span>优秀毕业生</span>
+    </div>
+  </div>
+<div class="container">
+    <div class="col-xs-offset-1 col-xs-10 specialty-content">
+        <p class="font-l font-weight text-center">信息与计算科学系优秀毕业生介绍</p>
+        <p class="font-s"><span class="space-two"></span>信息与计算科学专业是数学、计算机科学和信息科学等多个学科交叉渗透的数学类理科专业，培养具有扎实的数学基础和严密的逻辑思维能力；掌握信息科学和计算科学的基本理论、方法与技能，了解数据统计的基本原理，受到科学研究的初步训练；具有较强的数据分析和软件开发能力，能解决信息技术和科学与工程计算中的实际问题的复合型人才。</p>
+        <p class="font-s"><span class="space-two"></span>本专业开设的主要课程有：数学分析、高等代数与解析几何、概率论与数理统计、操作系统、计算机组成原理与接口、数据结构、计算方法、数学建模、离散数学、信息论基础与编码理论、微分方程数值解、面向对象技术、数据库系统基础、软件工程、计算机网络基础、回归分析、多元统计分析等。</p>
+        <p class="font-s"><span class="space-two"></span>我校信计专业2001年开始招生36人，从2004年开始每年招收60人左右，已培养了许多优秀毕业生，考研录取机构有：中科院、北大、清华、北航、北理工、浙大、东北大学、中国地质大学、北邮、北交等；就业单位包括中国工商银行、中国银行、中国移动集团、百度公司、IBM公司等；职业涵盖了软件开发、大数据统计分析、教师、公务员等。按照大学毕业五年薪酬指数计算，我校毕业生薪酬排名在全国前60位。</p>
+    </div>
+  </div>
+</div>

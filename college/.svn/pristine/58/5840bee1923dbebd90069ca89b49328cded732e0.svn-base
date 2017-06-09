@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--[if lte IE 7]>
+<script>window.location.href = 'http://cdn.dmeng.net/upgrade-your-browser.html?referrer=' + location.href;</script><![endif]-->
+<html lang="en" ng-app="college">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="css/layout.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/collegeFrontStage.css">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/public.css">
+    <link  href="css/PIE.htc">
+    <title>北京信息科技大学信息与计算科学系</title>
+  </head>
+  <body>
+    <div ui-view=""></div>
+  </body>
+  <script type="text/javascript" src="vendor/forEach/forEach.js"></script>
+  <script type="text/javascript" src="vendor/angular-1.2.9/angular.min.js"></script>
+  <script type="text/javascript" src="vendor/angular-ui-router/angular-ui-router.min.js"></script>
+  <script type="text/javascript" src="vendor/oclazyload/ocLazyLoad.min.js"></script>
+  <script type="text/javascript" src="vendor/Jquery-1.9.1/Jquery.min.js"></script>
+  <script type="text/javascript" src="vendor/bootstrap/bootstrap.min.js"></script>
+  <script type="text/javascript" src="vendor/angular-ui-bootstrap/ui-bootstrap.min.js"></script>
+
+  <script type="text/javascript" src="js/app.config.js"></script>
+  <script type="text/javascript" src="js/router.config.js"></script>
+  <script type="text/javascript" src="js/controllers/main.js"></script>
+  <script type="text/javascript" src="js/controllers/faculty.js"></script>
+  <script type="text/javascript" src="js/controllers/communication.js"></script>
+  <script type="text/javascript" src="js/filter/wordOfLength.js"></script>
+  <script type="text/javascript" src="js/data.js"></script>
+  <script type="text/javascript" src="js/services/switchItem.js"></script>
+  <script type="text/javascript" src="js/directives/nav/nav.js"></script>
+  <script type="text/javascript" src="js/directives/homepage/setAsHomepage.js"></script>
+  <script type="text/javascript" src="js/services/ajax.js"></script>
+</html>

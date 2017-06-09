@@ -1,0 +1,9 @@
+@import url(public.less);
+@import url(layout.less);
+.search-remind{
+  margin:20px 0;
+  span{
+    font-weight: 700;
+    color: @red;
+  }
+}

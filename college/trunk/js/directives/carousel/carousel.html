@@ -1,0 +1,19 @@
+<!-- <div class="container">
+  <div class="banner">
+    <ul>
+      <li ng-repeat="x in data" repeatFinish>
+        <img src="{{x.img}}" alt="banner">
+        <span ng-bind="x.tittle"></span>
+      </li>
+    </ul>
+  </div>
+  <a class="unslider-arrow prev" href="javascript:void(0)"></a>
+  <a class="unslider-arrow next" href="javascript:void(0)"></a>
+  <ol class="carousel-dots">
+    <li class="dot" ng-repeat="x in data" ng-bind="$index"></li>
+  </ol>
+</div> -->
+<li ng-repeat="x in data" >
+  <img src="{{x.img}}" alt="banner">
+  <span ng-bind="x.tittle"></span>
+</li>

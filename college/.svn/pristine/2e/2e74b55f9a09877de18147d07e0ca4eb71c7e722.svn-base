@@ -1,0 +1,250 @@
+@import url(public.less);
+@import url(layout.less);
+.banner{
+  position: relative;
+  overflow: hidden;
+  width: 1200px;
+  height: 600px;
+  ul{
+    height: 600px;
+    padding-left: 0;
+  }
+  li {
+    .float-left;
+    list-style: none;
+    span{
+      display: inline-block;
+      position: absolute;
+      bottom: 0;
+      width: 1200px;
+      height: 50px;
+      padding: 7px 0;
+      font-size: 24px;
+      color: @white;
+      background:rgba(0,0,0,0.5); 
+      /* IE*/  
+      filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#7F000000,endcolorstr=#7F000000);
+    }
+    img{
+      height: 600px;
+    }
+    .banner-link{
+      display: block;
+      position: absolute;
+      width: 1200px;
+      height: 600px;
+    }
+  }
+  .dots{
+    position: absolute;
+    right: 30px;
+    bottom: 60px;
+    left:auto;
+
+  }    
+  .dot{  
+      display:inline-block; 
+      width:14px;    
+      height:14px;    
+      font-size:0px;    
+      line-height:0px;    
+      margin-right:10px;    
+      cursor:pointer;
+      .border(1px,@white);  
+      // bbbbbbbbbbbbb
+      border-radius:8px;
+      behavior:url(../css/PIE.htc);
+  }    
+  .dot.active{
+    background-color: @white;
+  }
+}
+.unslider-arrow{
+  position: absolute;
+  top: 275px;
+  display: block;
+  padding: 10px 18px;
+  width: 50px;
+  height: 50px;
+  // bbbbbbbbbbbbbbbbbbbbb
+  border-radius: 7px;
+  behavior:url(../css/PIE.htc);
+  background: @black;
+  background:rgba(0,0,0,0.1); 
+  /* IE*/  
+  filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#19000000,endcolorstr=#19000000);
+  span {
+    display: inline-block;
+    width: 15px;
+    height: 28px;
+    background: url('../imgs/sprite.png') no-repeat;
+  }
+  &:hover{
+    background:rgba(255,255,255,0.8); 
+    /* IE 4-9 */  
+    filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#C8000000,endcolorstr=#C8000000);
+  }
+}
+.prev{
+  left: 20px;
+  span {
+    background-position: -181px 0;
+  }
+  &:hover{
+   span{
+    background-position: -166px 0;
+    }
+  }
+}
+.next{
+  right: 20px;
+  span{
+    background-position: -136px 0;
+  }
+  &:hover{
+   span{
+    background-position: -151px 0;
+    }
+  }
+}
+// 学术交流
+.homepage-academic-activity {
+  margin: 30px 0;
+  padding: 30px 0;
+
+  background-color: @dark-white;
+}
+.homepage-academic{
+  width: 790px;
+  border-top: 5px solid @light-blue;
+  .homepage-exchange{
+    padding: 20px 0;
+  }
+  .academic{
+    margin-right: 10px;
+    font-size: 20px;
+    color: @dddgray;
+  }
+  .academic-english{
+    color: @dgray;
+  }
+}
+.homepage-more {
+  display: block;
+  float: right;
+  margin-top: 2px;
+  padding: 1px 6px;
+  background-color: @yellow;
+  span{
+    color: @white;
+  }
+  .homepage-mor-plus{
+    font-size: 20px;
+    line-height: 0;
+  }
+}
+// 学生活动
+.homepage-activity{
+  width: 380px;
+  margin-left: 30px;
+  .border-top-homepage;
+  .activity{
+    margin-right: 10px;
+    font-size: 20px;
+    color: @dddgray;
+  }
+  .activity-english{
+    color: @dgray;
+  }
+  .activity-title{
+    padding: 20px 0;
+  }
+}
+.exchanges-title{
+  display: block;
+  margin: 22px 0;
+  color: @black;
+}
+.exchanges-content{
+  color: @ddgray;
+}
+.exchanges-titles{
+  display: block;
+  padding:  20px;
+  color: @dddgray;
+  .font-m;
+  .border-bottom(@lgray);
+}
+// 学生活动
+.activity{
+  img{
+    width: 380px;
+    height: 200px;
+  }
+}
+.activity-content{
+  padding: 10px 0;
+
+  a{
+    display: block;
+    .float-left;
+    margin: 10px 0;
+    .font-m;
+    color: @dddgray;
+    &:hover{
+      // 有冲突，和华飒的颜色
+      color: @ddblue;
+    }
+  }
+  span{
+    .float-right;
+    margin: 10px 0;
+    .font-m;
+  }
+}
+.homepage-exchange-main{
+  margin-top: -10px;
+}
+// 专业介绍，招生就业
+.homepage-major-job{
+  width: 570px;
+  margin-bottom: 60px;
+  .border-top-homepage;
+  .major-job-name-cn{
+    margin-right: 10px;
+    font-size: 20px;
+    color: @dddgray;
+  }
+  .major-job-name-en{
+    color: @dgray;
+  }
+  .major-job-content{
+    .border-top-homepage;
+    img{
+      width: 445px;
+      height: 250px;
+    }
+    div{
+      .float-right;
+      width: 125px;
+      height: 250px;
+      padding:78px 30px;
+      background-color: @light-blue;
+      a{
+        .font-m;
+        color: @white;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+// special
+.homepage-major{
+  margin-right: 60px;
+}
+.major-job-padding{
+  padding:20px 0;
+
+}
